@@ -1,0 +1,77 @@
+// prisma/schema.prisma
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL") // Assure-toi que cette variable est définie dans ton fichier .env
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id                   Int                   @id @default(autoincrement())
+  username             String
+  email                String                @unique
+  password             String // Ce champ stockera le hash du mot de passe
+  capsules             Capsule[] // Relation : un utilisateur peut créer plusieurs capsules
+  capsuleCollaborators CapsuleCollaborator[]
+  createdAt            DateTime              @default(now())
+  updatedAt            DateTime              @updatedAt
+}
+
+model Capsule {
+  id            Int                   @id @default(autoincrement())
+  owner         User                  @relation(fields: [ownerId], references: [id])
+  ownerId       Int
+  title         String
+  content       String? // Contenu textuel ou lien vers un média
+  scheduledDate DateTime // Date d'ouverture programmée
+  eventTrigger  String? // Facultatif : nom d'un événement déclencheur
+  visibility    String // "private", "public" ou "group"
+  group         Group?                @relation(fields: [groupId], references: [id])
+  groupId       Int? // Référence facultative pour les capsules de groupe
+  media         Media[] // Capsules peuvent avoir plusieurs médias
+  collaborators CapsuleCollaborator[] // Collaborateurs associés
+  // Champs ajoutés pour la fonctionnalité de groupe :
+  groupRecipient String?  // Optionnel, pour le destinataire (username ou email)
+  recipientType  String?  // Optionnel, pour indiquer le type ("username" ou "email")
+  createdAt     DateTime              @default(now())
+  updatedAt     DateTime              @updatedAt
+}
+
+model Group {
+  id          Int       @id @default(autoincrement())
+  name        String
+  description String?
+  capsules    Capsule[]
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+model CapsuleCollaborator {
+  id        Int      @id @default(autoincrement())
+  capsule   Capsule  @relation(fields: [capsuleId], references: [id])
+  capsuleId Int
+  user      User     @relation(fields: [userId], references: [id])
+  userId    Int
+  role      String // Exemple : "editor", "viewer"
+  createdAt DateTime @default(now())
+}
+
+model Media {
+  id        Int      @id @default(autoincrement())
+  capsule   Capsule  @relation(fields: [capsuleId], references: [id])
+  capsuleId Int
+  type      String // Par exemple "image", "video", "audio", etc.
+  url       String // URL vers le fichier stocké (local ou cloud)
+  createdAt DateTime @default(now())
+}
+
+model Notification {
+  id         Int      @id @default(autoincrement())
+  userId     Int
+  message    String
+  read       Boolean  @default(false)
+  createdAt  DateTime @default(now())
+}
