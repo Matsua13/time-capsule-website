@@ -1,5 +1,5 @@
 // app/utils/email.server.ts
-import nodemailer from 'nodemailer';
+import * as nodemailer from 'nodemailer';
 
 // Configure le transport avec Gmail
 const transporter = nodemailer.createTransport({
