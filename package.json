@@ -8,7 +8,7 @@
     "build": "remix build",
     "dev": "npx remix dev",
     "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
-    "start": "NODE_ENV=production npx remix-serve build",
+    "start": "NODE_ENV=production npx remix-serve build/index.js",
     "typecheck": "tsc"
   },
   "dependencies": {

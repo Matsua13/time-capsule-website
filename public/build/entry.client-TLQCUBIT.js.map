@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../app/entry.client.tsx"],
-  "sourcesContent": ["// REMIX HMR BEGIN\nimport * as __hmr__ from \"remix:hmr\";\nif (import.meta) {\nimport.meta.hot = __hmr__.createHotContext(\n//@ts-expect-error\n\"app/entry.client.tsx\"\n);\nimport.meta.hot.lastModified = \"1740076104622.8606\";\n}\n// REMIX HMR END\n\n// entry.client.tsx\nimport { RemixBrowser } from \"@remix-run/react\";\nimport { hydrateRoot } from \"react-dom/client\";\nimport { startTransition, StrictMode } from \"react\";\n\nfunction hydrate() {\n  startTransition(() => {\n    hydrateRoot(\n      document,\n      <StrictMode>\n        <RemixBrowser />\n      </StrictMode>\n    );\n  });\n}\n\nif (typeof requestIdleCallback === \"function\") {\n  requestIdleCallback(hydrate);\n} else {\n  // Pour Safari qui ne supporte pas requestIdleCallback\n  setTimeout(hydrate, 1);\n}\n"],
-  "mappings": ";;;;;;;;;;;;;;;;;;;;;;AAaA,oBAA4B;AAC5B,IAAAA,gBAA4C;AAOpC;AAnBR,IAAI,aAAa;AACjB,cAAY,MAAc;AAAA;AAAA,IAE1B;AAAA,EACA;AACA,cAAY,IAAI,eAAe;AAC/B;AAQA,SAAS,UAAU;AACjB,qCAAgB,MAAM;AACpB;AAAA,MACE;AAAA,MACA,mDAAC,4BACC,6DAAC,kBAAD;AAAA;AAAA;AAAA;AAAA,aAAc,KADhB;AAAA;AAAA;AAAA;AAAA,aAEA;AAAA,IACF;AAAA,EACF,CAAC;AACH;AAEA,IAAI,OAAO,wBAAwB,YAAY;AAC7C,sBAAoB,OAAO;AAC7B,OAAO;AAEL,aAAW,SAAS,CAAC;AACvB;",
-  "names": ["import_react"]
-}
