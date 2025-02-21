@@ -14,6 +14,8 @@ model User {
   username             String
   email                String                @unique
   password             String // Ce champ stockera le hash du mot de passe
+  emailConfirmed    Boolean  @default(false)
+  confirmationToken String?  // Token pour la confirmation d'e-mail
   capsules             Capsule[] // Relation : un utilisateur peut créer plusieurs capsules
   capsuleCollaborators CapsuleCollaborator[]
   createdAt            DateTime              @default(now())

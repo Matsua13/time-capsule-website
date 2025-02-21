@@ -8,21 +8,21 @@ export const loader: LoaderFunction = async ({ request }) => {
   const token = url.searchParams.get("token");
 
   if (!token) {
-    throw new Response("Missing token", { status: 400 });
+    throw new Response("Token manquant", { status: 400 });
   }
 
   const user = await db.user.findFirst({ where: { confirmationToken: token } });
   if (!user) {
-    throw new Response("Invalid token", { status: 400 });
+    throw new Response("Token invalide ou expiré", { status: 400 });
   }
 
-  // Met à jour l'utilisateur pour marquer l’e-mail comme confirmé et supprimer le token
+  // Mettre à jour l'utilisateur pour marquer l'e-mail comme confirmé
   await db.user.update({
     where: { id: user.id },
     data: { emailConfirmed: true, confirmationToken: null },
   });
 
-  // Redirige vers la page de connexion ou une page de confirmation
+  // Rediriger vers la page de connexion ou une page de confirmation
   return redirect("/login?confirmed=1");
 };
 

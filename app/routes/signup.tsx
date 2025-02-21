@@ -1,11 +1,12 @@
 // app/routes/signup.tsx
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { json, redirect } from "@remix-run/node";
 import { Form, useActionData, Link } from "@remix-run/react";
 import type { ActionFunction } from "@remix-run/node";
 import bcrypt from "bcryptjs";
 import { db } from "~/utils/db.server";
-import { createUserSession } from "~/utils/auth.server";
+// Importation de sendConfirmationEmail depuis email.server.ts
+import { sendConfirmationEmail } from "~/utils/email.server";
+import { randomUUID } from "crypto";
 
 interface ActionData {
   error?: string;
@@ -40,26 +41,25 @@ export const action: ActionFunction = async ({ request }) => {
   }
 
   const hashedPassword = await bcrypt.hash(password, 10);
-  // Génère un token de confirmation
-  const token = randomUUID();
+  // Générer un token de confirmation
+  const confirmationToken = randomUUID();
 
-  // Crée l'utilisateur avec le token et en précisant que l’e-mail n’est pas encore confirmé
-  const user = await db.user.create({
+  // Créer l'utilisateur avec le token et marquer email non confirmé
+  await db.user.create({
     data: {
       email,
       username,
       password: hashedPassword,
-      confirmationToken: token,
       emailConfirmed: false,
+      confirmationToken,
     },
   });
 
-  // Envoie l’e-mail de confirmation
-  await sendConfirmationEmail(email, token);
+  // Envoyer l'e-mail de confirmation
+  await sendConfirmationEmail(email, confirmationToken);
 
-  // Redirige vers une page informant l’utilisateur de vérifier ses e-mails
+  // Rediriger vers la page invitant à vérifier la boîte mail
   return redirect("/check-email");
-  // return createUserSession(user.id, "/dashboard");
 };
 
 export default function SignupPage() {
@@ -70,12 +70,18 @@ export default function SignupPage() {
       <h1 className="text-4xl font-extrabold text-white mb-6 drop-shadow-lg">
         Join the Adventure!
       </h1>
-      <Form method="post" className="w-full max-w-md bg-yellow-200 p-8 rounded-3xl shadow-xl border-4 border-yellow-500">
+      <Form
+        method="post"
+        className="w-full max-w-md bg-yellow-200 p-8 rounded-3xl shadow-xl border-4 border-yellow-500"
+      >
         {actionData?.error ? (
           <div className="mb-4 text-red-600 font-bold">{actionData.error}</div>
         ) : null}
         <div className="mb-4">
-          <label htmlFor="username" className="block text-lg font-semibold text-gray-700 mb-1">
+          <label
+            htmlFor="username"
+            className="block text-lg font-semibold text-gray-700 mb-1"
+          >
             Username
           </label>
           <input
@@ -87,7 +93,10 @@ export default function SignupPage() {
           />
         </div>
         <div className="mb-4">
-          <label htmlFor="email" className="block text-lg font-semibold text-gray-700 mb-1">
+          <label
+            htmlFor="email"
+            className="block text-lg font-semibold text-gray-700 mb-1"
+          >
             Email
           </label>
           <input
@@ -99,7 +108,10 @@ export default function SignupPage() {
           />
         </div>
         <div className="mb-6">
-          <label htmlFor="password" className="block text-lg font-semibold text-gray-700 mb-1">
+          <label
+            htmlFor="password"
+            className="block text-lg font-semibold text-gray-700 mb-1"
+          >
             Password
           </label>
           <input
@@ -119,7 +131,10 @@ export default function SignupPage() {
       </Form>
       <p className="mt-4 text-white">
         Already on board?{" "}
-        <Link to="/login" className="text-blue-200 underline font-semibold">
+        <Link
+          to="/login"
+          className="text-blue-200 underline font-semibold"
+        >
           Log in
         </Link>
       </p>
