@@ -11,6 +11,7 @@ import { useState } from "react";
 import { Prisma } from "@prisma/client";
 import { promises as fs } from "fs";
 import path from "path";
+import { sendInstantNotificationEmail } from "~/utils/email.server";
 
 // Le loader s'assure que l'utilisateur est connecté
 export const loader: LoaderFunction = async ({ request }) => {
@@ -101,6 +102,9 @@ export const action: ActionFunction = async ({ request }) => {
       },
     });
     console.log("Notification created for user", recipientUser.id);
+
+    // Envoi de l'e-mail instantané au destinataire
+    await sendInstantNotificationEmail(recipientUser.email, capsule.title);
   }
 
   // Gestion facultative du media

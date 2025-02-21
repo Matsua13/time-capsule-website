@@ -38,6 +38,7 @@ model Capsule {
   // Champs ajoutés pour la fonctionnalité de groupe :
   groupRecipient String?  // Optionnel, pour le destinataire (username ou email)
   recipientType  String?  // Optionnel, pour indiquer le type ("username" ou "email")
+  reminderSent   Boolean  @default(false) // Champ pour marquer l'envoi du rappel
   createdAt     DateTime              @default(now())
   updatedAt     DateTime              @updatedAt
 }
