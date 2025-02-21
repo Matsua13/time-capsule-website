@@ -40,16 +40,26 @@ export const action: ActionFunction = async ({ request }) => {
   }
 
   const hashedPassword = await bcrypt.hash(password, 10);
+  // Génère un token de confirmation
+  const token = randomUUID();
 
+  // Crée l'utilisateur avec le token et en précisant que l’e-mail n’est pas encore confirmé
   const user = await db.user.create({
     data: {
       email,
       username,
       password: hashedPassword,
+      confirmationToken: token,
+      emailConfirmed: false,
     },
   });
 
-  return createUserSession(user.id, "/dashboard");
+  // Envoie l’e-mail de confirmation
+  await sendConfirmationEmail(email, token);
+
+  // Redirige vers une page informant l’utilisateur de vérifier ses e-mails
+  return redirect("/check-email");
+  // return createUserSession(user.id, "/dashboard");
 };
 
 export default function SignupPage() {
