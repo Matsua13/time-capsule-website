@@ -1,0 +1,48 @@
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+// app/routes/signup.tsx
+import { json, redirect } from "@remix-run/node";
+import { Form, useActionData, Link } from "@remix-run/react";
+import bcrypt from "bcryptjs";
+import { db } from "~/utils/db.server";
+// Importation de sendConfirmationEmail depuis email.server.ts
+import { sendConfirmationEmail } from "~/utils/email.server";
+import { randomUUID } from "crypto";
+export const action = async ({ request }) => {
+    const formData = await request.formData();
+    const email = formData.get("email");
+    const password = formData.get("password");
+    const username = formData.get("username");
+    if (typeof email !== "string" ||
+        typeof password !== "string" ||
+        typeof username !== "string" ||
+        !email ||
+        !password ||
+        !username) {
+        return json({ error: "Please, try to fill in all the fields correctly." }, { status: 400 });
+    }
+    const existingUser = await db.user.findUnique({ where: { email } });
+    if (existingUser) {
+        return json({ error: "Are you sure you don't already have an account with this email?." }, { status: 400 });
+    }
+    const hashedPassword = await bcrypt.hash(password, 10);
+    // Générer un token de confirmation
+    const confirmationToken = randomUUID();
+    // Créer l'utilisateur avec le token et marquer email non confirmé
+    await db.user.create({
+        data: {
+            email,
+            username,
+            password: hashedPassword,
+            emailConfirmed: false,
+            confirmationToken,
+        },
+    });
+    // Envoyer l'e-mail de confirmation
+    await sendConfirmationEmail(email, confirmationToken);
+    // Rediriger vers la page invitant à vérifier la boîte mail
+    return redirect("/check-email");
+};
+export default function SignupPage() {
+    const actionData = useActionData();
+    return (_jsxs("div", { className: "min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-sky-400 to-sky-600 p-4", children: [_jsx("h1", { className: "text-4xl font-extrabold text-white mb-6 drop-shadow-lg", children: "Join the Adventure!" }), _jsxs(Form, { method: "post", className: "w-full max-w-md bg-yellow-200 p-8 rounded-3xl shadow-xl border-4 border-yellow-500", children: [actionData?.error ? (_jsx("div", { className: "mb-4 text-red-600 font-bold", children: actionData.error })) : null, _jsxs("div", { className: "mb-4", children: [_jsx("label", { htmlFor: "username", className: "block text-lg font-semibold text-gray-700 mb-1", children: "Username" }), _jsx("input", { type: "text", name: "username", id: "username", required: true, className: "w-full p-3 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-red-500" })] }), _jsxs("div", { className: "mb-4", children: [_jsx("label", { htmlFor: "email", className: "block text-lg font-semibold text-gray-700 mb-1", children: "Email" }), _jsx("input", { type: "email", name: "email", id: "email", required: true, className: "w-full p-3 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-red-500" })] }), _jsxs("div", { className: "mb-6", children: [_jsx("label", { htmlFor: "password", className: "block text-lg font-semibold text-gray-700 mb-1", children: "Password" }), _jsx("input", { type: "password", name: "password", id: "password", required: true, className: "w-full p-3 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-red-500" })] }), _jsx("button", { type: "submit", className: "w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-4 rounded-full shadow-xl transform hover:scale-105 transition", children: "Start" })] }), _jsxs("p", { className: "mt-4 text-white", children: ["Already on board?", " ", _jsx(Link, { to: "/login", className: "text-blue-200 underline font-semibold", children: "Log in" })] })] }));
+}
