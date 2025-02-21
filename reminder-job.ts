@@ -1,6 +1,6 @@
 // reminder-job.ts
-import { db } from "./app/utils/db.server";
-import { sendReminderEmail } from "./app/utils/email.server";
+import { db } from "./app/utils/db.server.js";
+import { sendReminderEmail } from "./app/utils/email.server.js";
 
 async function runReminderJob() {
   const now = new Date();
