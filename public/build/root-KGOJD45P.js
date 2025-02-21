@@ -19,7 +19,7 @@ import {
 } from "/build/_shared/chunk-PNG5AS42.js";
 
 // app/styles/global.css
-var global_default = "/build/_assets/global-ONKODEBQ.css";
+var global_default = "/build/_assets/global-JWEDX5S3.css";
 
 // app/root.tsx
 var import_jsx_dev_runtime = __toESM(require_jsx_dev_runtime(), 1);
@@ -109,4 +109,4 @@ export {
   App as default,
   links
 };
-//# sourceMappingURL=/build/root-WGVXCL4N.js.map
+//# sourceMappingURL=/build/root-KGOJD45P.js.map

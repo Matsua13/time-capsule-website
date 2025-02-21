@@ -6,9 +6,11 @@ import {
 } from "/build/_shared/chunk-HBOENHLD.js";
 import "/build/_shared/chunk-U4FRFQSK.js";
 import {
-  require_auth,
+  require_auth
+} from "/build/_shared/chunk-JSCKBFOW.js";
+import {
   require_db
-} from "/build/_shared/chunk-W3NWCIRA.js";
+} from "/build/_shared/chunk-KONDUBG3.js";
 import {
   require_node
 } from "/build/_shared/chunk-G7CHZRZX.js";
@@ -24,7 +26,7 @@ import {
   __toESM
 } from "/build/_shared/chunk-PNG5AS42.js";
 
-// app/routes/signup.tsx
+// app/routes/login.tsx
 var import_node = __toESM(require_node(), 1);
 var import_db = __toESM(require_db(), 1);
 var import_auth = __toESM(require_auth(), 1);
@@ -35,7 +37,7 @@ if (!window.$RefreshReg$ || !window.$RefreshSig$ || !window.$RefreshRuntime$) {
   prevRefreshReg = window.$RefreshReg$;
   prevRefreshSig = window.$RefreshSig$;
   window.$RefreshReg$ = (type, id) => {
-    window.$RefreshRuntime$.register(type, '"app/routes/signup.tsx"' + id);
+    window.$RefreshRuntime$.register(type, '"app/routes/login.tsx"' + id);
   };
   window.$RefreshSig$ = window.$RefreshRuntime$.createSignatureFunctionForTransform;
 }
@@ -45,111 +47,95 @@ var _s = $RefreshSig$();
 if (import.meta) {
   import.meta.hot = createHotContext(
     //@ts-expect-error
-    "app/routes/signup.tsx"
+    "app/routes/login.tsx"
   );
-  import.meta.hot.lastModified = "1740075941518.0183";
+  import.meta.hot.lastModified = "1740075850599.736";
 }
-function SignupPage() {
+function LoginPage() {
   _s();
   const actionData = useActionData();
   return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", { className: "min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-sky-400 to-sky-600 p-4", children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("h1", { className: "text-4xl font-extrabold text-white mb-6 drop-shadow-lg", children: "Join the Adventure!" }, void 0, false, {
-      fileName: "app/routes/signup.tsx",
-      lineNumber: 69,
+    /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("h1", { className: "text-4xl font-extrabold text-white mb-6 drop-shadow-lg", children: "Let's create magic!" }, void 0, false, {
+      fileName: "app/routes/login.tsx",
+      lineNumber: 76,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Form, { method: "post", className: "w-full max-w-md bg-yellow-200 p-8 rounded-3xl shadow-xl border-4 border-yellow-500", children: [
       actionData?.error ? /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", { className: "mb-4 text-red-600 font-bold", children: actionData.error }, void 0, false, {
-        fileName: "app/routes/signup.tsx",
-        lineNumber: 73,
+        fileName: "app/routes/login.tsx",
+        lineNumber: 80,
         columnNumber: 30
       }, this) : null,
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", { className: "mb-4", children: [
-        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("label", { htmlFor: "username", className: "block text-lg font-semibold text-gray-700 mb-1", children: "Username" }, void 0, false, {
-          fileName: "app/routes/signup.tsx",
-          lineNumber: 75,
-          columnNumber: 11
-        }, this),
-        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("input", { type: "text", name: "username", id: "username", required: true, className: "w-full p-3 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-red-500" }, void 0, false, {
-          fileName: "app/routes/signup.tsx",
-          lineNumber: 78,
-          columnNumber: 11
-        }, this)
-      ] }, void 0, true, {
-        fileName: "app/routes/signup.tsx",
-        lineNumber: 74,
-        columnNumber: 9
-      }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", { className: "mb-4", children: [
         /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("label", { htmlFor: "email", className: "block text-lg font-semibold text-gray-700 mb-1", children: "Email" }, void 0, false, {
-          fileName: "app/routes/signup.tsx",
-          lineNumber: 81,
+          fileName: "app/routes/login.tsx",
+          lineNumber: 82,
           columnNumber: 11
         }, this),
         /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("input", { type: "email", name: "email", id: "email", required: true, className: "w-full p-3 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-red-500" }, void 0, false, {
-          fileName: "app/routes/signup.tsx",
-          lineNumber: 84,
+          fileName: "app/routes/login.tsx",
+          lineNumber: 85,
           columnNumber: 11
         }, this)
       ] }, void 0, true, {
-        fileName: "app/routes/signup.tsx",
-        lineNumber: 80,
+        fileName: "app/routes/login.tsx",
+        lineNumber: 81,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", { className: "mb-6", children: [
         /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("label", { htmlFor: "password", className: "block text-lg font-semibold text-gray-700 mb-1", children: "Password" }, void 0, false, {
-          fileName: "app/routes/signup.tsx",
-          lineNumber: 87,
+          fileName: "app/routes/login.tsx",
+          lineNumber: 88,
           columnNumber: 11
         }, this),
         /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("input", { type: "password", name: "password", id: "password", required: true, className: "w-full p-3 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-red-500" }, void 0, false, {
-          fileName: "app/routes/signup.tsx",
-          lineNumber: 90,
+          fileName: "app/routes/login.tsx",
+          lineNumber: 91,
           columnNumber: 11
         }, this)
       ] }, void 0, true, {
-        fileName: "app/routes/signup.tsx",
-        lineNumber: 86,
+        fileName: "app/routes/login.tsx",
+        lineNumber: 87,
         columnNumber: 9
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("button", { type: "submit", className: "w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-4 rounded-full shadow-xl transform hover:scale-105 transition", children: "Start" }, void 0, false, {
-        fileName: "app/routes/signup.tsx",
-        lineNumber: 92,
+      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("button", { type: "submit", className: "w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-4 rounded-full shadow-xl transform hover:scale-105 transition", children: "Log in" }, void 0, false, {
+        fileName: "app/routes/login.tsx",
+        lineNumber: 93,
         columnNumber: 9
       }, this)
     ] }, void 0, true, {
-      fileName: "app/routes/signup.tsx",
-      lineNumber: 72,
+      fileName: "app/routes/login.tsx",
+      lineNumber: 79,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("p", { className: "mt-4 text-white", children: [
-      "Already on board?",
+      "Not a member yet?",
       " ",
-      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Link, { to: "/login", className: "text-blue-200 underline font-semibold", children: "Log in" }, void 0, false, {
-        fileName: "app/routes/signup.tsx",
-        lineNumber: 98,
+      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Link, { to: "/signup", className: "text-blue-200 underline font-semibold", children: "Joins us!" }, void 0, false, {
+        fileName: "app/routes/login.tsx",
+        lineNumber: 99,
         columnNumber: 9
       }, this)
     ] }, void 0, true, {
-      fileName: "app/routes/signup.tsx",
-      lineNumber: 96,
+      fileName: "app/routes/login.tsx",
+      lineNumber: 97,
       columnNumber: 7
     }, this)
   ] }, void 0, true, {
-    fileName: "app/routes/signup.tsx",
-    lineNumber: 68,
+    fileName: "app/routes/login.tsx",
+    lineNumber: 75,
     columnNumber: 10
   }, this);
 }
-_s(SignupPage, "fHVw5pq0Zwd2gXh2gyrnVdHnLCc=", false, function() {
+_s(LoginPage, "fHVw5pq0Zwd2gXh2gyrnVdHnLCc=", false, function() {
   return [useActionData];
 });
-_c = SignupPage;
+_c = LoginPage;
 var _c;
-$RefreshReg$(_c, "SignupPage");
+$RefreshReg$(_c, "LoginPage");
 window.$RefreshReg$ = prevRefreshReg;
 window.$RefreshSig$ = prevRefreshSig;
 export {
-  SignupPage as default
+  LoginPage as default
 };
-//# sourceMappingURL=/build/routes/signup-PZMWBGWE.js.map
+//# sourceMappingURL=/build/routes/login-MROXJ7X4.js.map

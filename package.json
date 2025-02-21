@@ -8,7 +8,7 @@
     "build": "remix build",
     "dev": "npx remix dev",
     "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
-    "start": "NODE_ENV=production npx remix-serve build",
+    "start": "NODE_ENV=production npx remix-serve build/index.js",
     "typecheck": "tsc"
   },
   "dependencies": {
@@ -16,14 +16,17 @@
     "@remix-run/node": "^2.15.3",
     "@remix-run/react": "^2.15.3",
     "@remix-run/serve": "^2.15.3",
+    "@sendgrid/mail": "^8.1.4",
     "bcryptjs": "^3.0.2",
     "isbot": "^4.1.0",
+    "nodemailer": "^6.10.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "zod": "^3.24.2"
   },
   "devDependencies": {
     "@remix-run/dev": "^2.15.3",
+    "@types/nodemailer": "^6.4.17",
     "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.7.4",
