@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/media-has-caption */
 // app/routes/capsule/$capsuleId.tsx
 import { json, redirect } from "@remix-run/node";
 import { useLoaderData, Link } from "@remix-run/react";
@@ -50,9 +51,10 @@ export const loader: LoaderFunction = async ({ request, params }) => {
   const now = new Date();
   const scheduledDate = new Date(capsule.scheduledDate);
 
-  // Si l'utilisateur n'est pas le propriétaire et que la capsule n'est pas encore ouverte,
-  // rediriger vers le dashboard avec un message indiquant la date d'ouverture.
-  if (currentUser.id !== capsule.ownerId && now < scheduledDate) {
+  // Si la capsule n'est pas encore ouverte :
+  // - pour une capsule privée, toujours verrouillée, même pour le propriétaire ;
+  // - pour les autres, verrouillée pour les non-propriétaires.
+  if (now < scheduledDate && (capsule.visibility === "private" || currentUser.id !== capsule.ownerId)) {
     return redirect(
       `/dashboard?locked=true&opening=${encodeURIComponent(scheduledDate.toLocaleString())}`
     );
@@ -72,8 +74,7 @@ export const loader: LoaderFunction = async ({ request, params }) => {
 };
 
 export default function CapsuleDetail() {
-  console.log("Capsule Detail est rendu");
-  const { capsule, currentUser } = useLoaderData<LoaderData>();
+  const { capsule } = useLoaderData<LoaderData>();
 
   return (
     <div className="min-h-screen p-4 bg-gradient-to-br from-sky-300 to-sky-500 text-gray-900">
@@ -88,7 +89,7 @@ export default function CapsuleDetail() {
         <p className="mb-4 text-sm text-gray-600">
           Visibility: {capsule.visibility}
         </p>
-        {capsule.ownerId !== currentUser.id && (
+        {capsule.ownerId !== capsule.owner.id && (
           <p className="mb-4 text-sm text-gray-600">
             Sent by {capsule.recipientType}:{" "}
             {capsule.owner.username || capsule.owner.email}
@@ -111,10 +112,8 @@ export default function CapsuleDetail() {
                   {media.type.startsWith("image") ? (
                     <img src={media.url} alt="" className="w-full" />
                   ) : media.type.startsWith("video") ? (
-                    // eslint-disable-next-line jsx-a11y/media-has-caption
                     <video controls src={media.url} className="w-full" />
                   ) : (
-                    // eslint-disable-next-line jsx-a11y/media-has-caption
                     <audio controls src={media.url} />
                   )}
                 </div>
