@@ -127,7 +127,7 @@ import {
 } from "@remix-run/react";
 
 // app/styles/global.css
-var global_default = "/build/_assets/global-JWEDX5S3.css";
+var global_default = "/build/_assets/global-JQY5IX5E.css";
 
 // app/root.tsx
 import { jsxDEV as jsxDEV2 } from "react/jsx-dev-runtime";
@@ -859,7 +859,7 @@ __export(capsuleId_exports, {
   default: () => CapsuleDetail,
   loader: () => loader3
 });
-import { json as json2 } from "@remix-run/node";
+import { json as json2, redirect as redirect4 } from "@remix-run/node";
 import { useLoaderData as useLoaderData2, Link as Link2 } from "@remix-run/react";
 import { jsxDEV as jsxDEV10 } from "react/jsx-dev-runtime";
 var loader3 = async ({ request, params }) => {
@@ -872,12 +872,18 @@ var loader3 = async ({ request, params }) => {
   });
   if (!capsule)
     throw new Response("Capsule not found", { status: 404 });
-  let formattedScheduledDate = new Date(capsule.scheduledDate).toLocaleString("en-US", { timeZone: "UTC" });
+  let now = /* @__PURE__ */ new Date(), scheduledDate = new Date(capsule.scheduledDate);
+  if (currentUser.id !== capsule.ownerId && now < scheduledDate)
+    return redirect4(
+      `/dashboard?locked=true&opening=${encodeURIComponent(scheduledDate.toLocaleString())}`
+    );
+  let formattedScheduledDate = scheduledDate.toLocaleString("en-US", {
+    timeZone: "UTC"
+  });
   return json2({
     capsule: {
       ...capsule,
       formattedScheduledDate
-      // Ajout de la date pré-formatée
     },
     currentUser
   });
@@ -888,12 +894,12 @@ function CapsuleDetail() {
   return /* @__PURE__ */ jsxDEV10("div", { className: "min-h-screen p-4 bg-gradient-to-br from-sky-300 to-sky-500 text-gray-900", children: /* @__PURE__ */ jsxDEV10("div", { className: "max-w-3xl mx-auto bg-white p-8 rounded-3xl shadow-xl border-4 border-yellow-500", children: [
     /* @__PURE__ */ jsxDEV10("h1", { className: "text-4xl font-extrabold drop-shadow-lg mb-4", children: capsule.title }, void 0, !1, {
       fileName: "app/routes/$capsuleId.tsx",
-      lineNumber: 68,
+      lineNumber: 81,
       columnNumber: 9
     }, this),
     /* @__PURE__ */ jsxDEV10("p", { className: "mb-4 text-lg", children: capsule.content }, void 0, !1, {
       fileName: "app/routes/$capsuleId.tsx",
-      lineNumber: 71,
+      lineNumber: 84,
       columnNumber: 9
     }, this),
     /* @__PURE__ */ jsxDEV10("p", { className: "mb-4 text-sm text-gray-600", children: [
@@ -901,7 +907,7 @@ function CapsuleDetail() {
       new Date(capsule.scheduledDate).toLocaleString()
     ] }, void 0, !0, {
       fileName: "app/routes/$capsuleId.tsx",
-      lineNumber: 72,
+      lineNumber: 85,
       columnNumber: 9
     }, this),
     /* @__PURE__ */ jsxDEV10("p", { className: "mb-4 text-sm text-gray-600", children: [
@@ -909,7 +915,7 @@ function CapsuleDetail() {
       capsule.visibility
     ] }, void 0, !0, {
       fileName: "app/routes/$capsuleId.tsx",
-      lineNumber: 75,
+      lineNumber: 88,
       columnNumber: 9
     }, this),
     capsule.ownerId !== currentUser.id && /* @__PURE__ */ jsxDEV10("p", { className: "mb-4 text-sm text-gray-600", children: [
@@ -920,7 +926,7 @@ function CapsuleDetail() {
       capsule.owner.username || capsule.owner.email
     ] }, void 0, !0, {
       fileName: "app/routes/$capsuleId.tsx",
-      lineNumber: 79,
+      lineNumber: 92,
       columnNumber: 11
     }, this),
     capsule.visibility === "group" && capsule.groupRecipient && /* @__PURE__ */ jsxDEV10("p", { className: "mb-4 text-sm text-gray-600", children: [
@@ -932,45 +938,45 @@ function CapsuleDetail() {
       ")"
     ] }, void 0, !0, {
       fileName: "app/routes/$capsuleId.tsx",
-      lineNumber: 85,
+      lineNumber: 98,
       columnNumber: 11
     }, this),
     capsule.media && capsule.media.length > 0 && /* @__PURE__ */ jsxDEV10("div", { className: "mb-4", children: [
       /* @__PURE__ */ jsxDEV10("h2", { className: "text-2xl font-semibold mb-2", children: "Special gifts with your capsule" }, void 0, !1, {
         fileName: "app/routes/$capsuleId.tsx",
-        lineNumber: 92,
+        lineNumber: 105,
         columnNumber: 13
       }, this),
       /* @__PURE__ */ jsxDEV10("div", { className: "grid grid-cols-1 md:grid-cols-2 gap-4", children: capsule.media.map((media) => /* @__PURE__ */ jsxDEV10("div", { className: "p-2 border rounded", children: media.type.startsWith("image") ? /* @__PURE__ */ jsxDEV10("img", { src: media.url, alt: "", className: "w-full" }, void 0, !1, {
         fileName: "app/routes/$capsuleId.tsx",
-        lineNumber: 99,
+        lineNumber: 112,
         columnNumber: 21
       }, this) : media.type.startsWith("video") ? (
         // eslint-disable-next-line jsx-a11y/media-has-caption
         /* @__PURE__ */ jsxDEV10("video", { controls: !0, src: media.url, className: "w-full" }, void 0, !1, {
           fileName: "app/routes/$capsuleId.tsx",
-          lineNumber: 102,
+          lineNumber: 115,
           columnNumber: 21
         }, this)
       ) : (
         // eslint-disable-next-line jsx-a11y/media-has-caption
         /* @__PURE__ */ jsxDEV10("audio", { controls: !0, src: media.url }, void 0, !1, {
           fileName: "app/routes/$capsuleId.tsx",
-          lineNumber: 105,
+          lineNumber: 118,
           columnNumber: 21
         }, this)
       ) }, media.id, !1, {
         fileName: "app/routes/$capsuleId.tsx",
-        lineNumber: 97,
+        lineNumber: 110,
         columnNumber: 17
       }, this)) }, void 0, !1, {
         fileName: "app/routes/$capsuleId.tsx",
-        lineNumber: 95,
+        lineNumber: 108,
         columnNumber: 13
       }, this)
     ] }, void 0, !0, {
       fileName: "app/routes/$capsuleId.tsx",
-      lineNumber: 91,
+      lineNumber: 104,
       columnNumber: 11
     }, this),
     /* @__PURE__ */ jsxDEV10("div", { className: "mt-8", children: /* @__PURE__ */ jsxDEV10(
@@ -978,28 +984,28 @@ function CapsuleDetail() {
       {
         to: "/dashboard",
         className: "bg-gray-700 text-white px-6 py-3 rounded hover:bg-gray-800 transition",
-        children: "Back to dashboard"
+        children: "Back to Dashboard"
       },
       void 0,
       !1,
       {
         fileName: "app/routes/$capsuleId.tsx",
-        lineNumber: 113,
+        lineNumber: 126,
         columnNumber: 11
       },
       this
     ) }, void 0, !1, {
       fileName: "app/routes/$capsuleId.tsx",
-      lineNumber: 112,
+      lineNumber: 125,
       columnNumber: 9
     }, this)
   ] }, void 0, !0, {
     fileName: "app/routes/$capsuleId.tsx",
-    lineNumber: 67,
+    lineNumber: 80,
     columnNumber: 7
   }, this) }, void 0, !1, {
     fileName: "app/routes/$capsuleId.tsx",
-    lineNumber: 66,
+    lineNumber: 79,
     columnNumber: 5
   }, this);
 }
@@ -1074,7 +1080,7 @@ __export(dashboard_exports, {
   loader: () => loader4
 });
 import { Link as Link3, Form as Form2, useLoaderData as useLoaderData3 } from "@remix-run/react";
-import { json as json3, redirect as redirect4 } from "@remix-run/node";
+import { json as json3, redirect as redirect5 } from "@remix-run/node";
 
 // app/components/Timeline.tsx
 import { jsxDEV as jsxDEV12 } from "react/jsx-dev-runtime";
@@ -1235,7 +1241,7 @@ var loader4 = async ({ request }) => {
     where: { capsuleId: parseInt(deleteId) }
   }), await db.capsule.delete({
     where: { id: parseInt(deleteId) }
-  }), redirect4("/dashboard"));
+  }), redirect5("/dashboard"));
 };
 function Dashboard() {
   let { capsules, user, notifications, reminders } = useLoaderData3(), [filter, setFilter] = useState("all"), [localReminders, setLocalReminders] = useState(reminders);
@@ -1406,76 +1412,177 @@ function Dashboard() {
       /* @__PURE__ */ jsxDEV14("h2", { className: "text-2xl font-semibold mb-4", children: "Upcoming Capsules" }, void 0, !1, {
         fileName: "app/routes/dashboard.tsx",
         lineNumber: 255,
-        columnNumber: 9
+        columnNumber: 7
       }, this),
-      upcomingCapsules.length ? /* @__PURE__ */ jsxDEV14("div", { className: "grid gap-4", children: upcomingCapsules.map((capsule) => /* @__PURE__ */ jsxDEV14(
-        "div",
-        {
-          className: "flex justify-between items-center p-4 bg-white rounded shadow hover:bg-gray-100 transition",
-          children: [
-            /* @__PURE__ */ jsxDEV14("div", { children: [
-              /* @__PURE__ */ jsxDEV14("h3", { className: "text-xl font-semibold", children: /* @__PURE__ */ jsxDEV14(Link3, { to: `/${capsule.id}`, className: "text-sky-700 hover:underline", children: capsule.title }, void 0, !1, {
-                fileName: "app/routes/dashboard.tsx",
-                lineNumber: 265,
-                columnNumber: 21
-              }, this) }, void 0, !1, {
-                fileName: "app/routes/dashboard.tsx",
-                lineNumber: 264,
-                columnNumber: 19
-              }, this),
-              /* @__PURE__ */ jsxDEV14("p", { className: "text-sm text-gray-600", children: capsule.content }, void 0, !1, {
-                fileName: "app/routes/dashboard.tsx",
-                lineNumber: 269,
-                columnNumber: 19
-              }, this),
-              /* @__PURE__ */ jsxDEV14("p", { className: "text-xs text-gray-500", children: [
-                "Opening day: ",
-                new Date(capsule.scheduledDate).toLocaleString()
+      upcomingCapsules.length ? /* @__PURE__ */ jsxDEV14("div", { className: "grid gap-4", children: upcomingCapsules.map((capsule) => {
+        let capsuleDate = new Date(capsule.scheduledDate);
+        return capsule.ownerId !== user.id && capsuleDate > now ? /* @__PURE__ */ jsxDEV14(
+          "div",
+          {
+            className: "flex justify-between items-center p-4 bg-gray-200 rounded shadow border border-gray-400 opacity-50 cursor-not-allowed",
+            onClick: () => alert(`Be patient, this capsule will open on ${capsuleDate.toLocaleString()}`),
+            role: "button",
+            tabIndex: 0,
+            onKeyDown: (e) => {
+              (e.key === "Enter" || e.key === " ") && alert(`Be patient, this capsule will open on ${capsuleDate.toLocaleString()}`);
+            },
+            children: [
+              /* @__PURE__ */ jsxDEV14("div", { children: [
+                /* @__PURE__ */ jsxDEV14("h3", { className: "text-xl font-semibold text-gray-700", children: capsule.title }, void 0, !1, {
+                  fileName: "app/routes/dashboard.tsx",
+                  lineNumber: 278,
+                  columnNumber: 21
+                }, this),
+                /* @__PURE__ */ jsxDEV14("p", { className: "text-xs text-gray-600", children: [
+                  "Opening day: ",
+                  capsuleDate.toLocaleString()
+                ] }, void 0, !0, {
+                  fileName: "app/routes/dashboard.tsx",
+                  lineNumber: 279,
+                  columnNumber: 21
+                }, this)
               ] }, void 0, !0, {
                 fileName: "app/routes/dashboard.tsx",
-                lineNumber: 270,
+                lineNumber: 277,
+                columnNumber: 19
+              }, this),
+              /* @__PURE__ */ jsxDEV14("div", { children: /* @__PURE__ */ jsxDEV14(
+                "svg",
+                {
+                  xmlns: "http://www.w3.org/2000/svg",
+                  className: "h-6 w-6 text-gray-700",
+                  fill: "none",
+                  viewBox: "0 0 24 24",
+                  stroke: "currentColor",
+                  children: [
+                    /* @__PURE__ */ jsxDEV14(
+                      "path",
+                      {
+                        strokeLinecap: "round",
+                        strokeLinejoin: "round",
+                        strokeWidth: 2,
+                        d: "M12 11c0-1.657-1.343-3-3-3S6 9.343 6 11v2h6v-2z"
+                      },
+                      void 0,
+                      !1,
+                      {
+                        fileName: "app/routes/dashboard.tsx",
+                        lineNumber: 292,
+                        columnNumber: 23
+                      },
+                      this
+                    ),
+                    /* @__PURE__ */ jsxDEV14(
+                      "path",
+                      {
+                        strokeLinecap: "round",
+                        strokeLinejoin: "round",
+                        strokeWidth: 2,
+                        d: "M16 11V9a4 4 0 00-8 0v2"
+                      },
+                      void 0,
+                      !1,
+                      {
+                        fileName: "app/routes/dashboard.tsx",
+                        lineNumber: 298,
+                        columnNumber: 23
+                      },
+                      this
+                    )
+                  ]
+                },
+                void 0,
+                !0,
+                {
+                  fileName: "app/routes/dashboard.tsx",
+                  lineNumber: 285,
+                  columnNumber: 21
+                },
+                this
+              ) }, void 0, !1, {
+                fileName: "app/routes/dashboard.tsx",
+                lineNumber: 283,
                 columnNumber: 19
               }, this)
-            ] }, void 0, !0, {
-              fileName: "app/routes/dashboard.tsx",
-              lineNumber: 263,
-              columnNumber: 17
-            }, this),
-            /* @__PURE__ */ jsxDEV14(
-              Link3,
-              {
-                to: "/delete-capsules",
-                className: "ml-4 text-red-600 hover:text-red-800",
-                title: "Manage capsule deletions",
-                children: "\u{1F5D1}\uFE0F"
-              },
-              void 0,
-              !1,
-              {
+            ]
+          },
+          capsule.id,
+          !0,
+          {
+            fileName: "app/routes/dashboard.tsx",
+            lineNumber: 263,
+            columnNumber: 17
+          },
+          this
+        ) : /* @__PURE__ */ jsxDEV14(
+          "div",
+          {
+            className: "flex justify-between items-center p-4 bg-white rounded shadow hover:bg-gray-100 transition",
+            children: [
+              /* @__PURE__ */ jsxDEV14("div", { children: [
+                /* @__PURE__ */ jsxDEV14("h3", { className: "text-xl font-semibold", children: /* @__PURE__ */ jsxDEV14(Link3, { to: `/${capsule.id}`, className: "text-sky-700 hover:underline", children: capsule.title }, void 0, !1, {
+                  fileName: "app/routes/dashboard.tsx",
+                  lineNumber: 317,
+                  columnNumber: 23
+                }, this) }, void 0, !1, {
+                  fileName: "app/routes/dashboard.tsx",
+                  lineNumber: 316,
+                  columnNumber: 21
+                }, this),
+                /* @__PURE__ */ jsxDEV14("p", { className: "text-sm text-gray-600", children: capsule.content }, void 0, !1, {
+                  fileName: "app/routes/dashboard.tsx",
+                  lineNumber: 321,
+                  columnNumber: 21
+                }, this),
+                /* @__PURE__ */ jsxDEV14("p", { className: "text-xs text-gray-500", children: [
+                  "Opening day: ",
+                  capsuleDate.toLocaleString()
+                ] }, void 0, !0, {
+                  fileName: "app/routes/dashboard.tsx",
+                  lineNumber: 322,
+                  columnNumber: 21
+                }, this)
+              ] }, void 0, !0, {
                 fileName: "app/routes/dashboard.tsx",
-                lineNumber: 275,
-                columnNumber: 17
-              },
-              this
-            )
-          ]
-        },
-        capsule.id,
-        !0,
-        {
-          fileName: "app/routes/dashboard.tsx",
-          lineNumber: 259,
-          columnNumber: 15
-        },
-        this
-      )) }, void 0, !1, {
+                lineNumber: 315,
+                columnNumber: 19
+              }, this),
+              /* @__PURE__ */ jsxDEV14(
+                Link3,
+                {
+                  to: "/delete-capsules",
+                  className: "ml-4 text-red-600 hover:text-red-800",
+                  title: "Manage capsule deletions",
+                  children: "\u{1F5D1}\uFE0F"
+                },
+                void 0,
+                !1,
+                {
+                  fileName: "app/routes/dashboard.tsx",
+                  lineNumber: 326,
+                  columnNumber: 19
+                },
+                this
+              )
+            ]
+          },
+          capsule.id,
+          !0,
+          {
+            fileName: "app/routes/dashboard.tsx",
+            lineNumber: 311,
+            columnNumber: 17
+          },
+          this
+        );
+      }) }, void 0, !1, {
         fileName: "app/routes/dashboard.tsx",
         lineNumber: 257,
-        columnNumber: 11
+        columnNumber: 9
       }, this) : /* @__PURE__ */ jsxDEV14("p", { children: "No upcoming capsules." }, void 0, !1, {
         fileName: "app/routes/dashboard.tsx",
-        lineNumber: 286,
-        columnNumber: 11
+        lineNumber: 339,
+        columnNumber: 9
       }, this)
     ] }, void 0, !0, {
       fileName: "app/routes/dashboard.tsx",
@@ -1485,7 +1592,7 @@ function Dashboard() {
     /* @__PURE__ */ jsxDEV14("section", { className: "mb-8", children: [
       /* @__PURE__ */ jsxDEV14("h2", { className: "text-2xl font-semibold mb-4", children: "Previous Capsules" }, void 0, !1, {
         fileName: "app/routes/dashboard.tsx",
-        lineNumber: 292,
+        lineNumber: 345,
         columnNumber: 9
       }, this),
       pastCapsules.length ? /* @__PURE__ */ jsxDEV14("div", { className: "grid gap-4", children: pastCapsules.map((capsule) => /* @__PURE__ */ jsxDEV14(
@@ -1505,18 +1612,18 @@ function Dashboard() {
                 !1,
                 {
                   fileName: "app/routes/dashboard.tsx",
-                  lineNumber: 302,
+                  lineNumber: 355,
                   columnNumber: 21
                 },
                 this
               ) }, void 0, !1, {
                 fileName: "app/routes/dashboard.tsx",
-                lineNumber: 301,
+                lineNumber: 354,
                 columnNumber: 19
               }, this),
               /* @__PURE__ */ jsxDEV14("p", { className: "text-sm text-gray-600", children: capsule.content }, void 0, !1, {
                 fileName: "app/routes/dashboard.tsx",
-                lineNumber: 309,
+                lineNumber: 362,
                 columnNumber: 19
               }, this),
               /* @__PURE__ */ jsxDEV14("p", { className: "text-xs text-gray-500", children: [
@@ -1524,12 +1631,12 @@ function Dashboard() {
                 new Date(capsule.scheduledDate).toLocaleString()
               ] }, void 0, !0, {
                 fileName: "app/routes/dashboard.tsx",
-                lineNumber: 310,
+                lineNumber: 363,
                 columnNumber: 19
               }, this)
             ] }, void 0, !0, {
               fileName: "app/routes/dashboard.tsx",
-              lineNumber: 300,
+              lineNumber: 353,
               columnNumber: 17
             }, this),
             /* @__PURE__ */ jsxDEV14(
@@ -1544,7 +1651,7 @@ function Dashboard() {
               !1,
               {
                 fileName: "app/routes/dashboard.tsx",
-                lineNumber: 314,
+                lineNumber: 367,
                 columnNumber: 17
               },
               this
@@ -1555,71 +1662,71 @@ function Dashboard() {
         !0,
         {
           fileName: "app/routes/dashboard.tsx",
-          lineNumber: 296,
+          lineNumber: 349,
           columnNumber: 15
         },
         this
       )) }, void 0, !1, {
         fileName: "app/routes/dashboard.tsx",
-        lineNumber: 294,
+        lineNumber: 347,
         columnNumber: 11
       }, this) : /* @__PURE__ */ jsxDEV14("p", { children: "No previous capsules." }, void 0, !1, {
         fileName: "app/routes/dashboard.tsx",
-        lineNumber: 325,
+        lineNumber: 378,
         columnNumber: 11
       }, this)
     ] }, void 0, !0, {
       fileName: "app/routes/dashboard.tsx",
-      lineNumber: 291,
+      lineNumber: 344,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ jsxDEV14("section", { className: "mb-8", children: [
       /* @__PURE__ */ jsxDEV14("h2", { className: "text-center text-2xl font-semibold mb-4", children: "Visualisations" }, void 0, !1, {
         fileName: "app/routes/dashboard.tsx",
-        lineNumber: 331,
+        lineNumber: 384,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ jsxDEV14("div", { className: "grid grid-cols-1 md:grid-cols-2 gap-8", children: [
         /* @__PURE__ */ jsxDEV14("div", { className: "bg-white p-8 rounded-3xl shadow-xl border-4 border-yellow-500", children: [
           /* @__PURE__ */ jsxDEV14("h3", { className: "text-xl font-semibold mb-2", children: "Timeline" }, void 0, !1, {
             fileName: "app/routes/dashboard.tsx",
-            lineNumber: 334,
+            lineNumber: 387,
             columnNumber: 13
           }, this),
           /* @__PURE__ */ jsxDEV14(Timeline_default, { capsules }, void 0, !1, {
             fileName: "app/routes/dashboard.tsx",
-            lineNumber: 335,
+            lineNumber: 388,
             columnNumber: 13
           }, this)
         ] }, void 0, !0, {
           fileName: "app/routes/dashboard.tsx",
-          lineNumber: 333,
+          lineNumber: 386,
           columnNumber: 11
         }, this),
         /* @__PURE__ */ jsxDEV14("div", { className: "bg-white p-8 rounded-3xl shadow-xl border-4 border-yellow-500", children: [
           /* @__PURE__ */ jsxDEV14("h3", { className: "text-xl font-semibold mb-2", children: "Calendar" }, void 0, !1, {
             fileName: "app/routes/dashboard.tsx",
-            lineNumber: 338,
+            lineNumber: 391,
             columnNumber: 13
           }, this),
           /* @__PURE__ */ jsxDEV14(CalendarView, { capsules }, void 0, !1, {
             fileName: "app/routes/dashboard.tsx",
-            lineNumber: 339,
+            lineNumber: 392,
             columnNumber: 13
           }, this)
         ] }, void 0, !0, {
           fileName: "app/routes/dashboard.tsx",
-          lineNumber: 337,
+          lineNumber: 390,
           columnNumber: 11
         }, this)
       ] }, void 0, !0, {
         fileName: "app/routes/dashboard.tsx",
-        lineNumber: 332,
+        lineNumber: 385,
         columnNumber: 9
       }, this)
     ] }, void 0, !0, {
       fileName: "app/routes/dashboard.tsx",
-      lineNumber: 330,
+      lineNumber: 383,
       columnNumber: 7
     }, this)
   ] }, void 0, !0, {
@@ -1635,7 +1742,7 @@ __export(confirm_exports, {
   default: () => Confirm,
   loader: () => loader5
 });
-import { redirect as redirect5 } from "@remix-run/node";
+import { redirect as redirect6 } from "@remix-run/node";
 import { jsxDEV as jsxDEV15 } from "react/jsx-dev-runtime";
 var loader5 = async ({ request }) => {
   let token = new URL(request.url).searchParams.get("token");
@@ -1647,7 +1754,7 @@ var loader5 = async ({ request }) => {
   return await db.user.update({
     where: { id: user.id },
     data: { emailConfirmed: !0, confirmationToken: null }
-  }), redirect5("/login?confirmed=1");
+  }), redirect6("/login?confirmed=1");
 };
 function Confirm() {
   return /* @__PURE__ */ jsxDEV15("p", { children: "Confirmation ongoing\u2026" }, void 0, !1, {
@@ -2130,15 +2237,15 @@ __export(logout_exports, {
   default: () => Logout,
   loader: () => loader6
 });
-import { redirect as redirect6 } from "@remix-run/node";
+import { redirect as redirect7 } from "@remix-run/node";
 var action3 = async ({ request }) => {
   let session = await getSession(request.headers.get("Cookie"));
-  return redirect6("/", {
+  return redirect7("/", {
     headers: {
       "Set-Cookie": await destroySession(session)
     }
   });
-}, loader6 = async () => redirect6("/");
+}, loader6 = async () => redirect7("/");
 function Logout() {
   return null;
 }
@@ -2149,7 +2256,7 @@ __export(signup_exports, {
   action: () => action4,
   default: () => SignupPage
 });
-import { json as json4, redirect as redirect7 } from "@remix-run/node";
+import { json as json4, redirect as redirect8 } from "@remix-run/node";
 import { Form as Form3, useActionData, Link as Link5 } from "@remix-run/react";
 import bcrypt2 from "bcryptjs";
 
@@ -2214,7 +2321,7 @@ var action4 = async ({ request }) => {
       emailConfirmed: !1,
       confirmationToken
     }
-  }), await sendConfirmationEmail(email, confirmationToken), redirect7("/check-email");
+  }), await sendConfirmationEmail(email, confirmationToken), redirect8("/check-email");
 };
 function SignupPage() {
   let actionData = useActionData();
@@ -3061,7 +3168,7 @@ __export(new_exports, {
   loader: () => loader7
 });
 import { Form as Form5, useActionData as useActionData3, useNavigation } from "@remix-run/react";
-import { json as json6, redirect as redirect9 } from "@remix-run/node";
+import { json as json6, redirect as redirect10 } from "@remix-run/node";
 import { useState as useState4 } from "react";
 import { promises as fs } from "fs";
 import path from "path";
@@ -3076,16 +3183,29 @@ var loader7 = async ({ request }) => (await requireUser(request), json6({})), ac
     return json6({ error: "Please, choose the opening day." }, { status: 400 });
   if (typeof visibility != "string")
     return json6({ error: "Please, choose the visibility." }, { status: 400 });
-  let groupRecipient = null, recipientType = null, recipientUser = null;
+  let groupRecipients = [], recipientType = null, recipientUsers = [], groupRecipientStored = null;
   if (visibility === "group") {
     let groupChoice = formData.get("groupChoice");
-    if (groupChoice === "username" ? (groupRecipient = formData.get("groupUsername"), recipientType = "username") : groupChoice === "email" && (groupRecipient = formData.get("groupEmail"), recipientType = "email"), !groupRecipient || groupRecipient.trim() === "")
-      return json6({ error: "Please enter the username or email of the recipient" }, { status: 400 });
-    recipientType === "email" ? recipientUser = await db.user.findUnique({
-      where: { email: groupRecipient.trim() }
-    }) : recipientType === "username" && (recipientUser = await db.user.findFirst({
-      where: { username: groupRecipient.trim() }
-    })), console.log("Recipient user:", recipientUser), recipientUser && recipientUser.id === user.id && (recipientUser = null);
+    if (groupChoice === "username") {
+      let groupUsernames = formData.get("groupUsername");
+      if (!groupUsernames || groupUsernames.trim() === "")
+        return json6({ error: "Please enter at least one recipient username." }, { status: 400 });
+      groupRecipients = groupUsernames.split(",").map((s) => s.trim()).filter((s) => s.length > 0), recipientType = "username";
+    } else if (groupChoice === "email") {
+      let groupEmails = formData.get("groupEmail");
+      if (!groupEmails || groupEmails.trim() === "")
+        return json6({ error: "Please enter at least one recipient email." }, { status: 400 });
+      groupRecipients = groupEmails.split(",").map((s) => s.trim()).filter((s) => s.length > 0), recipientType = "email";
+    }
+    groupRecipientStored = groupRecipients.join(", ");
+    for (let r of groupRecipients) {
+      let foundUser;
+      recipientType === "email" ? foundUser = await db.user.findUnique({
+        where: { email: r }
+      }) : recipientType === "username" && (foundUser = await db.user.findFirst({
+        where: { username: r }
+      })), foundUser && foundUser.id !== user.id && recipientUsers.push(foundUser);
+    }
   }
   let capsuleData = {
     ownerId: user.id,
@@ -3093,18 +3213,19 @@ var loader7 = async ({ request }) => (await requireUser(request), json6({})), ac
     content: content.trim(),
     scheduledDate: new Date(scheduledDate),
     visibility,
-    groupRecipient: visibility === "group" ? groupRecipient.trim() : null,
+    groupRecipient: visibility === "group" ? groupRecipientStored : null,
     recipientType: visibility === "group" ? recipientType : null
   }, capsule = await db.capsule.create({ data: capsuleData });
-  if (visibility === "group" && recipientUser && recipientUser.id !== user.id) {
-    let notificationMessage = `capsule:${capsule.id}: someone's thinking about you!`;
-    await db.notification.create({
-      data: {
-        userId: recipientUser.id,
-        message: notificationMessage
-      }
-    }), console.log("Notification created for user", recipientUser.id), await sendInstantNotificationEmail(recipientUser.email, capsule.title);
-  }
+  if (visibility === "group" && recipientUsers.length > 0)
+    for (let recipientUser of recipientUsers) {
+      let notificationMessage = `capsule:${capsule.id}: someone's thinking about you!`;
+      await db.notification.create({
+        data: {
+          userId: recipientUser.id,
+          message: notificationMessage
+        }
+      }), console.log("Notification created for user", recipientUser.id), await sendInstantNotificationEmail(recipientUser.email, capsule.title);
+    }
   let mediaFile = formData.get("mediaFile");
   if (mediaFile && mediaFile.size > 0) {
     let arrayBuffer = await mediaFile.arrayBuffer(), buffer = Buffer.from(arrayBuffer), filename = `${Date.now()}-${mediaFile.name}`, uploadDir = path.join(process.cwd(), "public", "uploads"), filePath = path.join(uploadDir, filename);
@@ -3114,12 +3235,11 @@ var loader7 = async ({ request }) => (await requireUser(request), json6({})), ac
       data: {
         capsule: { connect: { id: capsule.id } },
         type: mediaType,
-        // L'URL est ici le chemin relatif vers le fichier
         url: `/uploads/${filename}`
       }
     });
   }
-  return redirect9(`/${capsule.id}`);
+  return redirect10(`/${capsule.id}`);
 };
 function NewCapsule() {
   let actionData = useActionData3(), transition = useNavigation(), [selectedVisibility, setSelectedVisibility] = useState4("private"), [groupChoice, setGroupChoice] = useState4("");
@@ -3136,7 +3256,7 @@ function NewCapsule() {
         encType: "multipart/form-data",
         onSubmit: (event) => {
           window.confirm(
-            "Warning: Once created, the capsule cannot be modified. This is deliberate, to encourage you to be yourself: the idea is to be in the present. The editable draft option will come later for those who need more reflection."
+            "Warning: Once created, the capsule cannot be modified. This is deliberate, to encourage you to be in the present. The editable draft option will come later for those who need more reflection."
           ) || event.preventDefault();
         },
         className: "w-full max-w-md bg-yellow-200 p-8 rounded-3xl shadow-xl border-4 border-yellow-500",
@@ -3263,7 +3383,7 @@ function NewCapsule() {
           selectedVisibility === "group" && /* @__PURE__ */ jsxDEV20("fieldset", { className: "mb-4 border border-gray-300 p-4 rounded", children: [
             /* @__PURE__ */ jsxDEV20("legend", { className: "text-lg font-semibold mb-2", children: "How do you want to send the Capsule?" }, void 0, !1, {
               fileName: "app/routes/new.tsx",
-              lineNumber: 234,
+              lineNumber: 233,
               columnNumber: 13
             }, this),
             /* @__PURE__ */ jsxDEV20("div", { className: "mb-2", children: /* @__PURE__ */ jsxDEV20("label", { className: "inline-flex items-center", children: [
@@ -3281,7 +3401,7 @@ function NewCapsule() {
                 !1,
                 {
                   fileName: "app/routes/new.tsx",
-                  lineNumber: 239,
+                  lineNumber: 238,
                   columnNumber: 17
                 },
                 this
@@ -3289,11 +3409,11 @@ function NewCapsule() {
               "Via username"
             ] }, void 0, !0, {
               fileName: "app/routes/new.tsx",
-              lineNumber: 238,
+              lineNumber: 237,
               columnNumber: 15
             }, this) }, void 0, !1, {
               fileName: "app/routes/new.tsx",
-              lineNumber: 237,
+              lineNumber: 236,
               columnNumber: 13
             }, this),
             /* @__PURE__ */ jsxDEV20("div", { className: "mb-2", children: /* @__PURE__ */ jsxDEV20("label", { className: "inline-flex items-center", children: [
@@ -3311,7 +3431,7 @@ function NewCapsule() {
                 !1,
                 {
                   fileName: "app/routes/new.tsx",
-                  lineNumber: 252,
+                  lineNumber: 251,
                   columnNumber: 17
                 },
                 this
@@ -3319,45 +3439,47 @@ function NewCapsule() {
               "Via email"
             ] }, void 0, !0, {
               fileName: "app/routes/new.tsx",
-              lineNumber: 251,
+              lineNumber: 250,
               columnNumber: 15
             }, this) }, void 0, !1, {
               fileName: "app/routes/new.tsx",
-              lineNumber: 250,
+              lineNumber: 249,
               columnNumber: 13
             }, this),
             groupChoice === "username" && /* @__PURE__ */ jsxDEV20("label", { className: "block mt-2", children: [
-              "Recipient username:",
+              "Recipient usernames (comma separated):",
               /* @__PURE__ */ jsxDEV20(
                 "input",
                 {
                   type: "text",
                   name: "groupUsername",
                   required: !0,
+                  placeholder: "selim, jane, ma\xEFa",
                   className: "mt-1 block w-full p-3 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-red-500"
                 },
                 void 0,
                 !1,
                 {
                   fileName: "app/routes/new.tsx",
-                  lineNumber: 266,
+                  lineNumber: 265,
                   columnNumber: 17
                 },
                 this
               )
             ] }, void 0, !0, {
               fileName: "app/routes/new.tsx",
-              lineNumber: 264,
+              lineNumber: 263,
               columnNumber: 15
             }, this),
             groupChoice === "email" && /* @__PURE__ */ jsxDEV20("label", { className: "block mt-2", children: [
-              "Recipient email:",
+              "Recipient emails (comma separated):",
               /* @__PURE__ */ jsxDEV20(
                 "input",
                 {
-                  type: "email",
+                  type: "text",
                   name: "groupEmail",
                   required: !0,
+                  placeholder: "selim@example.com, jane@example.com",
                   className: "mt-1 block w-full p-3 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-red-500"
                 },
                 void 0,
@@ -3376,7 +3498,7 @@ function NewCapsule() {
             }, this)
           ] }, void 0, !0, {
             fileName: "app/routes/new.tsx",
-            lineNumber: 233,
+            lineNumber: 232,
             columnNumber: 11
           }, this),
           /* @__PURE__ */ jsxDEV20("fieldset", { className: "mb-4 border border-gray-300 p-4 rounded", children: [
@@ -3450,7 +3572,7 @@ function NewCapsule() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { entry: { module: "/build/entry.client-TLQCUBIT.js", imports: ["/build/_shared/chunk-O4BRYNJ4.js", "/build/_shared/chunk-HBOENHLD.js", "/build/_shared/chunk-U4FRFQSK.js", "/build/_shared/chunk-XGOTYLZ5.js", "/build/_shared/chunk-7M6SC7J5.js", "/build/_shared/chunk-FOVVXGJ2.js", "/build/_shared/chunk-UWV35TSL.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-KGOJD45P.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/$capsuleId": { id: "routes/$capsuleId", parentId: "root", path: ":capsuleId", index: void 0, caseSensitive: void 0, module: "/build/routes/$capsuleId-XZ2EYPEI.js", imports: ["/build/_shared/chunk-JSCKBFOW.js", "/build/_shared/chunk-KONDUBG3.js", "/build/_shared/chunk-G7CHZRZX.js"], hasAction: !1, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-G73HSPV7.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/check-email": { id: "routes/check-email", parentId: "root", path: "check-email", index: void 0, caseSensitive: void 0, module: "/build/routes/check-email-VCGO4LB2.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/community-guidelines": { id: "routes/community-guidelines", parentId: "root", path: "community-guidelines", index: void 0, caseSensitive: void 0, module: "/build/routes/community-guidelines-X55JPK2G.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/confirm": { id: "routes/confirm", parentId: "root", path: "confirm", index: void 0, caseSensitive: void 0, module: "/build/routes/confirm-TUVAOTYP.js", imports: ["/build/_shared/chunk-KONDUBG3.js", "/build/_shared/chunk-G7CHZRZX.js"], hasAction: !1, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/contact-us": { id: "routes/contact-us", parentId: "root", path: "contact-us", index: void 0, caseSensitive: void 0, module: "/build/routes/contact-us-2ZHO32BN.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/dashboard": { id: "routes/dashboard", parentId: "root", path: "dashboard", index: void 0, caseSensitive: void 0, module: "/build/routes/dashboard-QFIA3LAB.js", imports: ["/build/_shared/chunk-JSCKBFOW.js", "/build/_shared/chunk-KONDUBG3.js", "/build/_shared/chunk-G7CHZRZX.js"], hasAction: !0, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/delete-capsules": { id: "routes/delete-capsules", parentId: "root", path: "delete-capsules", index: void 0, caseSensitive: void 0, module: "/build/routes/delete-capsules-BNOZKYGC.js", imports: ["/build/_shared/chunk-JSCKBFOW.js", "/build/_shared/chunk-KONDUBG3.js", "/build/_shared/chunk-G7CHZRZX.js"], hasAction: !0, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: "index", index: void 0, caseSensitive: void 0, module: "/build/routes/index-4BETLTF6.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/login": { id: "routes/login", parentId: "root", path: "login", index: void 0, caseSensitive: void 0, module: "/build/routes/login-MROXJ7X4.js", imports: ["/build/_shared/chunk-3TAIMXWF.js", "/build/_shared/chunk-JSCKBFOW.js", "/build/_shared/chunk-KONDUBG3.js", "/build/_shared/chunk-G7CHZRZX.js"], hasAction: !0, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/logout": { id: "routes/logout", parentId: "root", path: "logout", index: void 0, caseSensitive: void 0, module: "/build/routes/logout-3MCVWBUP.js", imports: ["/build/_shared/chunk-G7CHZRZX.js"], hasAction: !0, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/new": { id: "routes/new", parentId: "root", path: "new", index: void 0, caseSensitive: void 0, module: "/build/routes/new-2WMIWN2B.js", imports: ["/build/_shared/chunk-3NMNVWE6.js", "/build/_shared/chunk-JSCKBFOW.js", "/build/_shared/chunk-KONDUBG3.js", "/build/_shared/chunk-G7CHZRZX.js"], hasAction: !0, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/notification": { id: "routes/notification", parentId: "root", path: "notification", index: void 0, caseSensitive: void 0, module: "/build/routes/notification-7ZHBOCK7.js", imports: ["/build/_shared/chunk-JSCKBFOW.js", "/build/_shared/chunk-KONDUBG3.js", "/build/_shared/chunk-G7CHZRZX.js"], hasAction: !1, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/privacy-policy": { id: "routes/privacy-policy", parentId: "root", path: "privacy-policy", index: void 0, caseSensitive: void 0, module: "/build/routes/privacy-policy-UHXXRGZO.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/safety-tips": { id: "routes/safety-tips", parentId: "root", path: "safety-tips", index: void 0, caseSensitive: void 0, module: "/build/routes/safety-tips-VXVNC4VE.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/signup": { id: "routes/signup", parentId: "root", path: "signup", index: void 0, caseSensitive: void 0, module: "/build/routes/signup-IQ34T3N5.js", imports: ["/build/_shared/chunk-3TAIMXWF.js", "/build/_shared/chunk-3NMNVWE6.js", "/build/_shared/chunk-KONDUBG3.js", "/build/_shared/chunk-G7CHZRZX.js"], hasAction: !0, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/terms-of-use": { id: "routes/terms-of-use", parentId: "root", path: "terms-of-use", index: void 0, caseSensitive: void 0, module: "/build/routes/terms-of-use-JNAYU4Y6.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/upcoming-updates": { id: "routes/upcoming-updates", parentId: "root", path: "upcoming-updates", index: void 0, caseSensitive: void 0, module: "/build/routes/upcoming-updates-B2FR3UUD.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 } }, version: "90501ab2", hmr: { runtime: "/build/_shared/chunk-FOVVXGJ2.js", timestamp: 1740152085875 }, url: "/build/manifest-90501AB2.js" };
+var assets_manifest_default = { entry: { module: "/build/entry.client-TLQCUBIT.js", imports: ["/build/_shared/chunk-O4BRYNJ4.js", "/build/_shared/chunk-HBOENHLD.js", "/build/_shared/chunk-U4FRFQSK.js", "/build/_shared/chunk-XGOTYLZ5.js", "/build/_shared/chunk-7M6SC7J5.js", "/build/_shared/chunk-FOVVXGJ2.js", "/build/_shared/chunk-UWV35TSL.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-XF6T3RXH.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/$capsuleId": { id: "routes/$capsuleId", parentId: "root", path: ":capsuleId", index: void 0, caseSensitive: void 0, module: "/build/routes/$capsuleId-XZ4VTENU.js", imports: ["/build/_shared/chunk-JSCKBFOW.js", "/build/_shared/chunk-KONDUBG3.js", "/build/_shared/chunk-G7CHZRZX.js"], hasAction: !1, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-G73HSPV7.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/check-email": { id: "routes/check-email", parentId: "root", path: "check-email", index: void 0, caseSensitive: void 0, module: "/build/routes/check-email-VCGO4LB2.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/community-guidelines": { id: "routes/community-guidelines", parentId: "root", path: "community-guidelines", index: void 0, caseSensitive: void 0, module: "/build/routes/community-guidelines-X55JPK2G.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/confirm": { id: "routes/confirm", parentId: "root", path: "confirm", index: void 0, caseSensitive: void 0, module: "/build/routes/confirm-TUVAOTYP.js", imports: ["/build/_shared/chunk-KONDUBG3.js", "/build/_shared/chunk-G7CHZRZX.js"], hasAction: !1, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/contact-us": { id: "routes/contact-us", parentId: "root", path: "contact-us", index: void 0, caseSensitive: void 0, module: "/build/routes/contact-us-2ZHO32BN.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/dashboard": { id: "routes/dashboard", parentId: "root", path: "dashboard", index: void 0, caseSensitive: void 0, module: "/build/routes/dashboard-IYWBTGUO.js", imports: ["/build/_shared/chunk-JSCKBFOW.js", "/build/_shared/chunk-KONDUBG3.js", "/build/_shared/chunk-G7CHZRZX.js"], hasAction: !0, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/delete-capsules": { id: "routes/delete-capsules", parentId: "root", path: "delete-capsules", index: void 0, caseSensitive: void 0, module: "/build/routes/delete-capsules-BNOZKYGC.js", imports: ["/build/_shared/chunk-JSCKBFOW.js", "/build/_shared/chunk-KONDUBG3.js", "/build/_shared/chunk-G7CHZRZX.js"], hasAction: !0, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: "index", index: void 0, caseSensitive: void 0, module: "/build/routes/index-4BETLTF6.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/login": { id: "routes/login", parentId: "root", path: "login", index: void 0, caseSensitive: void 0, module: "/build/routes/login-MROXJ7X4.js", imports: ["/build/_shared/chunk-3TAIMXWF.js", "/build/_shared/chunk-JSCKBFOW.js", "/build/_shared/chunk-KONDUBG3.js", "/build/_shared/chunk-G7CHZRZX.js"], hasAction: !0, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/logout": { id: "routes/logout", parentId: "root", path: "logout", index: void 0, caseSensitive: void 0, module: "/build/routes/logout-3MCVWBUP.js", imports: ["/build/_shared/chunk-G7CHZRZX.js"], hasAction: !0, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/new": { id: "routes/new", parentId: "root", path: "new", index: void 0, caseSensitive: void 0, module: "/build/routes/new-KAK3GSWK.js", imports: ["/build/_shared/chunk-3NMNVWE6.js", "/build/_shared/chunk-JSCKBFOW.js", "/build/_shared/chunk-KONDUBG3.js", "/build/_shared/chunk-G7CHZRZX.js"], hasAction: !0, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/notification": { id: "routes/notification", parentId: "root", path: "notification", index: void 0, caseSensitive: void 0, module: "/build/routes/notification-7ZHBOCK7.js", imports: ["/build/_shared/chunk-JSCKBFOW.js", "/build/_shared/chunk-KONDUBG3.js", "/build/_shared/chunk-G7CHZRZX.js"], hasAction: !1, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/privacy-policy": { id: "routes/privacy-policy", parentId: "root", path: "privacy-policy", index: void 0, caseSensitive: void 0, module: "/build/routes/privacy-policy-UHXXRGZO.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/safety-tips": { id: "routes/safety-tips", parentId: "root", path: "safety-tips", index: void 0, caseSensitive: void 0, module: "/build/routes/safety-tips-VXVNC4VE.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/signup": { id: "routes/signup", parentId: "root", path: "signup", index: void 0, caseSensitive: void 0, module: "/build/routes/signup-IQ34T3N5.js", imports: ["/build/_shared/chunk-3TAIMXWF.js", "/build/_shared/chunk-3NMNVWE6.js", "/build/_shared/chunk-KONDUBG3.js", "/build/_shared/chunk-G7CHZRZX.js"], hasAction: !0, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/terms-of-use": { id: "routes/terms-of-use", parentId: "root", path: "terms-of-use", index: void 0, caseSensitive: void 0, module: "/build/routes/terms-of-use-JNAYU4Y6.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/upcoming-updates": { id: "routes/upcoming-updates", parentId: "root", path: "upcoming-updates", index: void 0, caseSensitive: void 0, module: "/build/routes/upcoming-updates-B2FR3UUD.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 } }, version: "79f7cb6c", hmr: { runtime: "/build/_shared/chunk-FOVVXGJ2.js", timestamp: 1740240583395 }, url: "/build/manifest-79F7CB6C.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var mode = "development", assetsBuildDirectory = "public/build", future = { v3_fetcherPersist: !1, v3_relativeSplatPath: !1, v3_throwAbortReason: !1, v3_routeConfig: !1, v3_singleFetch: !1, v3_lazyRouteDiscovery: !1, unstable_optimizeDeps: !1 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {

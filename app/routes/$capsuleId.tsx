@@ -1,5 +1,5 @@
 // app/routes/capsule/$capsuleId.tsx
-import { json } from "@remix-run/node";
+import { json, redirect } from "@remix-run/node";
 import { useLoaderData, Link } from "@remix-run/react";
 import type { LoaderFunction } from "@remix-run/node";
 import { requireUser } from "~/utils/auth.server";
@@ -16,7 +16,7 @@ interface Capsule {
   title: string;
   content: string;
   scheduledDate: string;
-  formattedScheduledDate: string; // La date déjà formatée côté serveur
+  formattedScheduledDate: string; // La date formatée côté serveur
   visibility: string;
   groupRecipient?: string | null;
   recipientType?: string | null;
@@ -33,11 +33,12 @@ interface LoaderData {
 export const loader: LoaderFunction = async ({ request, params }) => {
   const currentUser = await requireUser(request);
   const capsuleId = params.capsuleId;
-  console.log("Requête reçue pour capsule ID:", capsuleId); // Vérifie la réception de l'ID
+  console.log("Requête reçue pour capsule ID:", capsuleId);
 
   if (!capsuleId) {
     throw new Response("Missing capsule ID", { status: 400 });
   }
+
   const capsule = await db.capsule.findUnique({
     where: { id: parseInt(capsuleId) },
     include: { media: true, owner: true },
@@ -45,14 +46,26 @@ export const loader: LoaderFunction = async ({ request, params }) => {
   if (!capsule) {
     throw new Response("Capsule not found", { status: 404 });
   }
-  // Pré-calculer la date formatée en mode fixe (ici, en UTC par exemple)
-  const formattedScheduledDate = new Date(capsule.scheduledDate)
-    .toLocaleString("en-US", { timeZone: "UTC" });
+
+  const now = new Date();
+  const scheduledDate = new Date(capsule.scheduledDate);
+
+  // Si l'utilisateur n'est pas le propriétaire et que la capsule n'est pas encore ouverte,
+  // rediriger vers le dashboard avec un message indiquant la date d'ouverture.
+  if (currentUser.id !== capsule.ownerId && now < scheduledDate) {
+    return redirect(
+      `/dashboard?locked=true&opening=${encodeURIComponent(scheduledDate.toLocaleString())}`
+    );
+  }
+
+  const formattedScheduledDate = scheduledDate.toLocaleString("en-US", {
+    timeZone: "UTC",
+  });
 
   return json({
     capsule: {
       ...capsule,
-      formattedScheduledDate, // Ajout de la date pré-formatée
+      formattedScheduledDate,
     },
     currentUser,
   });
@@ -114,7 +127,7 @@ export default function CapsuleDetail() {
             to="/dashboard"
             className="bg-gray-700 text-white px-6 py-3 rounded hover:bg-gray-800 transition"
           >
-            Back to dashboard
+            Back to Dashboard
           </Link>
         </div>
       </div>
