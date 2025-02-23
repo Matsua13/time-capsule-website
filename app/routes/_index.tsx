@@ -202,7 +202,7 @@ export default function Index() {
               One day, determined to seal her dreams, she created a time capsule, a message of hope and ambition, destined for her future version. Five years later, after a morning surf session, she found herself facing the ocean — the ocean that had become her daily life over the last year. She felt immense gratitude towards the little girl who had dared to dream. You are where you wanted to be.
             </p>
             <p className="text-base leading-relaxed mt-4 text-justify">
-              <strong>Time Capsule</strong> is much more than an app. Whether you want to send an inspiring public capsule to your friends, record your dreams for yourself, share a personalised message for a birthday or even to let a grandmother send a heartfelt message to her newborn granddaughter so that as she grows up, she can witness her grandmother’s youthful words; Time Capsule transforms every moment into a precious bridge between the past and the future. Be creative and let your messages travel through time.
+              <strong>Time Capsule</strong> is much more than an app. Whether you want to send an inspiring public capsule to your friends, record your dreams for yourself, share a personalised message for a birthday or even to let a grandmother send a heartfelt message to her newborn granddaughter so that as she grows up, she can witness her grandmother’s youthful words — Time Capsule transforms every moment into a precious bridge between the past and the future. Be creative and let your messages travel through time.
             </p>
           </div>
         </ScrollReveal>
