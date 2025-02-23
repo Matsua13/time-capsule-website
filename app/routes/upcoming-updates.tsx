@@ -32,6 +32,9 @@ export default function UpcomingUpdates() {
             <li>
               <strong>- Social Sign-In:</strong> Enjoy a smoother experience with the option to sign up and log in using Google and Facebook.
             </li>
+            <li>
+              <strong>- Animation effect for opening day&#39;s capsule:</strong> Enjoy a smoother experience.
+            </li>
           </ul>
           <p>
             Stay tuned for these exciting new features as we continue to evolve your Time Capsule experience!
