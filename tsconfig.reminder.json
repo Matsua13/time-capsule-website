@@ -11,7 +11,8 @@
     "baseUrl": ".",
     "paths": {
       "~/*": ["app/*"]
-    }
+    },
+    "allowImportingTsExtensions": true
   },
   "include": [
     "reminder-job.ts",

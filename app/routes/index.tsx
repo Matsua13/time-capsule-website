@@ -268,7 +268,7 @@ export default function Index() {
               </a>
             </div>
             <div className="mt-4 md:mt-0 text-xs text-gray-500 text-center">
-              © 2023 Time Capsule. All rights reserved.
+              © 2025 Time Capsule. All rights reserved.
             </div>
           </div>
         </div>

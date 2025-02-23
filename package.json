@@ -9,7 +9,8 @@
     "dev": "npx remix dev",
     "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
     "start": "NODE_ENV=production npx remix-serve build/index.js",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "reminder-job": "TS_NODE_PROJECT=tsconfig.reminder.json node --loader ts-node/esm reminder-job.ts"
   },
   "dependencies": {
     "@prisma/client": "^6.4.0",
@@ -41,6 +42,7 @@
     "postcss": "^8.5.3",
     "prisma": "^6.4.0",
     "tailwindcss": "^3.4.17",
+    "ts-node": "^10.9.2",
     "typescript": "^5.1.6",
     "vite": "^5.1.0",
     "vite-tsconfig-paths": "^4.2.1"

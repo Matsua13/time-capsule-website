@@ -19,9 +19,9 @@ export async function sendConfirmationEmail(to: string, token: string): Promise<
   const mailOptions = {
     from: process.env.GMAIL_USER,
     to,
-    subject: 'Please, confirm your e-mail address',
-    text: `Click on this link to confirm your account: ${confirmationUrl}`,
-    html: `<p>Click on <a href="${confirmationUrl}">this link</a> to confirm your account and join us!</p>`
+    subject: 'Thank you for joining us!',
+    text: `Hello there! We're delighted to have you on board. To confirm your account, please click on the following link: ${confirmationUrl} and join our community.`,
+    html: `<p>Hello there! We're delighted to have you on board. Please <a href="${confirmationUrl}">click here</a> to confirm your account and join our community.</p>`
   };
 
   await transporter.sendMail(mailOptions);
@@ -37,10 +37,10 @@ export async function sendInstantNotificationEmail(to: string, capsuleTitle: str
     from: process.env.GMAIL_USER,
     to,
     subject: 'Someone is thinking about you 🌻',
-    text: `You have received a capsule titled "${capsuleTitle}". Visit your dashboard for more details: ${notificationUrl}\n\nBest regards,\nThe Time Capsule Team`,
+    text: `You have received a capsule titled "${capsuleTitle}". Visit your dashboard for more details: ${notificationUrl}\n\nCheers,\nThe Time Capsule Team`,
     html: `<p>You have received a capsule titled "<strong>${capsuleTitle}</strong>".</p>
            <p>Visit your <a href="${notificationUrl}">dashboard</a> for more details.</p>
-           <p>Best regards,<br>The <strong>Time Capsule</strong> Team</p>`
+           <p>Cheers,<br>The <strong>Time Capsule</strong> Team</p>`
   };
 
   await transporter.sendMail(mailOptions);
@@ -56,10 +56,10 @@ export async function sendReminderEmail(to: string, capsuleTitle: string, openin
     from: process.env.GMAIL_USER,
     to,
     subject: 'Reminder: Your capsule opens tomorrow 🤩',
-    text: `Reminder: Your capsule "${capsuleTitle}" is scheduled to open on ${openingDate}. For more details, visit: ${reminderUrl}\n\nBest regards,\nThe Time Capsule Team`,
+    text: `Reminder: Your capsule "${capsuleTitle}" is scheduled to open on ${openingDate}. For more details, visit: ${reminderUrl}\n\nCheers,\nThe Time Capsule Team`,
     html: `<p>Reminder: Your capsule "<strong>${capsuleTitle}</strong>" is scheduled to open on ${openingDate}.</p>
            <p>For more details, visit your <a href="${reminderUrl}">dashboard</a>.</p>
-           <p>Best regards,<br>The <strong>Time Capsule</strong> Team</p>`
+           <p>Cheers,<br>The <strong>Time Capsule</strong> Team</p>`
   };
 
   await transporter.sendMail(mailOptions);

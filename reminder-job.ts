@@ -1,6 +1,8 @@
 // reminder-job.ts
-import { db } from "./app/utils/db.server.js";
-import { sendReminderEmail } from "./app/utils/email.server.js";
+// @ts-expect-error: allowImportingTsExtensions is enabled in tsconfig.reminder.json
+import { db } from "./app/utils/db.server.ts";
+// @ts-expect-error: allowImportingTsExtensions is enabled in tsconfig.reminder.json
+import { sendReminderEmail } from "./app/utils/email.server.ts";
 
 async function runReminderJob() {
   const now = new Date();

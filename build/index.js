@@ -127,7 +127,7 @@ import {
 } from "@remix-run/react";
 
 // app/styles/global.css
-var global_default = "/build/_assets/global-JQY5IX5E.css";
+var global_default = "/build/_assets/global-XOB27IOR.css";
 
 // app/root.tsx
 import { jsxDEV as jsxDEV2 } from "react/jsx-dev-runtime";
@@ -278,7 +278,7 @@ function CommunityGuidelines() {
       lineNumber: 16,
       columnNumber: 9
     }, this),
-    /* @__PURE__ */ jsxDEV3("footer", { className: "mt-8 text-center text-sm text-gray-600", children: /* @__PURE__ */ jsxDEV3("p", { children: "\xA9 2023 Time Capsule. All rights reserved." }, void 0, !1, {
+    /* @__PURE__ */ jsxDEV3("footer", { className: "mt-8 text-center text-sm text-gray-600", children: /* @__PURE__ */ jsxDEV3("p", { children: "\xA9 2025 Time Capsule. All rights reserved." }, void 0, !1, {
       fileName: "app/routes/community-guidelines.tsx",
       lineNumber: 41,
       columnNumber: 11
@@ -323,36 +323,36 @@ function UpcomingUpdates() {
       }, this),
       /* @__PURE__ */ jsxDEV4("ul", { children: [
         /* @__PURE__ */ jsxDEV4("li", { children: [
-          /* @__PURE__ */ jsxDEV4("strong", { children: "- Draft Mode:" }, void 0, !1, {
+          /* @__PURE__ */ jsxDEV4("strong", { children: "- Friend Connections:" }, void 0, !1, {
             fileName: "app/routes/upcoming-updates.tsx",
             lineNumber: 21,
             columnNumber: 15
           }, this),
-          " Create and save draft capsules that you can edit and refine before sending\u2014giving you the time to think about your message."
+          " Connect with other users so that your public capsules can be shared and enjoyed among friends."
         ] }, void 0, !0, {
           fileName: "app/routes/upcoming-updates.tsx",
           lineNumber: 20,
           columnNumber: 13
         }, this),
         /* @__PURE__ */ jsxDEV4("li", { children: [
-          /* @__PURE__ */ jsxDEV4("strong", { children: "- Archive option:" }, void 0, !1, {
+          /* @__PURE__ */ jsxDEV4("strong", { children: "- Draft Mode:" }, void 0, !1, {
             fileName: "app/routes/upcoming-updates.tsx",
             lineNumber: 24,
             columnNumber: 15
           }, this),
-          " Archive the capsules you want to make it easier to organise the dashboard."
+          " Create and save draft capsules that you can edit and refine before sending\u2014giving you the time to think about your message."
         ] }, void 0, !0, {
           fileName: "app/routes/upcoming-updates.tsx",
           lineNumber: 23,
           columnNumber: 13
         }, this),
         /* @__PURE__ */ jsxDEV4("li", { children: [
-          /* @__PURE__ */ jsxDEV4("strong", { children: "- Friend Connections:" }, void 0, !1, {
+          /* @__PURE__ */ jsxDEV4("strong", { children: "- Archive option:" }, void 0, !1, {
             fileName: "app/routes/upcoming-updates.tsx",
             lineNumber: 27,
             columnNumber: 15
           }, this),
-          " Connect with other users so that your public capsules can be shared and enjoyed among friends."
+          " Archive the capsules you want to make it easier to organise the dashboard."
         ] }, void 0, !0, {
           fileName: "app/routes/upcoming-updates.tsx",
           lineNumber: 26,
@@ -381,6 +381,18 @@ function UpcomingUpdates() {
           fileName: "app/routes/upcoming-updates.tsx",
           lineNumber: 32,
           columnNumber: 13
+        }, this),
+        /* @__PURE__ */ jsxDEV4("li", { children: [
+          /* @__PURE__ */ jsxDEV4("strong", { children: "- Animation effect for opening day's capsule:" }, void 0, !1, {
+            fileName: "app/routes/upcoming-updates.tsx",
+            lineNumber: 36,
+            columnNumber: 15
+          }, this),
+          " Enjoy a smoother experience."
+        ] }, void 0, !0, {
+          fileName: "app/routes/upcoming-updates.tsx",
+          lineNumber: 35,
+          columnNumber: 13
         }, this)
       ] }, void 0, !0, {
         fileName: "app/routes/upcoming-updates.tsx",
@@ -389,7 +401,7 @@ function UpcomingUpdates() {
       }, this),
       /* @__PURE__ */ jsxDEV4("p", { children: "Stay tuned for these exciting new features as we continue to evolve your Time Capsule experience!" }, void 0, !1, {
         fileName: "app/routes/upcoming-updates.tsx",
-        lineNumber: 36,
+        lineNumber: 39,
         columnNumber: 11
       }, this)
     ] }, void 0, !0, {
@@ -397,13 +409,13 @@ function UpcomingUpdates() {
       lineNumber: 16,
       columnNumber: 9
     }, this),
-    /* @__PURE__ */ jsxDEV4("footer", { className: "mt-8 text-center text-sm text-gray-600", children: /* @__PURE__ */ jsxDEV4("p", { children: "\xA9 2023 Time Capsule. All rights reserved." }, void 0, !1, {
+    /* @__PURE__ */ jsxDEV4("footer", { className: "mt-8 text-center text-sm text-gray-600", children: /* @__PURE__ */ jsxDEV4("p", { children: "\xA9 2025 Time Capsule. All rights reserved." }, void 0, !1, {
       fileName: "app/routes/upcoming-updates.tsx",
-      lineNumber: 42,
+      lineNumber: 45,
       columnNumber: 11
     }, this) }, void 0, !1, {
       fileName: "app/routes/upcoming-updates.tsx",
-      lineNumber: 41,
+      lineNumber: 44,
       columnNumber: 9
     }, this)
   ] }, void 0, !0, {
@@ -621,7 +633,7 @@ function PrivacyPolicy() {
       lineNumber: 11,
       columnNumber: 7
     }, this),
-    /* @__PURE__ */ jsxDEV6("footer", { className: "bg-white text-gray-900 py-4 text-center border-t border-gray-300", children: /* @__PURE__ */ jsxDEV6("p", { children: "\xA9 2023 Time Capsule. All rights reserved." }, void 0, !1, {
+    /* @__PURE__ */ jsxDEV6("footer", { className: "bg-white text-gray-900 py-4 text-center border-t border-gray-300", children: /* @__PURE__ */ jsxDEV6("p", { children: "\xA9 2025 Time Capsule. All rights reserved." }, void 0, !1, {
       fileName: "app/routes/privacy-policy.tsx",
       lineNumber: 17,
       columnNumber: 9
@@ -685,7 +697,7 @@ function TermsOfUse() {
       lineNumber: 11,
       columnNumber: 7
     }, this),
-    /* @__PURE__ */ jsxDEV7("footer", { className: "bg-white text-gray-900 py-4 text-center border-t border-gray-300", children: /* @__PURE__ */ jsxDEV7("p", { children: "\xA9 2023 Time Capsule. All rights reserved." }, void 0, !1, {
+    /* @__PURE__ */ jsxDEV7("footer", { className: "bg-white text-gray-900 py-4 text-center border-t border-gray-300", children: /* @__PURE__ */ jsxDEV7("p", { children: "\xA9 2025 Time Capsule. All rights reserved." }, void 0, !1, {
       fileName: "app/routes/terms-of-use.tsx",
       lineNumber: 17,
       columnNumber: 9
@@ -714,7 +726,7 @@ function CheckEmail() {
       lineNumber: 6,
       columnNumber: 9
     }, this),
-    /* @__PURE__ */ jsxDEV8("p", { className: "text-lg", children: "A confirmation e-mail has been sent to you. Click on the link to confirm your e-mail address and join us!" }, void 0, !1, {
+    /* @__PURE__ */ jsxDEV8("p", { className: "text-lg", children: "We just sent a confirmation email to your inbox. Please click the link in the email to verify your address and get started. If you don't see it right away, be sure to check your spam or junk folder. We're excited to have you with us!\u{1F33B}" }, void 0, !1, {
       fileName: "app/routes/check-email.tsx",
       lineNumber: 7,
       columnNumber: 9
@@ -833,7 +845,7 @@ function SafetyTips() {
       lineNumber: 16,
       columnNumber: 9
     }, this),
-    /* @__PURE__ */ jsxDEV9("footer", { className: "mt-8 text-center text-sm text-gray-600", children: /* @__PURE__ */ jsxDEV9("p", { children: "\xA9 2023 Time Capsule. All rights reserved." }, void 0, !1, {
+    /* @__PURE__ */ jsxDEV9("footer", { className: "mt-8 text-center text-sm text-gray-600", children: /* @__PURE__ */ jsxDEV9("p", { children: "\xA9 2025 Time Capsule. All rights reserved." }, void 0, !1, {
       fileName: "app/routes/safety-tips.tsx",
       lineNumber: 43,
       columnNumber: 11
@@ -873,7 +885,7 @@ var loader3 = async ({ request, params }) => {
   if (!capsule)
     throw new Response("Capsule not found", { status: 404 });
   let now = /* @__PURE__ */ new Date(), scheduledDate = new Date(capsule.scheduledDate);
-  if (currentUser.id !== capsule.ownerId && now < scheduledDate)
+  if (now < scheduledDate && (capsule.visibility === "private" || currentUser.id !== capsule.ownerId))
     return redirect4(
       `/dashboard?locked=true&opening=${encodeURIComponent(scheduledDate.toLocaleString())}`
     );
@@ -889,17 +901,16 @@ var loader3 = async ({ request, params }) => {
   });
 };
 function CapsuleDetail() {
-  console.log("Capsule Detail est rendu");
-  let { capsule, currentUser } = useLoaderData2();
+  let { capsule } = useLoaderData2();
   return /* @__PURE__ */ jsxDEV10("div", { className: "min-h-screen p-4 bg-gradient-to-br from-sky-300 to-sky-500 text-gray-900", children: /* @__PURE__ */ jsxDEV10("div", { className: "max-w-3xl mx-auto bg-white p-8 rounded-3xl shadow-xl border-4 border-yellow-500", children: [
     /* @__PURE__ */ jsxDEV10("h1", { className: "text-4xl font-extrabold drop-shadow-lg mb-4", children: capsule.title }, void 0, !1, {
       fileName: "app/routes/$capsuleId.tsx",
-      lineNumber: 81,
+      lineNumber: 82,
       columnNumber: 9
     }, this),
     /* @__PURE__ */ jsxDEV10("p", { className: "mb-4 text-lg", children: capsule.content }, void 0, !1, {
       fileName: "app/routes/$capsuleId.tsx",
-      lineNumber: 84,
+      lineNumber: 85,
       columnNumber: 9
     }, this),
     /* @__PURE__ */ jsxDEV10("p", { className: "mb-4 text-sm text-gray-600", children: [
@@ -907,7 +918,7 @@ function CapsuleDetail() {
       new Date(capsule.scheduledDate).toLocaleString()
     ] }, void 0, !0, {
       fileName: "app/routes/$capsuleId.tsx",
-      lineNumber: 85,
+      lineNumber: 86,
       columnNumber: 9
     }, this),
     /* @__PURE__ */ jsxDEV10("p", { className: "mb-4 text-sm text-gray-600", children: [
@@ -915,10 +926,10 @@ function CapsuleDetail() {
       capsule.visibility
     ] }, void 0, !0, {
       fileName: "app/routes/$capsuleId.tsx",
-      lineNumber: 88,
+      lineNumber: 89,
       columnNumber: 9
     }, this),
-    capsule.ownerId !== currentUser.id && /* @__PURE__ */ jsxDEV10("p", { className: "mb-4 text-sm text-gray-600", children: [
+    capsule.ownerId !== capsule.owner.id && /* @__PURE__ */ jsxDEV10("p", { className: "mb-4 text-sm text-gray-600", children: [
       "Sent by ",
       capsule.recipientType,
       ":",
@@ -926,57 +937,57 @@ function CapsuleDetail() {
       capsule.owner.username || capsule.owner.email
     ] }, void 0, !0, {
       fileName: "app/routes/$capsuleId.tsx",
-      lineNumber: 92,
+      lineNumber: 93,
       columnNumber: 11
     }, this),
     capsule.visibility === "group" && capsule.groupRecipient && /* @__PURE__ */ jsxDEV10("p", { className: "mb-4 text-sm text-gray-600", children: [
-      "(Group capsule intended for ",
+      "Group capsule intended for ",
       capsule.recipientType,
-      ":",
-      " ",
+      ": ",
       capsule.groupRecipient,
-      ")"
+      /* @__PURE__ */ jsxDEV10("p", { children: [
+        "Sent by: ",
+        capsule.owner.username || capsule.owner.email
+      ] }, void 0, !0, {
+        fileName: "app/routes/$capsuleId.tsx",
+        lineNumber: 101,
+        columnNumber: 11
+      }, this)
     ] }, void 0, !0, {
       fileName: "app/routes/$capsuleId.tsx",
-      lineNumber: 98,
+      lineNumber: 99,
       columnNumber: 11
     }, this),
     capsule.media && capsule.media.length > 0 && /* @__PURE__ */ jsxDEV10("div", { className: "mb-4", children: [
       /* @__PURE__ */ jsxDEV10("h2", { className: "text-2xl font-semibold mb-2", children: "Special gifts with your capsule" }, void 0, !1, {
         fileName: "app/routes/$capsuleId.tsx",
-        lineNumber: 105,
+        lineNumber: 106,
         columnNumber: 13
       }, this),
       /* @__PURE__ */ jsxDEV10("div", { className: "grid grid-cols-1 md:grid-cols-2 gap-4", children: capsule.media.map((media) => /* @__PURE__ */ jsxDEV10("div", { className: "p-2 border rounded", children: media.type.startsWith("image") ? /* @__PURE__ */ jsxDEV10("img", { src: media.url, alt: "", className: "w-full" }, void 0, !1, {
         fileName: "app/routes/$capsuleId.tsx",
-        lineNumber: 112,
+        lineNumber: 113,
         columnNumber: 21
-      }, this) : media.type.startsWith("video") ? (
-        // eslint-disable-next-line jsx-a11y/media-has-caption
-        /* @__PURE__ */ jsxDEV10("video", { controls: !0, src: media.url, className: "w-full" }, void 0, !1, {
-          fileName: "app/routes/$capsuleId.tsx",
-          lineNumber: 115,
-          columnNumber: 21
-        }, this)
-      ) : (
-        // eslint-disable-next-line jsx-a11y/media-has-caption
-        /* @__PURE__ */ jsxDEV10("audio", { controls: !0, src: media.url }, void 0, !1, {
-          fileName: "app/routes/$capsuleId.tsx",
-          lineNumber: 118,
-          columnNumber: 21
-        }, this)
-      ) }, media.id, !1, {
+      }, this) : media.type.startsWith("video") ? /* @__PURE__ */ jsxDEV10("video", { controls: !0, src: media.url, className: "w-full" }, void 0, !1, {
         fileName: "app/routes/$capsuleId.tsx",
-        lineNumber: 110,
+        lineNumber: 115,
+        columnNumber: 21
+      }, this) : /* @__PURE__ */ jsxDEV10("audio", { controls: !0, src: media.url }, void 0, !1, {
+        fileName: "app/routes/$capsuleId.tsx",
+        lineNumber: 117,
+        columnNumber: 21
+      }, this) }, media.id, !1, {
+        fileName: "app/routes/$capsuleId.tsx",
+        lineNumber: 111,
         columnNumber: 17
       }, this)) }, void 0, !1, {
         fileName: "app/routes/$capsuleId.tsx",
-        lineNumber: 108,
+        lineNumber: 109,
         columnNumber: 13
       }, this)
     ] }, void 0, !0, {
       fileName: "app/routes/$capsuleId.tsx",
-      lineNumber: 104,
+      lineNumber: 105,
       columnNumber: 11
     }, this),
     /* @__PURE__ */ jsxDEV10("div", { className: "mt-8", children: /* @__PURE__ */ jsxDEV10(
@@ -990,22 +1001,22 @@ function CapsuleDetail() {
       !1,
       {
         fileName: "app/routes/$capsuleId.tsx",
-        lineNumber: 126,
+        lineNumber: 125,
         columnNumber: 11
       },
       this
     ) }, void 0, !1, {
       fileName: "app/routes/$capsuleId.tsx",
-      lineNumber: 125,
+      lineNumber: 124,
       columnNumber: 9
     }, this)
   ] }, void 0, !0, {
     fileName: "app/routes/$capsuleId.tsx",
-    lineNumber: 80,
+    lineNumber: 81,
     columnNumber: 7
   }, this) }, void 0, !1, {
     fileName: "app/routes/$capsuleId.tsx",
-    lineNumber: 79,
+    lineNumber: 80,
     columnNumber: 5
   }, this);
 }
@@ -1052,7 +1063,7 @@ function ContactUs() {
       lineNumber: 14,
       columnNumber: 9
     }, this),
-    /* @__PURE__ */ jsxDEV11("footer", { className: "mt-8 text-center text-sm text-gray-600", children: /* @__PURE__ */ jsxDEV11("p", { children: "\xA9 2023 Time Capsule. All rights reserved." }, void 0, !1, {
+    /* @__PURE__ */ jsxDEV11("footer", { className: "mt-8 text-center text-sm text-gray-600", children: /* @__PURE__ */ jsxDEV11("p", { children: "\xA9 2025 Time Capsule. All rights reserved." }, void 0, !1, {
       fileName: "app/routes/contact-us.tsx",
       lineNumber: 27,
       columnNumber: 11
@@ -1079,7 +1090,7 @@ __export(dashboard_exports, {
   default: () => Dashboard,
   loader: () => loader4
 });
-import { Link as Link3, Form as Form2, useLoaderData as useLoaderData3 } from "@remix-run/react";
+import { Link as Link3, Form as Form2, useLoaderData as useLoaderData3, useSearchParams } from "@remix-run/react";
 import { json as json3, redirect as redirect5 } from "@remix-run/node";
 
 // app/components/Timeline.tsx
@@ -1244,7 +1255,7 @@ var loader4 = async ({ request }) => {
   }), redirect5("/dashboard"));
 };
 function Dashboard() {
-  let { capsules, user, notifications, reminders } = useLoaderData3(), [filter, setFilter] = useState("all"), [localReminders, setLocalReminders] = useState(reminders);
+  let { capsules, user, notifications, reminders } = useLoaderData3(), [searchParams] = useSearchParams(), [filter, setFilter] = useState("all"), [localReminders, setLocalReminders] = useState(reminders);
   useEffect(() => {
     let timer = setTimeout(() => {
       setLocalReminders([]);
@@ -1253,19 +1264,33 @@ function Dashboard() {
   }, []);
   let filteredCapsules = capsules;
   filter === "sent" ? filteredCapsules = capsules.filter((c) => c.ownerId === user.id) : filter === "received" && (filteredCapsules = capsules.filter((c) => c.ownerId !== user.id));
-  let now = /* @__PURE__ */ new Date(), upcomingCapsules = filteredCapsules.filter(
-    (c) => new Date(c.scheduledDate) >= now
-  ), pastCapsules = filteredCapsules.filter(
-    (c) => new Date(c.scheduledDate) < now
-  );
+  let now = /* @__PURE__ */ new Date(), upcomingCapsules = filteredCapsules.filter((c) => new Date(c.scheduledDate) >= now), pastCapsules = filteredCapsules.filter((c) => new Date(c.scheduledDate) < now);
   return /* @__PURE__ */ jsxDEV14("div", { className: "min-h-screen p-4 bg-gradient-to-br from-sky-300 to-sky-500 text-gray-900", children: [
+    searchParams.get("locked") && searchParams.get("opening") && /* @__PURE__ */ jsxDEV14("div", { className: "mb-6 p-4 bg-red-100 text-red-800 rounded border border-red-300", children: /* @__PURE__ */ jsxDEV14("p", { children: [
+      "Be patient, this capsule will open on",
+      " ",
+      /* @__PURE__ */ jsxDEV14("strong", { children: searchParams.get("opening") }, void 0, !1, {
+        fileName: "app/routes/dashboard.tsx",
+        lineNumber: 169,
+        columnNumber: 13
+      }, this),
+      "."
+    ] }, void 0, !0, {
+      fileName: "app/routes/dashboard.tsx",
+      lineNumber: 167,
+      columnNumber: 11
+    }, this) }, void 0, !1, {
+      fileName: "app/routes/dashboard.tsx",
+      lineNumber: 166,
+      columnNumber: 9
+    }, this),
     localReminders.length > 0 && /* @__PURE__ */ jsxDEV14("div", { className: "mb-6 p-4 bg-emerald-100 text-emerald-800 rounded", children: localReminders.map((reminder) => /* @__PURE__ */ jsxDEV14("p", { className: "text-sm", children: reminder.message }, reminder.id, !1, {
       fileName: "app/routes/dashboard.tsx",
-      lineNumber: 172,
+      lineNumber: 178,
       columnNumber: 13
     }, this)) }, void 0, !1, {
       fileName: "app/routes/dashboard.tsx",
-      lineNumber: 170,
+      lineNumber: 176,
       columnNumber: 9
     }, this),
     notifications.length > 0 && /* @__PURE__ */ jsxDEV14("div", { className: "mb-6 p-4 bg-amber-100 text-amber-800 rounded", children: notifications.map((notif) => {
@@ -1283,30 +1308,30 @@ function Dashboard() {
           !1,
           {
             fileName: "app/routes/dashboard.tsx",
-            lineNumber: 187,
+            lineNumber: 193,
             columnNumber: 19
           },
           this
         ) }, notif.id, !1, {
           fileName: "app/routes/dashboard.tsx",
-          lineNumber: 186,
+          lineNumber: 192,
           columnNumber: 17
         }, this);
       } else
         return /* @__PURE__ */ jsxDEV14("p", { className: "text-sm", children: notif.message }, notif.id, !1, {
           fileName: "app/routes/dashboard.tsx",
-          lineNumber: 196,
+          lineNumber: 202,
           columnNumber: 22
         }, this);
     }) }, void 0, !1, {
       fileName: "app/routes/dashboard.tsx",
-      lineNumber: 179,
+      lineNumber: 185,
       columnNumber: 9
     }, this),
     /* @__PURE__ */ jsxDEV14("div", { className: "flex justify-between items-center mb-8", children: [
       /* @__PURE__ */ jsxDEV14("h1", { className: "text-5xl font-extrabold drop-shadow-xl", children: "Dashboard" }, void 0, !1, {
         fileName: "app/routes/dashboard.tsx",
-        lineNumber: 204,
+        lineNumber: 210,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ jsxDEV14(Form2, { method: "post", action: "/logout", children: /* @__PURE__ */ jsxDEV14(
@@ -1320,18 +1345,18 @@ function Dashboard() {
         !1,
         {
           fileName: "app/routes/dashboard.tsx",
-          lineNumber: 206,
+          lineNumber: 212,
           columnNumber: 11
         },
         this
       ) }, void 0, !1, {
         fileName: "app/routes/dashboard.tsx",
-        lineNumber: 205,
+        lineNumber: 211,
         columnNumber: 9
       }, this)
     ] }, void 0, !0, {
       fileName: "app/routes/dashboard.tsx",
-      lineNumber: 203,
+      lineNumber: 209,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ jsxDEV14("section", { className: "flex justify-center mb-8", children: /* @__PURE__ */ jsxDEV14(
@@ -1345,13 +1370,13 @@ function Dashboard() {
       !1,
       {
         fileName: "app/routes/dashboard.tsx",
-        lineNumber: 217,
+        lineNumber: 223,
         columnNumber: 9
       },
       this
     ) }, void 0, !1, {
       fileName: "app/routes/dashboard.tsx",
-      lineNumber: 216,
+      lineNumber: 222,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ jsxDEV14("div", { className: "mb-6 flex space-x-4", children: [
@@ -1366,7 +1391,7 @@ function Dashboard() {
         !1,
         {
           fileName: "app/routes/dashboard.tsx",
-          lineNumber: 227,
+          lineNumber: 233,
           columnNumber: 9
         },
         this
@@ -1382,7 +1407,7 @@ function Dashboard() {
         !1,
         {
           fileName: "app/routes/dashboard.tsx",
-          lineNumber: 235,
+          lineNumber: 241,
           columnNumber: 9
         },
         this
@@ -1398,25 +1423,25 @@ function Dashboard() {
         !1,
         {
           fileName: "app/routes/dashboard.tsx",
-          lineNumber: 243,
+          lineNumber: 249,
           columnNumber: 9
         },
         this
       )
     ] }, void 0, !0, {
       fileName: "app/routes/dashboard.tsx",
-      lineNumber: 226,
+      lineNumber: 232,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ jsxDEV14("section", { className: "mb-8", children: [
       /* @__PURE__ */ jsxDEV14("h2", { className: "text-2xl font-semibold mb-4", children: "Upcoming Capsules" }, void 0, !1, {
         fileName: "app/routes/dashboard.tsx",
-        lineNumber: 255,
-        columnNumber: 7
+        lineNumber: 261,
+        columnNumber: 9
       }, this),
       upcomingCapsules.length ? /* @__PURE__ */ jsxDEV14("div", { className: "grid gap-4", children: upcomingCapsules.map((capsule) => {
         let capsuleDate = new Date(capsule.scheduledDate);
-        return capsule.ownerId !== user.id && capsuleDate > now ? /* @__PURE__ */ jsxDEV14(
+        return capsuleDate > now && (capsule.visibility === "private" || capsule.ownerId !== user.id) ? /* @__PURE__ */ jsxDEV14(
           "div",
           {
             className: "flex justify-between items-center p-4 bg-gray-200 rounded shadow border border-gray-400 opacity-50 cursor-not-allowed",
@@ -1430,21 +1455,21 @@ function Dashboard() {
               /* @__PURE__ */ jsxDEV14("div", { children: [
                 /* @__PURE__ */ jsxDEV14("h3", { className: "text-xl font-semibold text-gray-700", children: capsule.title }, void 0, !1, {
                   fileName: "app/routes/dashboard.tsx",
-                  lineNumber: 278,
-                  columnNumber: 21
+                  lineNumber: 288,
+                  columnNumber: 23
                 }, this),
                 /* @__PURE__ */ jsxDEV14("p", { className: "text-xs text-gray-600", children: [
                   "Opening day: ",
                   capsuleDate.toLocaleString()
                 ] }, void 0, !0, {
                   fileName: "app/routes/dashboard.tsx",
-                  lineNumber: 279,
-                  columnNumber: 21
+                  lineNumber: 289,
+                  columnNumber: 23
                 }, this)
               ] }, void 0, !0, {
                 fileName: "app/routes/dashboard.tsx",
-                lineNumber: 277,
-                columnNumber: 19
+                lineNumber: 287,
+                columnNumber: 21
               }, this),
               /* @__PURE__ */ jsxDEV14("div", { children: /* @__PURE__ */ jsxDEV14(
                 "svg",
@@ -1467,8 +1492,8 @@ function Dashboard() {
                       !1,
                       {
                         fileName: "app/routes/dashboard.tsx",
-                        lineNumber: 292,
-                        columnNumber: 23
+                        lineNumber: 301,
+                        columnNumber: 25
                       },
                       this
                     ),
@@ -1484,8 +1509,8 @@ function Dashboard() {
                       !1,
                       {
                         fileName: "app/routes/dashboard.tsx",
-                        lineNumber: 298,
-                        columnNumber: 23
+                        lineNumber: 307,
+                        columnNumber: 25
                       },
                       this
                     )
@@ -1495,14 +1520,14 @@ function Dashboard() {
                 !0,
                 {
                   fileName: "app/routes/dashboard.tsx",
-                  lineNumber: 285,
-                  columnNumber: 21
+                  lineNumber: 294,
+                  columnNumber: 23
                 },
                 this
               ) }, void 0, !1, {
                 fileName: "app/routes/dashboard.tsx",
-                lineNumber: 283,
-                columnNumber: 19
+                lineNumber: 293,
+                columnNumber: 21
               }, this)
             ]
           },
@@ -1510,8 +1535,8 @@ function Dashboard() {
           !0,
           {
             fileName: "app/routes/dashboard.tsx",
-            lineNumber: 263,
-            columnNumber: 17
+            lineNumber: 273,
+            columnNumber: 19
           },
           this
         ) : /* @__PURE__ */ jsxDEV14(
@@ -1522,30 +1547,30 @@ function Dashboard() {
               /* @__PURE__ */ jsxDEV14("div", { children: [
                 /* @__PURE__ */ jsxDEV14("h3", { className: "text-xl font-semibold", children: /* @__PURE__ */ jsxDEV14(Link3, { to: `/${capsule.id}`, className: "text-sky-700 hover:underline", children: capsule.title }, void 0, !1, {
                   fileName: "app/routes/dashboard.tsx",
-                  lineNumber: 317,
-                  columnNumber: 23
+                  lineNumber: 325,
+                  columnNumber: 25
                 }, this) }, void 0, !1, {
                   fileName: "app/routes/dashboard.tsx",
-                  lineNumber: 316,
-                  columnNumber: 21
+                  lineNumber: 324,
+                  columnNumber: 23
                 }, this),
                 /* @__PURE__ */ jsxDEV14("p", { className: "text-sm text-gray-600", children: capsule.content }, void 0, !1, {
                   fileName: "app/routes/dashboard.tsx",
-                  lineNumber: 321,
-                  columnNumber: 21
+                  lineNumber: 329,
+                  columnNumber: 23
                 }, this),
                 /* @__PURE__ */ jsxDEV14("p", { className: "text-xs text-gray-500", children: [
                   "Opening day: ",
                   capsuleDate.toLocaleString()
                 ] }, void 0, !0, {
                   fileName: "app/routes/dashboard.tsx",
-                  lineNumber: 322,
-                  columnNumber: 21
+                  lineNumber: 330,
+                  columnNumber: 23
                 }, this)
               ] }, void 0, !0, {
                 fileName: "app/routes/dashboard.tsx",
-                lineNumber: 315,
-                columnNumber: 19
+                lineNumber: 323,
+                columnNumber: 21
               }, this),
               /* @__PURE__ */ jsxDEV14(
                 Link3,
@@ -1559,8 +1584,8 @@ function Dashboard() {
                 !1,
                 {
                   fileName: "app/routes/dashboard.tsx",
-                  lineNumber: 326,
-                  columnNumber: 19
+                  lineNumber: 334,
+                  columnNumber: 21
                 },
                 this
               )
@@ -1570,29 +1595,29 @@ function Dashboard() {
           !0,
           {
             fileName: "app/routes/dashboard.tsx",
-            lineNumber: 311,
-            columnNumber: 17
+            lineNumber: 319,
+            columnNumber: 19
           },
           this
         );
       }) }, void 0, !1, {
         fileName: "app/routes/dashboard.tsx",
-        lineNumber: 257,
-        columnNumber: 9
+        lineNumber: 263,
+        columnNumber: 11
       }, this) : /* @__PURE__ */ jsxDEV14("p", { children: "No upcoming capsules." }, void 0, !1, {
         fileName: "app/routes/dashboard.tsx",
-        lineNumber: 339,
-        columnNumber: 9
+        lineNumber: 347,
+        columnNumber: 11
       }, this)
     ] }, void 0, !0, {
       fileName: "app/routes/dashboard.tsx",
-      lineNumber: 254,
+      lineNumber: 260,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ jsxDEV14("section", { className: "mb-8", children: [
       /* @__PURE__ */ jsxDEV14("h2", { className: "text-2xl font-semibold mb-4", children: "Previous Capsules" }, void 0, !1, {
         fileName: "app/routes/dashboard.tsx",
-        lineNumber: 345,
+        lineNumber: 353,
         columnNumber: 9
       }, this),
       pastCapsules.length ? /* @__PURE__ */ jsxDEV14("div", { className: "grid gap-4", children: pastCapsules.map((capsule) => /* @__PURE__ */ jsxDEV14(
@@ -1601,29 +1626,18 @@ function Dashboard() {
           className: "flex justify-between items-center p-4 bg-white rounded shadow hover:bg-gray-100 transition",
           children: [
             /* @__PURE__ */ jsxDEV14("div", { children: [
-              /* @__PURE__ */ jsxDEV14("h3", { className: "text-xl font-semibold", children: /* @__PURE__ */ jsxDEV14(
-                Link3,
-                {
-                  to: `/${capsule.id}`,
-                  className: "text-sky-700 hover:underline",
-                  children: capsule.title
-                },
-                void 0,
-                !1,
-                {
-                  fileName: "app/routes/dashboard.tsx",
-                  lineNumber: 355,
-                  columnNumber: 21
-                },
-                this
-              ) }, void 0, !1, {
+              /* @__PURE__ */ jsxDEV14("h3", { className: "text-xl font-semibold", children: /* @__PURE__ */ jsxDEV14(Link3, { to: `/${capsule.id}`, className: "text-sky-700 hover:underline", children: capsule.title }, void 0, !1, {
                 fileName: "app/routes/dashboard.tsx",
-                lineNumber: 354,
+                lineNumber: 363,
+                columnNumber: 21
+              }, this) }, void 0, !1, {
+                fileName: "app/routes/dashboard.tsx",
+                lineNumber: 362,
                 columnNumber: 19
               }, this),
               /* @__PURE__ */ jsxDEV14("p", { className: "text-sm text-gray-600", children: capsule.content }, void 0, !1, {
                 fileName: "app/routes/dashboard.tsx",
-                lineNumber: 362,
+                lineNumber: 367,
                 columnNumber: 19
               }, this),
               /* @__PURE__ */ jsxDEV14("p", { className: "text-xs text-gray-500", children: [
@@ -1631,12 +1645,12 @@ function Dashboard() {
                 new Date(capsule.scheduledDate).toLocaleString()
               ] }, void 0, !0, {
                 fileName: "app/routes/dashboard.tsx",
-                lineNumber: 363,
+                lineNumber: 368,
                 columnNumber: 19
               }, this)
             ] }, void 0, !0, {
               fileName: "app/routes/dashboard.tsx",
-              lineNumber: 353,
+              lineNumber: 361,
               columnNumber: 17
             }, this),
             /* @__PURE__ */ jsxDEV14(
@@ -1651,7 +1665,7 @@ function Dashboard() {
               !1,
               {
                 fileName: "app/routes/dashboard.tsx",
-                lineNumber: 367,
+                lineNumber: 372,
                 columnNumber: 17
               },
               this
@@ -1662,76 +1676,76 @@ function Dashboard() {
         !0,
         {
           fileName: "app/routes/dashboard.tsx",
-          lineNumber: 349,
+          lineNumber: 357,
           columnNumber: 15
         },
         this
       )) }, void 0, !1, {
         fileName: "app/routes/dashboard.tsx",
-        lineNumber: 347,
+        lineNumber: 355,
         columnNumber: 11
       }, this) : /* @__PURE__ */ jsxDEV14("p", { children: "No previous capsules." }, void 0, !1, {
         fileName: "app/routes/dashboard.tsx",
-        lineNumber: 378,
+        lineNumber: 383,
         columnNumber: 11
       }, this)
     ] }, void 0, !0, {
       fileName: "app/routes/dashboard.tsx",
-      lineNumber: 344,
+      lineNumber: 352,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ jsxDEV14("section", { className: "mb-8", children: [
       /* @__PURE__ */ jsxDEV14("h2", { className: "text-center text-2xl font-semibold mb-4", children: "Visualisations" }, void 0, !1, {
         fileName: "app/routes/dashboard.tsx",
-        lineNumber: 384,
+        lineNumber: 389,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ jsxDEV14("div", { className: "grid grid-cols-1 md:grid-cols-2 gap-8", children: [
         /* @__PURE__ */ jsxDEV14("div", { className: "bg-white p-8 rounded-3xl shadow-xl border-4 border-yellow-500", children: [
           /* @__PURE__ */ jsxDEV14("h3", { className: "text-xl font-semibold mb-2", children: "Timeline" }, void 0, !1, {
             fileName: "app/routes/dashboard.tsx",
-            lineNumber: 387,
+            lineNumber: 392,
             columnNumber: 13
           }, this),
           /* @__PURE__ */ jsxDEV14(Timeline_default, { capsules }, void 0, !1, {
             fileName: "app/routes/dashboard.tsx",
-            lineNumber: 388,
+            lineNumber: 393,
             columnNumber: 13
           }, this)
         ] }, void 0, !0, {
           fileName: "app/routes/dashboard.tsx",
-          lineNumber: 386,
+          lineNumber: 391,
           columnNumber: 11
         }, this),
         /* @__PURE__ */ jsxDEV14("div", { className: "bg-white p-8 rounded-3xl shadow-xl border-4 border-yellow-500", children: [
           /* @__PURE__ */ jsxDEV14("h3", { className: "text-xl font-semibold mb-2", children: "Calendar" }, void 0, !1, {
             fileName: "app/routes/dashboard.tsx",
-            lineNumber: 391,
+            lineNumber: 396,
             columnNumber: 13
           }, this),
           /* @__PURE__ */ jsxDEV14(CalendarView, { capsules }, void 0, !1, {
             fileName: "app/routes/dashboard.tsx",
-            lineNumber: 392,
+            lineNumber: 397,
             columnNumber: 13
           }, this)
         ] }, void 0, !0, {
           fileName: "app/routes/dashboard.tsx",
-          lineNumber: 390,
+          lineNumber: 395,
           columnNumber: 11
         }, this)
       ] }, void 0, !0, {
         fileName: "app/routes/dashboard.tsx",
-        lineNumber: 385,
+        lineNumber: 390,
         columnNumber: 9
       }, this)
     ] }, void 0, !0, {
       fileName: "app/routes/dashboard.tsx",
-      lineNumber: 383,
+      lineNumber: 388,
       columnNumber: 7
     }, this)
   ] }, void 0, !0, {
     fileName: "app/routes/dashboard.tsx",
-    lineNumber: 167,
+    lineNumber: 163,
     columnNumber: 5
   }, this);
 }
@@ -2004,7 +2018,7 @@ function Index() {
       /* @__PURE__ */ jsxDEV16("div", { className: "absolute bottom-4", children: /* @__PURE__ */ jsxDEV16(
         "svg",
         {
-          className: "w-8 h-8 animate-bounce text-white",
+          className: "w-12 h-12 animate-bounce text-white drop-shadow-lg",
           fill: "none",
           stroke: "currentColor",
           viewBox: "0 0 24 24",
@@ -2039,7 +2053,7 @@ function Index() {
         lineNumber: 195,
         columnNumber: 13
       }, this),
-      /* @__PURE__ */ jsxDEV16("p", { className: "text-base leading-relaxed text-justify", children: "Once upon a time, there was a little girl with eyes sparkling with innocence, who dreamt of feeling the salt of the ocean caress her cheeks and hearing the murmur of the waves as a lullaby every day. She imagined herself, a few years later, living by the sea, her feet in the foam, gliding over the waves like a dancer in symphony with the ocean." }, void 0, !1, {
+      /* @__PURE__ */ jsxDEV16("p", { className: "text-base leading-relaxed text-justify", children: "Once upon a time, there was a little girl with sparkling eyes, who dreamt of hearing the murmur of the waves as a lullaby every day. She imagined herself, a few years later, living by the sea, gliding over the waves like a dancer in symphony with the ocean." }, void 0, !1, {
         fileName: "app/routes/_index.tsx",
         lineNumber: 198,
         columnNumber: 13
@@ -2049,7 +2063,14 @@ function Index() {
         lineNumber: 201,
         columnNumber: 13
       }, this),
-      /* @__PURE__ */ jsxDEV16("p", { className: "text-base leading-relaxed mt-4 text-justify", children: "Time Capsule is much more than an app. Whether you want to send an inspiring, public and accessible capsule to your friends, record your dreams and achievements for yourself, or share a personalised message for a birthday, an amusing anecdote or to comfort a loved one, Time Capsule transforms every moment into a precious bridge between the past and the future. Be creative and let your messages travel through time." }, void 0, !1, {
+      /* @__PURE__ */ jsxDEV16("p", { className: "text-base leading-relaxed mt-4 text-justify", children: [
+        /* @__PURE__ */ jsxDEV16("strong", { children: "Time Capsule" }, void 0, !1, {
+          fileName: "app/routes/_index.tsx",
+          lineNumber: 205,
+          columnNumber: 15
+        }, this),
+        " is much more than an app. Whether you want to send an inspiring public capsule to your friends, record your dreams for yourself, share a personalised message for a birthday or even to let a grandmother send a heartfelt message to her newborn granddaughter so that as she grows up, she can witness her grandmother\u2019s youthful words \u2014 Time Capsule transforms every moment into a precious bridge between the past and the future. Be creative and let your messages travel through time."
+      ] }, void 0, !0, {
         fileName: "app/routes/_index.tsx",
         lineNumber: 204,
         columnNumber: 13
@@ -2204,7 +2225,7 @@ function Index() {
           lineNumber: 256,
           columnNumber: 13
         }, this),
-        /* @__PURE__ */ jsxDEV16("div", { className: "mt-4 md:mt-0 text-xs text-gray-500 text-center", children: "\xA9 2023 Time Capsule. All rights reserved." }, void 0, !1, {
+        /* @__PURE__ */ jsxDEV16("div", { className: "mt-4 md:mt-0 text-xs text-gray-500 text-center", children: "\xA9 2025 Time Capsule. All rights reserved." }, void 0, !1, {
           fileName: "app/routes/_index.tsx",
           lineNumber: 270,
           columnNumber: 13
@@ -2275,9 +2296,9 @@ async function sendConfirmationEmail(to, token) {
   let confirmationUrl = `${process.env.BASE_URL || "http://localhost:3000"}/confirm?token=${token}`, mailOptions = {
     from: process.env.GMAIL_USER,
     to,
-    subject: "Please, confirm your e-mail address",
-    text: `Click on this link to confirm your account: ${confirmationUrl}`,
-    html: `<p>Click on <a href="${confirmationUrl}">this link</a> to confirm your account and join us!</p>`
+    subject: "Thank you for joining us!",
+    text: `Hello there! We're delighted to have you on board. To confirm your account, please click on the following link: ${confirmationUrl} and join our community.`,
+    html: `<p>Hello there! We're delighted to have you on board. Please <a href="${confirmationUrl}">click here</a> to confirm your account and join our community.</p>`
   };
   await transporter.sendMail(mailOptions);
 }
@@ -2288,11 +2309,11 @@ async function sendInstantNotificationEmail(to, capsuleTitle) {
     subject: "Someone is thinking about you \u{1F33B}",
     text: `You have received a capsule titled "${capsuleTitle}". Visit your dashboard for more details: ${notificationUrl}
 
-Best regards,
+Cheers,
 The Time Capsule Team`,
     html: `<p>You have received a capsule titled "<strong>${capsuleTitle}</strong>".</p>
            <p>Visit your <a href="${notificationUrl}">dashboard</a> for more details.</p>
-           <p>Best regards,<br>The <strong>Time Capsule</strong> Team</p>`
+           <p>Cheers,<br>The <strong>Time Capsule</strong> Team</p>`
   };
   await transporter.sendMail(mailOptions);
 }
@@ -2960,7 +2981,7 @@ function Index2() {
           lineNumber: 256,
           columnNumber: 13
         }, this),
-        /* @__PURE__ */ jsxDEV18("div", { className: "mt-4 md:mt-0 text-xs text-gray-500 text-center", children: "\xA9 2023 Time Capsule. All rights reserved." }, void 0, !1, {
+        /* @__PURE__ */ jsxDEV18("div", { className: "mt-4 md:mt-0 text-xs text-gray-500 text-center", children: "\xA9 2025 Time Capsule. All rights reserved." }, void 0, !1, {
           fileName: "app/routes/index.tsx",
           lineNumber: 270,
           columnNumber: 13
@@ -3572,7 +3593,7 @@ function NewCapsule() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { entry: { module: "/build/entry.client-TLQCUBIT.js", imports: ["/build/_shared/chunk-O4BRYNJ4.js", "/build/_shared/chunk-HBOENHLD.js", "/build/_shared/chunk-U4FRFQSK.js", "/build/_shared/chunk-XGOTYLZ5.js", "/build/_shared/chunk-7M6SC7J5.js", "/build/_shared/chunk-FOVVXGJ2.js", "/build/_shared/chunk-UWV35TSL.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-XF6T3RXH.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/$capsuleId": { id: "routes/$capsuleId", parentId: "root", path: ":capsuleId", index: void 0, caseSensitive: void 0, module: "/build/routes/$capsuleId-XZ4VTENU.js", imports: ["/build/_shared/chunk-JSCKBFOW.js", "/build/_shared/chunk-KONDUBG3.js", "/build/_shared/chunk-G7CHZRZX.js"], hasAction: !1, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-G73HSPV7.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/check-email": { id: "routes/check-email", parentId: "root", path: "check-email", index: void 0, caseSensitive: void 0, module: "/build/routes/check-email-VCGO4LB2.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/community-guidelines": { id: "routes/community-guidelines", parentId: "root", path: "community-guidelines", index: void 0, caseSensitive: void 0, module: "/build/routes/community-guidelines-X55JPK2G.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/confirm": { id: "routes/confirm", parentId: "root", path: "confirm", index: void 0, caseSensitive: void 0, module: "/build/routes/confirm-TUVAOTYP.js", imports: ["/build/_shared/chunk-KONDUBG3.js", "/build/_shared/chunk-G7CHZRZX.js"], hasAction: !1, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/contact-us": { id: "routes/contact-us", parentId: "root", path: "contact-us", index: void 0, caseSensitive: void 0, module: "/build/routes/contact-us-2ZHO32BN.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/dashboard": { id: "routes/dashboard", parentId: "root", path: "dashboard", index: void 0, caseSensitive: void 0, module: "/build/routes/dashboard-IYWBTGUO.js", imports: ["/build/_shared/chunk-JSCKBFOW.js", "/build/_shared/chunk-KONDUBG3.js", "/build/_shared/chunk-G7CHZRZX.js"], hasAction: !0, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/delete-capsules": { id: "routes/delete-capsules", parentId: "root", path: "delete-capsules", index: void 0, caseSensitive: void 0, module: "/build/routes/delete-capsules-BNOZKYGC.js", imports: ["/build/_shared/chunk-JSCKBFOW.js", "/build/_shared/chunk-KONDUBG3.js", "/build/_shared/chunk-G7CHZRZX.js"], hasAction: !0, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: "index", index: void 0, caseSensitive: void 0, module: "/build/routes/index-4BETLTF6.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/login": { id: "routes/login", parentId: "root", path: "login", index: void 0, caseSensitive: void 0, module: "/build/routes/login-MROXJ7X4.js", imports: ["/build/_shared/chunk-3TAIMXWF.js", "/build/_shared/chunk-JSCKBFOW.js", "/build/_shared/chunk-KONDUBG3.js", "/build/_shared/chunk-G7CHZRZX.js"], hasAction: !0, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/logout": { id: "routes/logout", parentId: "root", path: "logout", index: void 0, caseSensitive: void 0, module: "/build/routes/logout-3MCVWBUP.js", imports: ["/build/_shared/chunk-G7CHZRZX.js"], hasAction: !0, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/new": { id: "routes/new", parentId: "root", path: "new", index: void 0, caseSensitive: void 0, module: "/build/routes/new-KAK3GSWK.js", imports: ["/build/_shared/chunk-3NMNVWE6.js", "/build/_shared/chunk-JSCKBFOW.js", "/build/_shared/chunk-KONDUBG3.js", "/build/_shared/chunk-G7CHZRZX.js"], hasAction: !0, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/notification": { id: "routes/notification", parentId: "root", path: "notification", index: void 0, caseSensitive: void 0, module: "/build/routes/notification-7ZHBOCK7.js", imports: ["/build/_shared/chunk-JSCKBFOW.js", "/build/_shared/chunk-KONDUBG3.js", "/build/_shared/chunk-G7CHZRZX.js"], hasAction: !1, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/privacy-policy": { id: "routes/privacy-policy", parentId: "root", path: "privacy-policy", index: void 0, caseSensitive: void 0, module: "/build/routes/privacy-policy-UHXXRGZO.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/safety-tips": { id: "routes/safety-tips", parentId: "root", path: "safety-tips", index: void 0, caseSensitive: void 0, module: "/build/routes/safety-tips-VXVNC4VE.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/signup": { id: "routes/signup", parentId: "root", path: "signup", index: void 0, caseSensitive: void 0, module: "/build/routes/signup-IQ34T3N5.js", imports: ["/build/_shared/chunk-3TAIMXWF.js", "/build/_shared/chunk-3NMNVWE6.js", "/build/_shared/chunk-KONDUBG3.js", "/build/_shared/chunk-G7CHZRZX.js"], hasAction: !0, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/terms-of-use": { id: "routes/terms-of-use", parentId: "root", path: "terms-of-use", index: void 0, caseSensitive: void 0, module: "/build/routes/terms-of-use-JNAYU4Y6.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/upcoming-updates": { id: "routes/upcoming-updates", parentId: "root", path: "upcoming-updates", index: void 0, caseSensitive: void 0, module: "/build/routes/upcoming-updates-B2FR3UUD.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 } }, version: "79f7cb6c", hmr: { runtime: "/build/_shared/chunk-FOVVXGJ2.js", timestamp: 1740240583395 }, url: "/build/manifest-79F7CB6C.js" };
+var assets_manifest_default = { entry: { module: "/build/entry.client-TLQCUBIT.js", imports: ["/build/_shared/chunk-O4BRYNJ4.js", "/build/_shared/chunk-HBOENHLD.js", "/build/_shared/chunk-U4FRFQSK.js", "/build/_shared/chunk-XGOTYLZ5.js", "/build/_shared/chunk-7M6SC7J5.js", "/build/_shared/chunk-FOVVXGJ2.js", "/build/_shared/chunk-UWV35TSL.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-DNW3GC7V.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/$capsuleId": { id: "routes/$capsuleId", parentId: "root", path: ":capsuleId", index: void 0, caseSensitive: void 0, module: "/build/routes/$capsuleId-SWJUZI6H.js", imports: ["/build/_shared/chunk-JSCKBFOW.js", "/build/_shared/chunk-KONDUBG3.js", "/build/_shared/chunk-G7CHZRZX.js"], hasAction: !1, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-76MGVL4T.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/check-email": { id: "routes/check-email", parentId: "root", path: "check-email", index: void 0, caseSensitive: void 0, module: "/build/routes/check-email-3ODWRDDT.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/community-guidelines": { id: "routes/community-guidelines", parentId: "root", path: "community-guidelines", index: void 0, caseSensitive: void 0, module: "/build/routes/community-guidelines-6APRDYGD.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/confirm": { id: "routes/confirm", parentId: "root", path: "confirm", index: void 0, caseSensitive: void 0, module: "/build/routes/confirm-TUVAOTYP.js", imports: ["/build/_shared/chunk-KONDUBG3.js", "/build/_shared/chunk-G7CHZRZX.js"], hasAction: !1, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/contact-us": { id: "routes/contact-us", parentId: "root", path: "contact-us", index: void 0, caseSensitive: void 0, module: "/build/routes/contact-us-DNIB6KV6.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/dashboard": { id: "routes/dashboard", parentId: "root", path: "dashboard", index: void 0, caseSensitive: void 0, module: "/build/routes/dashboard-7H3CJNXX.js", imports: ["/build/_shared/chunk-JSCKBFOW.js", "/build/_shared/chunk-KONDUBG3.js", "/build/_shared/chunk-G7CHZRZX.js"], hasAction: !0, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/delete-capsules": { id: "routes/delete-capsules", parentId: "root", path: "delete-capsules", index: void 0, caseSensitive: void 0, module: "/build/routes/delete-capsules-BNOZKYGC.js", imports: ["/build/_shared/chunk-JSCKBFOW.js", "/build/_shared/chunk-KONDUBG3.js", "/build/_shared/chunk-G7CHZRZX.js"], hasAction: !0, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: "index", index: void 0, caseSensitive: void 0, module: "/build/routes/index-S5YRIARH.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/login": { id: "routes/login", parentId: "root", path: "login", index: void 0, caseSensitive: void 0, module: "/build/routes/login-MROXJ7X4.js", imports: ["/build/_shared/chunk-3TAIMXWF.js", "/build/_shared/chunk-JSCKBFOW.js", "/build/_shared/chunk-KONDUBG3.js", "/build/_shared/chunk-G7CHZRZX.js"], hasAction: !0, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/logout": { id: "routes/logout", parentId: "root", path: "logout", index: void 0, caseSensitive: void 0, module: "/build/routes/logout-3MCVWBUP.js", imports: ["/build/_shared/chunk-G7CHZRZX.js"], hasAction: !0, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/new": { id: "routes/new", parentId: "root", path: "new", index: void 0, caseSensitive: void 0, module: "/build/routes/new-44ZGID5R.js", imports: ["/build/_shared/chunk-3NMNVWE6.js", "/build/_shared/chunk-JSCKBFOW.js", "/build/_shared/chunk-KONDUBG3.js", "/build/_shared/chunk-G7CHZRZX.js"], hasAction: !0, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/notification": { id: "routes/notification", parentId: "root", path: "notification", index: void 0, caseSensitive: void 0, module: "/build/routes/notification-7ZHBOCK7.js", imports: ["/build/_shared/chunk-JSCKBFOW.js", "/build/_shared/chunk-KONDUBG3.js", "/build/_shared/chunk-G7CHZRZX.js"], hasAction: !1, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/privacy-policy": { id: "routes/privacy-policy", parentId: "root", path: "privacy-policy", index: void 0, caseSensitive: void 0, module: "/build/routes/privacy-policy-JVTNJNBG.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/safety-tips": { id: "routes/safety-tips", parentId: "root", path: "safety-tips", index: void 0, caseSensitive: void 0, module: "/build/routes/safety-tips-HAWSM2BN.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/signup": { id: "routes/signup", parentId: "root", path: "signup", index: void 0, caseSensitive: void 0, module: "/build/routes/signup-IQ34T3N5.js", imports: ["/build/_shared/chunk-3TAIMXWF.js", "/build/_shared/chunk-3NMNVWE6.js", "/build/_shared/chunk-KONDUBG3.js", "/build/_shared/chunk-G7CHZRZX.js"], hasAction: !0, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/terms-of-use": { id: "routes/terms-of-use", parentId: "root", path: "terms-of-use", index: void 0, caseSensitive: void 0, module: "/build/routes/terms-of-use-4THPFSWE.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/upcoming-updates": { id: "routes/upcoming-updates", parentId: "root", path: "upcoming-updates", index: void 0, caseSensitive: void 0, module: "/build/routes/upcoming-updates-NVNACOUC.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 } }, version: "df0e0743", hmr: { runtime: "/build/_shared/chunk-FOVVXGJ2.js", timestamp: 1740316381763 }, url: "/build/manifest-DF0E0743.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var mode = "development", assetsBuildDirectory = "public/build", future = { v3_fetcherPersist: !1, v3_relativeSplatPath: !1, v3_throwAbortReason: !1, v3_routeConfig: !1, v3_singleFetch: !1, v3_lazyRouteDiscovery: !1, unstable_optimizeDeps: !1 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {

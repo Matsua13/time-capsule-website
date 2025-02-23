@@ -1,6 +1,5 @@
-/* eslint-disable import/no-duplicates */
 // app/routes/dashboard.tsx
-import { Link, Form, useLoaderData } from "@remix-run/react";
+import { Link, Form, useLoaderData, useSearchParams } from "@remix-run/react";
 import type { ActionFunction, LoaderFunction } from "@remix-run/node";
 import { json, redirect } from "@remix-run/node";
 import { db } from "~/utils/db.server";
@@ -104,7 +103,6 @@ export const loader: LoaderFunction = async ({ request }) => {
   return json({ capsules: capsulesTransformed, user, notifications, reminders });
 };
 
-// Action pour gérer la suppression d'une capsule depuis le Dashboard
 export const action: ActionFunction = async ({ request }) => {
   const user = await requireUser(request);
   const formData = await request.formData();
@@ -114,7 +112,6 @@ export const action: ActionFunction = async ({ request }) => {
     return json({ error: "Invalid capsule ID" }, { status: 400 });
   }
 
-  // Vérifie que la capsule existe et appartient à l'utilisateur
   const capsule = await db.capsule.findUnique({
     where: { id: parseInt(deleteId) },
     select: { ownerId: true },
@@ -123,11 +120,9 @@ export const action: ActionFunction = async ({ request }) => {
     return json({ error: "Capsule not found or unauthorized" }, { status: 404 });
   }
 
-  // Supprime d'abord les médias associés
   await db.media.deleteMany({
     where: { capsuleId: parseInt(deleteId) },
   });
-  // Puis supprime la capsule
   await db.capsule.delete({
     where: { id: parseInt(deleteId) },
   });
@@ -137,6 +132,7 @@ export const action: ActionFunction = async ({ request }) => {
 
 export default function Dashboard() {
   const { capsules, user, notifications, reminders } = useLoaderData<LoaderData>();
+  const [searchParams] = useSearchParams();
   const [filter, setFilter] = useState<"all" | "sent" | "received">("all");
   const [localReminders, setLocalReminders] = useState<Reminder[]>(reminders);
 
@@ -156,15 +152,25 @@ export default function Dashboard() {
   }
 
   const now = new Date();
-  const upcomingCapsules = filteredCapsules.filter(
-    (c) => new Date(c.scheduledDate) >= now
-  );
-  const pastCapsules = filteredCapsules.filter(
-    (c) => new Date(c.scheduledDate) < now
-  );
+  const upcomingCapsules = filteredCapsules.filter((c) => {
+    return new Date(c.scheduledDate) >= now;
+  });
+  const pastCapsules = filteredCapsules.filter((c) => {
+    return new Date(c.scheduledDate) < now;
+  });
 
   return (
     <div className="min-h-screen p-4 bg-gradient-to-br from-sky-300 to-sky-500 text-gray-900">
+      {/* Affichage d'une alerte si l'URL contient locked et opening */}
+      {searchParams.get("locked") && searchParams.get("opening") && (
+        <div className="mb-6 p-4 bg-red-100 text-red-800 rounded border border-red-300">
+          <p>
+            Be patient, this capsule will open on{" "}
+            <strong>{searchParams.get("opening")}</strong>.
+          </p>
+        </div>
+      )}
+
       {/* Rappels */}
       {localReminders.length > 0 && (
         <div className="mb-6 p-4 bg-emerald-100 text-emerald-800 rounded">
@@ -250,97 +256,99 @@ export default function Dashboard() {
         </button>
       </div>
 
-      {/* Section Capsules à venir avec bouton poubelle redirigeant vers /delete-capsules */}
+      {/* Section Capsules à venir */}
       <section className="mb-8">
-      <h2 className="text-2xl font-semibold mb-4">Upcoming Capsules</h2>
-      {upcomingCapsules.length ? (
-        <div className="grid gap-4">
-          {upcomingCapsules.map((capsule) => {
-            const capsuleDate = new Date(capsule.scheduledDate);
-            // Si l'utilisateur n'est pas le propriétaire et la capsule n'est pas encore accessible
-            if (capsule.ownerId !== user.id && capsuleDate > now) {
-              return (
-                <div
-                  key={capsule.id}
-                  className="flex justify-between items-center p-4 bg-gray-200 rounded shadow border border-gray-400 opacity-50 cursor-not-allowed"
-                  onClick={() =>
-                    alert(`Be patient, this capsule will open on ${capsuleDate.toLocaleString()}`)
-                  }
-                  role="button"
-                  tabIndex={0}
-                  onKeyDown={(e) => {
-                    if (e.key === 'Enter' || e.key === ' ') {
-                      alert(`Be patient, this capsule will open on ${capsuleDate.toLocaleString()}`);
+        <h2 className="text-2xl font-semibold mb-4">Upcoming Capsules</h2>
+        {upcomingCapsules.length ? (
+          <div className="grid gap-4">
+            {upcomingCapsules.map((capsule) => {
+              const capsuleDate = new Date(capsule.scheduledDate);
+              // Condition : verrouiller si la capsule n'est pas ouverte (capsuleDate > now)
+              // ET si la capsule est privée OU si l'utilisateur n'est pas le propriétaire
+              const isLocked =
+                capsuleDate > now &&
+                (capsule.visibility === "private" || capsule.ownerId !== user.id);
+              if (isLocked) {
+                return (
+                  <div
+                    key={capsule.id}
+                    className="flex justify-between items-center p-4 bg-gray-200 rounded shadow border border-gray-400 opacity-50 cursor-not-allowed"
+                    onClick={() =>
+                      alert(`Be patient, this capsule will open on ${capsuleDate.toLocaleString()}`)
                     }
-                  }}
-                >
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-700">{capsule.title}</h3>
-                    <p className="text-xs text-gray-600">
-                      Opening day: {capsuleDate.toLocaleString()}
-                    </p>
-                  </div>
-                  <div>
-                    {/* Icône de verrouillage */}
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-6 w-6 text-gray-700"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M12 11c0-1.657-1.343-3-3-3S6 9.343 6 11v2h6v-2z"
-                      />
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M16 11V9a4 4 0 00-8 0v2"
-                      />
-                    </svg>
-                  </div>
-                </div>
-              );
-            } else {
-              // Affichage normal pour les capsules accessibles (ou pour celles appartenant à l'utilisateur)
-              return (
-                <div
-                  key={capsule.id}
-                  className="flex justify-between items-center p-4 bg-white rounded shadow hover:bg-gray-100 transition"
-                >
-                  <div>
-                    <h3 className="text-xl font-semibold">
-                      <Link to={`/${capsule.id}`} className="text-sky-700 hover:underline">
-                        {capsule.title}
-                      </Link>
-                    </h3>
-                    <p className="text-sm text-gray-600">{capsule.content}</p>
-                    <p className="text-xs text-gray-500">
-                      Opening day: {capsuleDate.toLocaleString()}
-                    </p>
-                  </div>
-                  <Link
-                    to="/delete-capsules"
-                    className="ml-4 text-red-600 hover:text-red-800"
-                    title="Manage capsule deletions"
+                    role="button"
+                    tabIndex={0}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter" || e.key === " ") {
+                        alert(`Be patient, this capsule will open on ${capsuleDate.toLocaleString()}`);
+                      }
+                    }}
                   >
-                    🗑️
-                  </Link>
-                </div>
-              );
-            }
-          })}
-        </div>
-      ) : (
-        <p>No upcoming capsules.</p>
+                    <div>
+                      <h3 className="text-xl font-semibold text-gray-700">{capsule.title}</h3>
+                      <p className="text-xs text-gray-600">
+                        Opening day: {capsuleDate.toLocaleString()}
+                      </p>
+                    </div>
+                    <div>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-6 w-6 text-gray-700"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M12 11c0-1.657-1.343-3-3-3S6 9.343 6 11v2h6v-2z"
+                        />
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M16 11V9a4 4 0 00-8 0v2"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                );
+              } else {
+                return (
+                  <div
+                    key={capsule.id}
+                    className="flex justify-between items-center p-4 bg-white rounded shadow hover:bg-gray-100 transition"
+                  >
+                    <div>
+                      <h3 className="text-xl font-semibold">
+                        <Link to={`/${capsule.id}`} className="text-sky-700 hover:underline">
+                          {capsule.title}
+                        </Link>
+                      </h3>
+                      <p className="text-sm text-gray-600">{capsule.content}</p>
+                      <p className="text-xs text-gray-500">
+                        Opening day: {capsuleDate.toLocaleString()}
+                      </p>
+                    </div>
+                    <Link
+                      to="/delete-capsules"
+                      className="ml-4 text-red-600 hover:text-red-800"
+                      title="Manage capsule deletions"
+                    >
+                      🗑️
+                    </Link>
+                  </div>
+                );
+              }
+            })}
+          </div>
+        ) : (
+          <p>No upcoming capsules.</p>
         )}
       </section>
 
-      {/* Section Capsules passées avec bouton poubelle */}
+      {/* Section Capsules passées */}
       <section className="mb-8">
         <h2 className="text-2xl font-semibold mb-4">Previous Capsules</h2>
         {pastCapsules.length ? (
@@ -352,10 +360,7 @@ export default function Dashboard() {
               >
                 <div>
                   <h3 className="text-xl font-semibold">
-                    <Link
-                      to={`/${capsule.id}`}
-                      className="text-sky-700 hover:underline"
-                    >
+                    <Link to={`/${capsule.id}`} className="text-sky-700 hover:underline">
                       {capsule.title}
                     </Link>
                   </h3>
