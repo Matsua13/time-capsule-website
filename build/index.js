@@ -127,7 +127,7 @@ import {
 } from "@remix-run/react";
 
 // app/styles/global.css
-var global_default = "/build/_assets/global-B7H6MOKP.css";
+var global_default = "/build/_assets/global-VZRVRNVJ.css";
 
 // app/root.tsx
 import { jsxDEV as jsxDEV2 } from "react/jsx-dev-runtime";
@@ -278,7 +278,7 @@ function CommunityGuidelines() {
       lineNumber: 16,
       columnNumber: 9
     }, this),
-    /* @__PURE__ */ jsxDEV3("footer", { className: "mt-8 text-center text-sm text-gray-600", children: /* @__PURE__ */ jsxDEV3("p", { children: "\xA9 2023 Time Capsule. All rights reserved." }, void 0, !1, {
+    /* @__PURE__ */ jsxDEV3("footer", { className: "mt-8 text-center text-sm text-gray-600", children: /* @__PURE__ */ jsxDEV3("p", { children: "\xA9 2025 Time Capsule. All rights reserved." }, void 0, !1, {
       fileName: "app/routes/community-guidelines.tsx",
       lineNumber: 41,
       columnNumber: 11
@@ -323,36 +323,36 @@ function UpcomingUpdates() {
       }, this),
       /* @__PURE__ */ jsxDEV4("ul", { children: [
         /* @__PURE__ */ jsxDEV4("li", { children: [
-          /* @__PURE__ */ jsxDEV4("strong", { children: "- Draft Mode:" }, void 0, !1, {
+          /* @__PURE__ */ jsxDEV4("strong", { children: "- Friend Connections:" }, void 0, !1, {
             fileName: "app/routes/upcoming-updates.tsx",
             lineNumber: 21,
             columnNumber: 15
           }, this),
-          " Create and save draft capsules that you can edit and refine before sending\u2014giving you the time to think about your message."
+          " Connect with other users so that your public capsules can be shared and enjoyed among friends."
         ] }, void 0, !0, {
           fileName: "app/routes/upcoming-updates.tsx",
           lineNumber: 20,
           columnNumber: 13
         }, this),
         /* @__PURE__ */ jsxDEV4("li", { children: [
-          /* @__PURE__ */ jsxDEV4("strong", { children: "- Archive option:" }, void 0, !1, {
+          /* @__PURE__ */ jsxDEV4("strong", { children: "- Draft Mode:" }, void 0, !1, {
             fileName: "app/routes/upcoming-updates.tsx",
             lineNumber: 24,
             columnNumber: 15
           }, this),
-          " Archive the capsules you want to make it easier to organise the dashboard."
+          " Create and save draft capsules that you can edit and refine before sending\u2014giving you the time to think about your message."
         ] }, void 0, !0, {
           fileName: "app/routes/upcoming-updates.tsx",
           lineNumber: 23,
           columnNumber: 13
         }, this),
         /* @__PURE__ */ jsxDEV4("li", { children: [
-          /* @__PURE__ */ jsxDEV4("strong", { children: "- Friend Connections:" }, void 0, !1, {
+          /* @__PURE__ */ jsxDEV4("strong", { children: "- Archive option:" }, void 0, !1, {
             fileName: "app/routes/upcoming-updates.tsx",
             lineNumber: 27,
             columnNumber: 15
           }, this),
-          " Connect with other users so that your public capsules can be shared and enjoyed among friends."
+          " Archive the capsules you want to make it easier to organise the dashboard."
         ] }, void 0, !0, {
           fileName: "app/routes/upcoming-updates.tsx",
           lineNumber: 26,
@@ -397,7 +397,7 @@ function UpcomingUpdates() {
       lineNumber: 16,
       columnNumber: 9
     }, this),
-    /* @__PURE__ */ jsxDEV4("footer", { className: "mt-8 text-center text-sm text-gray-600", children: /* @__PURE__ */ jsxDEV4("p", { children: "\xA9 2023 Time Capsule. All rights reserved." }, void 0, !1, {
+    /* @__PURE__ */ jsxDEV4("footer", { className: "mt-8 text-center text-sm text-gray-600", children: /* @__PURE__ */ jsxDEV4("p", { children: "\xA9 2025 Time Capsule. All rights reserved." }, void 0, !1, {
       fileName: "app/routes/upcoming-updates.tsx",
       lineNumber: 42,
       columnNumber: 11
@@ -621,7 +621,7 @@ function PrivacyPolicy() {
       lineNumber: 11,
       columnNumber: 7
     }, this),
-    /* @__PURE__ */ jsxDEV6("footer", { className: "bg-white text-gray-900 py-4 text-center border-t border-gray-300", children: /* @__PURE__ */ jsxDEV6("p", { children: "\xA9 2023 Time Capsule. All rights reserved." }, void 0, !1, {
+    /* @__PURE__ */ jsxDEV6("footer", { className: "bg-white text-gray-900 py-4 text-center border-t border-gray-300", children: /* @__PURE__ */ jsxDEV6("p", { children: "\xA9 2025 Time Capsule. All rights reserved." }, void 0, !1, {
       fileName: "app/routes/privacy-policy.tsx",
       lineNumber: 17,
       columnNumber: 9
@@ -685,7 +685,7 @@ function TermsOfUse() {
       lineNumber: 11,
       columnNumber: 7
     }, this),
-    /* @__PURE__ */ jsxDEV7("footer", { className: "bg-white text-gray-900 py-4 text-center border-t border-gray-300", children: /* @__PURE__ */ jsxDEV7("p", { children: "\xA9 2023 Time Capsule. All rights reserved." }, void 0, !1, {
+    /* @__PURE__ */ jsxDEV7("footer", { className: "bg-white text-gray-900 py-4 text-center border-t border-gray-300", children: /* @__PURE__ */ jsxDEV7("p", { children: "\xA9 2025 Time Capsule. All rights reserved." }, void 0, !1, {
       fileName: "app/routes/terms-of-use.tsx",
       lineNumber: 17,
       columnNumber: 9
@@ -714,7 +714,7 @@ function CheckEmail() {
       lineNumber: 6,
       columnNumber: 9
     }, this),
-    /* @__PURE__ */ jsxDEV8("p", { className: "text-lg", children: "A confirmation e-mail has been sent to you. Click on the link to confirm your e-mail address and join us!" }, void 0, !1, {
+    /* @__PURE__ */ jsxDEV8("p", { className: "text-lg", children: "We just sent a confirmation email to your inbox. Please click the link in the email to verify your address and get started. If you don't see it right away, be sure to check your spam or junk folder. We're excited to have you with us!\u{1F33B}" }, void 0, !1, {
       fileName: "app/routes/check-email.tsx",
       lineNumber: 7,
       columnNumber: 9
@@ -833,7 +833,7 @@ function SafetyTips() {
       lineNumber: 16,
       columnNumber: 9
     }, this),
-    /* @__PURE__ */ jsxDEV9("footer", { className: "mt-8 text-center text-sm text-gray-600", children: /* @__PURE__ */ jsxDEV9("p", { children: "\xA9 2023 Time Capsule. All rights reserved." }, void 0, !1, {
+    /* @__PURE__ */ jsxDEV9("footer", { className: "mt-8 text-center text-sm text-gray-600", children: /* @__PURE__ */ jsxDEV9("p", { children: "\xA9 2025 Time Capsule. All rights reserved." }, void 0, !1, {
       fileName: "app/routes/safety-tips.tsx",
       lineNumber: 43,
       columnNumber: 11
@@ -929,12 +929,18 @@ function CapsuleDetail() {
       columnNumber: 11
     }, this),
     capsule.visibility === "group" && capsule.groupRecipient && /* @__PURE__ */ jsxDEV10("p", { className: "mb-4 text-sm text-gray-600", children: [
-      "(Group capsule intended for ",
+      "Group capsule intended for ",
       capsule.recipientType,
-      ":",
-      " ",
+      ": ",
       capsule.groupRecipient,
-      ")"
+      /* @__PURE__ */ jsxDEV10("p", { children: [
+        "Sent by: ",
+        capsule.owner.username || capsule.owner.email
+      ] }, void 0, !0, {
+        fileName: "app/routes/$capsuleId.tsx",
+        lineNumber: 101,
+        columnNumber: 11
+      }, this)
     ] }, void 0, !0, {
       fileName: "app/routes/$capsuleId.tsx",
       lineNumber: 99,
@@ -1045,7 +1051,7 @@ function ContactUs() {
       lineNumber: 14,
       columnNumber: 9
     }, this),
-    /* @__PURE__ */ jsxDEV11("footer", { className: "mt-8 text-center text-sm text-gray-600", children: /* @__PURE__ */ jsxDEV11("p", { children: "\xA9 2023 Time Capsule. All rights reserved." }, void 0, !1, {
+    /* @__PURE__ */ jsxDEV11("footer", { className: "mt-8 text-center text-sm text-gray-600", children: /* @__PURE__ */ jsxDEV11("p", { children: "\xA9 2025 Time Capsule. All rights reserved." }, void 0, !1, {
       fileName: "app/routes/contact-us.tsx",
       lineNumber: 27,
       columnNumber: 11
@@ -2000,7 +2006,7 @@ function Index() {
       /* @__PURE__ */ jsxDEV16("div", { className: "absolute bottom-4", children: /* @__PURE__ */ jsxDEV16(
         "svg",
         {
-          className: "w-8 h-8 animate-bounce text-white",
+          className: "w-12 h-12 animate-bounce text-white drop-shadow-lg",
           fill: "none",
           stroke: "currentColor",
           viewBox: "0 0 24 24",
@@ -2035,7 +2041,7 @@ function Index() {
         lineNumber: 195,
         columnNumber: 13
       }, this),
-      /* @__PURE__ */ jsxDEV16("p", { className: "text-base leading-relaxed text-justify", children: "Once upon a time, there was a little girl with eyes sparkling with innocence, who dreamt of feeling the salt of the ocean caress her cheeks and hearing the murmur of the waves as a lullaby every day. She imagined herself, a few years later, living by the sea, her feet in the foam, gliding over the waves like a dancer in symphony with the ocean." }, void 0, !1, {
+      /* @__PURE__ */ jsxDEV16("p", { className: "text-base leading-relaxed text-justify", children: "Once upon a time, there was a little girl with sparkling eyes, who dreamt of hearing the murmur of the waves as a lullaby every day. She imagined herself, a few years later, living by the sea, gliding over the waves like a dancer in symphony with the ocean." }, void 0, !1, {
         fileName: "app/routes/_index.tsx",
         lineNumber: 198,
         columnNumber: 13
@@ -2045,7 +2051,14 @@ function Index() {
         lineNumber: 201,
         columnNumber: 13
       }, this),
-      /* @__PURE__ */ jsxDEV16("p", { className: "text-base leading-relaxed mt-4 text-justify", children: "Time Capsule is much more than an app. Whether you want to send an inspiring, public and accessible capsule to your friends, record your dreams and achievements for yourself, or share a personalised message for a birthday, an amusing anecdote or to comfort a loved one, Time Capsule transforms every moment into a precious bridge between the past and the future. Be creative and let your messages travel through time." }, void 0, !1, {
+      /* @__PURE__ */ jsxDEV16("p", { className: "text-base leading-relaxed mt-4 text-justify", children: [
+        /* @__PURE__ */ jsxDEV16("strong", { children: "Time Capsule" }, void 0, !1, {
+          fileName: "app/routes/_index.tsx",
+          lineNumber: 205,
+          columnNumber: 15
+        }, this),
+        " is much more than an app. Whether you want to send an inspiring public capsule to your friends, record your dreams for yourself, share a personalised message for a birthday or even to let a grandmother send a heartfelt message to her newborn granddaughter so that as she grows up, she can witness her grandmother\u2019s youthful words; Time Capsule transforms every moment into a precious bridge between the past and the future. Be creative and let your messages travel through time."
+      ] }, void 0, !0, {
         fileName: "app/routes/_index.tsx",
         lineNumber: 204,
         columnNumber: 13
@@ -2200,7 +2213,7 @@ function Index() {
           lineNumber: 256,
           columnNumber: 13
         }, this),
-        /* @__PURE__ */ jsxDEV16("div", { className: "mt-4 md:mt-0 text-xs text-gray-500 text-center", children: "\xA9 2023 Time Capsule. All rights reserved." }, void 0, !1, {
+        /* @__PURE__ */ jsxDEV16("div", { className: "mt-4 md:mt-0 text-xs text-gray-500 text-center", children: "\xA9 2025 Time Capsule. All rights reserved." }, void 0, !1, {
           fileName: "app/routes/_index.tsx",
           lineNumber: 270,
           columnNumber: 13
@@ -2271,9 +2284,9 @@ async function sendConfirmationEmail(to, token) {
   let confirmationUrl = `${process.env.BASE_URL || "http://localhost:3000"}/confirm?token=${token}`, mailOptions = {
     from: process.env.GMAIL_USER,
     to,
-    subject: "Please, confirm your e-mail address",
-    text: `Click on this link to confirm your account: ${confirmationUrl}`,
-    html: `<p>Click on <a href="${confirmationUrl}">this link</a> to confirm your account and join us!</p>`
+    subject: "Thank you for joining us!",
+    text: `Hello there! We're delighted to have you on board. To confirm your account, please click on the following link: ${confirmationUrl} and join our community.`,
+    html: `<p>Hello there! We're delighted to have you on board. Please <a href="${confirmationUrl}">click here</a> to confirm your account and join our community.</p>`
   };
   await transporter.sendMail(mailOptions);
 }
@@ -2284,11 +2297,11 @@ async function sendInstantNotificationEmail(to, capsuleTitle) {
     subject: "Someone is thinking about you \u{1F33B}",
     text: `You have received a capsule titled "${capsuleTitle}". Visit your dashboard for more details: ${notificationUrl}
 
-Best regards,
+Cheers,
 The Time Capsule Team`,
     html: `<p>You have received a capsule titled "<strong>${capsuleTitle}</strong>".</p>
            <p>Visit your <a href="${notificationUrl}">dashboard</a> for more details.</p>
-           <p>Best regards,<br>The <strong>Time Capsule</strong> Team</p>`
+           <p>Cheers,<br>The <strong>Time Capsule</strong> Team</p>`
   };
   await transporter.sendMail(mailOptions);
 }
@@ -2956,7 +2969,7 @@ function Index2() {
           lineNumber: 256,
           columnNumber: 13
         }, this),
-        /* @__PURE__ */ jsxDEV18("div", { className: "mt-4 md:mt-0 text-xs text-gray-500 text-center", children: "\xA9 2023 Time Capsule. All rights reserved." }, void 0, !1, {
+        /* @__PURE__ */ jsxDEV18("div", { className: "mt-4 md:mt-0 text-xs text-gray-500 text-center", children: "\xA9 2025 Time Capsule. All rights reserved." }, void 0, !1, {
           fileName: "app/routes/index.tsx",
           lineNumber: 270,
           columnNumber: 13
@@ -3568,7 +3581,7 @@ function NewCapsule() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { entry: { module: "/build/entry.client-TLQCUBIT.js", imports: ["/build/_shared/chunk-O4BRYNJ4.js", "/build/_shared/chunk-HBOENHLD.js", "/build/_shared/chunk-U4FRFQSK.js", "/build/_shared/chunk-XGOTYLZ5.js", "/build/_shared/chunk-7M6SC7J5.js", "/build/_shared/chunk-FOVVXGJ2.js", "/build/_shared/chunk-UWV35TSL.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-RWX6A22O.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/$capsuleId": { id: "routes/$capsuleId", parentId: "root", path: ":capsuleId", index: void 0, caseSensitive: void 0, module: "/build/routes/$capsuleId-W2RIUDFD.js", imports: ["/build/_shared/chunk-JSCKBFOW.js", "/build/_shared/chunk-KONDUBG3.js", "/build/_shared/chunk-G7CHZRZX.js"], hasAction: !1, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-G73HSPV7.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/check-email": { id: "routes/check-email", parentId: "root", path: "check-email", index: void 0, caseSensitive: void 0, module: "/build/routes/check-email-VCGO4LB2.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/community-guidelines": { id: "routes/community-guidelines", parentId: "root", path: "community-guidelines", index: void 0, caseSensitive: void 0, module: "/build/routes/community-guidelines-X55JPK2G.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/confirm": { id: "routes/confirm", parentId: "root", path: "confirm", index: void 0, caseSensitive: void 0, module: "/build/routes/confirm-TUVAOTYP.js", imports: ["/build/_shared/chunk-KONDUBG3.js", "/build/_shared/chunk-G7CHZRZX.js"], hasAction: !1, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/contact-us": { id: "routes/contact-us", parentId: "root", path: "contact-us", index: void 0, caseSensitive: void 0, module: "/build/routes/contact-us-2ZHO32BN.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/dashboard": { id: "routes/dashboard", parentId: "root", path: "dashboard", index: void 0, caseSensitive: void 0, module: "/build/routes/dashboard-7H3CJNXX.js", imports: ["/build/_shared/chunk-JSCKBFOW.js", "/build/_shared/chunk-KONDUBG3.js", "/build/_shared/chunk-G7CHZRZX.js"], hasAction: !0, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/delete-capsules": { id: "routes/delete-capsules", parentId: "root", path: "delete-capsules", index: void 0, caseSensitive: void 0, module: "/build/routes/delete-capsules-BNOZKYGC.js", imports: ["/build/_shared/chunk-JSCKBFOW.js", "/build/_shared/chunk-KONDUBG3.js", "/build/_shared/chunk-G7CHZRZX.js"], hasAction: !0, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: "index", index: void 0, caseSensitive: void 0, module: "/build/routes/index-4BETLTF6.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/login": { id: "routes/login", parentId: "root", path: "login", index: void 0, caseSensitive: void 0, module: "/build/routes/login-MROXJ7X4.js", imports: ["/build/_shared/chunk-3TAIMXWF.js", "/build/_shared/chunk-JSCKBFOW.js", "/build/_shared/chunk-KONDUBG3.js", "/build/_shared/chunk-G7CHZRZX.js"], hasAction: !0, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/logout": { id: "routes/logout", parentId: "root", path: "logout", index: void 0, caseSensitive: void 0, module: "/build/routes/logout-3MCVWBUP.js", imports: ["/build/_shared/chunk-G7CHZRZX.js"], hasAction: !0, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/new": { id: "routes/new", parentId: "root", path: "new", index: void 0, caseSensitive: void 0, module: "/build/routes/new-44ZGID5R.js", imports: ["/build/_shared/chunk-3NMNVWE6.js", "/build/_shared/chunk-JSCKBFOW.js", "/build/_shared/chunk-KONDUBG3.js", "/build/_shared/chunk-G7CHZRZX.js"], hasAction: !0, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/notification": { id: "routes/notification", parentId: "root", path: "notification", index: void 0, caseSensitive: void 0, module: "/build/routes/notification-7ZHBOCK7.js", imports: ["/build/_shared/chunk-JSCKBFOW.js", "/build/_shared/chunk-KONDUBG3.js", "/build/_shared/chunk-G7CHZRZX.js"], hasAction: !1, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/privacy-policy": { id: "routes/privacy-policy", parentId: "root", path: "privacy-policy", index: void 0, caseSensitive: void 0, module: "/build/routes/privacy-policy-UHXXRGZO.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/safety-tips": { id: "routes/safety-tips", parentId: "root", path: "safety-tips", index: void 0, caseSensitive: void 0, module: "/build/routes/safety-tips-VXVNC4VE.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/signup": { id: "routes/signup", parentId: "root", path: "signup", index: void 0, caseSensitive: void 0, module: "/build/routes/signup-IQ34T3N5.js", imports: ["/build/_shared/chunk-3TAIMXWF.js", "/build/_shared/chunk-3NMNVWE6.js", "/build/_shared/chunk-KONDUBG3.js", "/build/_shared/chunk-G7CHZRZX.js"], hasAction: !0, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/terms-of-use": { id: "routes/terms-of-use", parentId: "root", path: "terms-of-use", index: void 0, caseSensitive: void 0, module: "/build/routes/terms-of-use-JNAYU4Y6.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/upcoming-updates": { id: "routes/upcoming-updates", parentId: "root", path: "upcoming-updates", index: void 0, caseSensitive: void 0, module: "/build/routes/upcoming-updates-B2FR3UUD.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 } }, version: "e30b4f43", hmr: { runtime: "/build/_shared/chunk-FOVVXGJ2.js", timestamp: 1740241899996 }, url: "/build/manifest-E30B4F43.js" };
+var assets_manifest_default = { entry: { module: "/build/entry.client-TLQCUBIT.js", imports: ["/build/_shared/chunk-O4BRYNJ4.js", "/build/_shared/chunk-HBOENHLD.js", "/build/_shared/chunk-U4FRFQSK.js", "/build/_shared/chunk-XGOTYLZ5.js", "/build/_shared/chunk-7M6SC7J5.js", "/build/_shared/chunk-FOVVXGJ2.js", "/build/_shared/chunk-UWV35TSL.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-QWGPZYYB.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/$capsuleId": { id: "routes/$capsuleId", parentId: "root", path: ":capsuleId", index: void 0, caseSensitive: void 0, module: "/build/routes/$capsuleId-NMMR2CCP.js", imports: ["/build/_shared/chunk-JSCKBFOW.js", "/build/_shared/chunk-KONDUBG3.js", "/build/_shared/chunk-G7CHZRZX.js"], hasAction: !1, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-BHKFKD7X.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/check-email": { id: "routes/check-email", parentId: "root", path: "check-email", index: void 0, caseSensitive: void 0, module: "/build/routes/check-email-3ODWRDDT.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/community-guidelines": { id: "routes/community-guidelines", parentId: "root", path: "community-guidelines", index: void 0, caseSensitive: void 0, module: "/build/routes/community-guidelines-6APRDYGD.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/confirm": { id: "routes/confirm", parentId: "root", path: "confirm", index: void 0, caseSensitive: void 0, module: "/build/routes/confirm-TUVAOTYP.js", imports: ["/build/_shared/chunk-KONDUBG3.js", "/build/_shared/chunk-G7CHZRZX.js"], hasAction: !1, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/contact-us": { id: "routes/contact-us", parentId: "root", path: "contact-us", index: void 0, caseSensitive: void 0, module: "/build/routes/contact-us-DNIB6KV6.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/dashboard": { id: "routes/dashboard", parentId: "root", path: "dashboard", index: void 0, caseSensitive: void 0, module: "/build/routes/dashboard-7H3CJNXX.js", imports: ["/build/_shared/chunk-JSCKBFOW.js", "/build/_shared/chunk-KONDUBG3.js", "/build/_shared/chunk-G7CHZRZX.js"], hasAction: !0, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/delete-capsules": { id: "routes/delete-capsules", parentId: "root", path: "delete-capsules", index: void 0, caseSensitive: void 0, module: "/build/routes/delete-capsules-BNOZKYGC.js", imports: ["/build/_shared/chunk-JSCKBFOW.js", "/build/_shared/chunk-KONDUBG3.js", "/build/_shared/chunk-G7CHZRZX.js"], hasAction: !0, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: "index", index: void 0, caseSensitive: void 0, module: "/build/routes/index-S5YRIARH.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/login": { id: "routes/login", parentId: "root", path: "login", index: void 0, caseSensitive: void 0, module: "/build/routes/login-MROXJ7X4.js", imports: ["/build/_shared/chunk-3TAIMXWF.js", "/build/_shared/chunk-JSCKBFOW.js", "/build/_shared/chunk-KONDUBG3.js", "/build/_shared/chunk-G7CHZRZX.js"], hasAction: !0, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/logout": { id: "routes/logout", parentId: "root", path: "logout", index: void 0, caseSensitive: void 0, module: "/build/routes/logout-3MCVWBUP.js", imports: ["/build/_shared/chunk-G7CHZRZX.js"], hasAction: !0, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/new": { id: "routes/new", parentId: "root", path: "new", index: void 0, caseSensitive: void 0, module: "/build/routes/new-44ZGID5R.js", imports: ["/build/_shared/chunk-3NMNVWE6.js", "/build/_shared/chunk-JSCKBFOW.js", "/build/_shared/chunk-KONDUBG3.js", "/build/_shared/chunk-G7CHZRZX.js"], hasAction: !0, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/notification": { id: "routes/notification", parentId: "root", path: "notification", index: void 0, caseSensitive: void 0, module: "/build/routes/notification-7ZHBOCK7.js", imports: ["/build/_shared/chunk-JSCKBFOW.js", "/build/_shared/chunk-KONDUBG3.js", "/build/_shared/chunk-G7CHZRZX.js"], hasAction: !1, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/privacy-policy": { id: "routes/privacy-policy", parentId: "root", path: "privacy-policy", index: void 0, caseSensitive: void 0, module: "/build/routes/privacy-policy-JVTNJNBG.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/safety-tips": { id: "routes/safety-tips", parentId: "root", path: "safety-tips", index: void 0, caseSensitive: void 0, module: "/build/routes/safety-tips-HAWSM2BN.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/signup": { id: "routes/signup", parentId: "root", path: "signup", index: void 0, caseSensitive: void 0, module: "/build/routes/signup-IQ34T3N5.js", imports: ["/build/_shared/chunk-3TAIMXWF.js", "/build/_shared/chunk-3NMNVWE6.js", "/build/_shared/chunk-KONDUBG3.js", "/build/_shared/chunk-G7CHZRZX.js"], hasAction: !0, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/terms-of-use": { id: "routes/terms-of-use", parentId: "root", path: "terms-of-use", index: void 0, caseSensitive: void 0, module: "/build/routes/terms-of-use-4THPFSWE.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/upcoming-updates": { id: "routes/upcoming-updates", parentId: "root", path: "upcoming-updates", index: void 0, caseSensitive: void 0, module: "/build/routes/upcoming-updates-MPA4NYUG.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 } }, version: "e07723a7", hmr: { runtime: "/build/_shared/chunk-FOVVXGJ2.js", timestamp: 1740312800439 }, url: "/build/manifest-E07723A7.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var mode = "development", assetsBuildDirectory = "public/build", future = { v3_fetcherPersist: !1, v3_relativeSplatPath: !1, v3_throwAbortReason: !1, v3_routeConfig: !1, v3_singleFetch: !1, v3_lazyRouteDiscovery: !1, unstable_optimizeDeps: !1 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {

@@ -14,7 +14,7 @@ export default function TermsOfUse() {
         </div>
       </main>
       <footer className="bg-white text-gray-900 py-4 text-center border-t border-gray-300">
-        <p>© 2023 Time Capsule. All rights reserved.</p>
+        <p>© 2025 Time Capsule. All rights reserved.</p>
       </footer>
     </div>
   );

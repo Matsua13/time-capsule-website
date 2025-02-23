@@ -38,7 +38,7 @@ export default function CommunityGuidelines() {
         </main>
         {/* FOOTER */}
         <footer className="mt-8 text-center text-sm text-gray-600">
-          <p>© 2023 Time Capsule. All rights reserved.</p>
+          <p>© 2025 Time Capsule. All rights reserved.</p>
         </footer>
       </div>
     </div>

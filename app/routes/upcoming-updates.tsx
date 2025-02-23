@@ -18,13 +18,13 @@ export default function UpcomingUpdates() {
             At Time Capsule, we&#39;re continuously working to enhance your experience. In our upcoming updates, you can expect:</p>
           <ul>
             <li>
+              <strong>- Friend Connections:</strong> Connect with other users so that your public capsules can be shared and enjoyed among friends.
+            </li>
+            <li>
               <strong>- Draft Mode:</strong> Create and save draft capsules that you can edit and refine before sending—giving you the time to think about your message.
             </li>
             <li>
               <strong>- Archive option:</strong> Archive the capsules you want to make it easier to organise the dashboard.
-            </li>
-            <li>
-              <strong>- Friend Connections:</strong> Connect with other users so that your public capsules can be shared and enjoyed among friends.
             </li>
             <li>
               <strong>- Interactive Replies:</strong> Respond to received capsules—whether it&#39;s engaging with your past self or replying to a friend&#39;s message.
@@ -39,7 +39,7 @@ export default function UpcomingUpdates() {
         </main>
         {/* FOOTER */}
         <footer className="mt-8 text-center text-sm text-gray-600">
-          <p>© 2023 Time Capsule. All rights reserved.</p>
+          <p>© 2025 Time Capsule. All rights reserved.</p>
         </footer>
       </div>
     </div>

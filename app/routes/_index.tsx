@@ -177,7 +177,7 @@ export default function Index() {
         {/* Indicateur de scroll animé */}
         <div className="absolute bottom-4">
           <svg
-            className="w-8 h-8 animate-bounce text-white"
+            className="w-12 h-12 animate-bounce text-white drop-shadow-lg"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -196,13 +196,13 @@ export default function Index() {
               About
             </h2>
             <p className="text-base leading-relaxed text-justify">
-              Once upon a time, there was a little girl with eyes sparkling with innocence, who dreamt of feeling the salt of the ocean caress her cheeks and hearing the murmur of the waves as a lullaby every day. She imagined herself, a few years later, living by the sea, her feet in the foam, gliding over the waves like a dancer in symphony with the ocean.
+              Once upon a time, there was a little girl with sparkling eyes, who dreamt of hearing the murmur of the waves as a lullaby every day. She imagined herself, a few years later, living by the sea, gliding over the waves like a dancer in symphony with the ocean.
             </p>
             <p className="text-base leading-relaxed mt-4 text-justify">
               One day, determined to seal her dreams, she created a time capsule, a message of hope and ambition, destined for her future version. Five years later, after a morning surf session, she found herself facing the ocean — the ocean that had become her daily life over the last year. She felt immense gratitude towards the little girl who had dared to dream. You are where you wanted to be.
             </p>
             <p className="text-base leading-relaxed mt-4 text-justify">
-              Time Capsule is much more than an app. Whether you want to send an inspiring, public and accessible capsule to your friends, record your dreams and achievements for yourself, or share a personalised message for a birthday, an amusing anecdote or to comfort a loved one, Time Capsule transforms every moment into a precious bridge between the past and the future. Be creative and let your messages travel through time.
+              <strong>Time Capsule</strong> is much more than an app. Whether you want to send an inspiring public capsule to your friends, record your dreams for yourself, share a personalised message for a birthday or even to let a grandmother send a heartfelt message to her newborn granddaughter so that as she grows up, she can witness her grandmother’s youthful words; Time Capsule transforms every moment into a precious bridge between the past and the future. Be creative and let your messages travel through time.
             </p>
           </div>
         </ScrollReveal>
@@ -268,7 +268,7 @@ export default function Index() {
               </a>
             </div>
             <div className="mt-4 md:mt-0 text-xs text-gray-500 text-center">
-              © 2023 Time Capsule. All rights reserved.
+              © 2025 Time Capsule. All rights reserved.
             </div>
           </div>
         </div>

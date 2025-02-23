@@ -97,8 +97,8 @@ export default function CapsuleDetail() {
         )}
         {capsule.visibility === "group" && capsule.groupRecipient && (
           <p className="mb-4 text-sm text-gray-600">
-            (Group capsule intended for {capsule.recipientType}:{" "}
-            {capsule.groupRecipient})
+            Group capsule intended for {capsule.recipientType}: {capsule.groupRecipient}
+          <p>Sent by: {capsule.owner.username || capsule.owner.email}</p>
           </p>
         )}
         {capsule.media && capsule.media.length > 0 && (
