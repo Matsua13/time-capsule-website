@@ -14,7 +14,7 @@ import { createReadableStreamFromReadable } from "@remix-run/node";
 import { RemixServer } from "@remix-run/react";
 import { isbot } from "isbot";
 import { renderToPipeableStream } from "react-dom/server";
-import { jsxDEV } from "react/jsx-dev-runtime";
+import { jsx } from "react/jsx-runtime";
 var ABORT_DELAY = 5e3;
 function handleRequest(request, responseStatusCode, responseHeaders, remixContext, loadContext) {
   return isbot(request.headers.get("user-agent") || "") ? handleBotRequest(
@@ -32,21 +32,13 @@ function handleRequest(request, responseStatusCode, responseHeaders, remixContex
 function handleBotRequest(request, responseStatusCode, responseHeaders, remixContext) {
   return new Promise((resolve, reject) => {
     let shellRendered = !1, { pipe, abort } = renderToPipeableStream(
-      /* @__PURE__ */ jsxDEV(
+      /* @__PURE__ */ jsx(
         RemixServer,
         {
           context: remixContext,
           url: request.url,
           abortDelay: ABORT_DELAY
-        },
-        void 0,
-        !1,
-        {
-          fileName: "app/entry.server.tsx",
-          lineNumber: 51,
-          columnNumber: 7
-        },
-        this
+        }
       ),
       {
         onAllReady() {
@@ -73,21 +65,13 @@ function handleBotRequest(request, responseStatusCode, responseHeaders, remixCon
 function handleBrowserRequest(request, responseStatusCode, responseHeaders, remixContext) {
   return new Promise((resolve, reject) => {
     let shellRendered = !1, { pipe, abort } = renderToPipeableStream(
-      /* @__PURE__ */ jsxDEV(
+      /* @__PURE__ */ jsx(
         RemixServer,
         {
           context: remixContext,
           url: request.url,
           abortDelay: ABORT_DELAY
-        },
-        void 0,
-        !1,
-        {
-          fileName: "app/entry.server.tsx",
-          lineNumber: 101,
-          columnNumber: 7
-        },
-        this
+        }
       ),
       {
         onShellReady() {
@@ -127,10 +111,10 @@ import {
 } from "@remix-run/react";
 
 // app/styles/global.css
-var global_default = "/build/_assets/global-XOB27IOR.css";
+var global_default = "/build/_assets/global-LK6CQD5J.css";
 
 // app/root.tsx
-import { jsxDEV as jsxDEV2 } from "react/jsx-dev-runtime";
+import { jsx as jsx2, jsxs } from "react/jsx-runtime";
 var links = () => [
   { rel: "stylesheet", href: global_default },
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -141,49 +125,17 @@ var links = () => [
   }
 ];
 function App() {
-  return /* @__PURE__ */ jsxDEV2("html", { lang: "en", children: [
-    /* @__PURE__ */ jsxDEV2("head", { children: [
-      /* @__PURE__ */ jsxDEV2(Meta, {}, void 0, !1, {
-        fileName: "app/root.tsx",
-        lineNumber: 29,
-        columnNumber: 9
-      }, this),
-      /* @__PURE__ */ jsxDEV2(Links, {}, void 0, !1, {
-        fileName: "app/root.tsx",
-        lineNumber: 30,
-        columnNumber: 9
-      }, this)
-    ] }, void 0, !0, {
-      fileName: "app/root.tsx",
-      lineNumber: 28,
-      columnNumber: 7
-    }, this),
-    /* @__PURE__ */ jsxDEV2("body", { className: "font-inter bg-background text-gray-800", children: [
-      /* @__PURE__ */ jsxDEV2(Outlet, {}, void 0, !1, {
-        fileName: "app/root.tsx",
-        lineNumber: 33,
-        columnNumber: 9
-      }, this),
-      /* @__PURE__ */ jsxDEV2(ScrollRestoration, {}, void 0, !1, {
-        fileName: "app/root.tsx",
-        lineNumber: 34,
-        columnNumber: 9
-      }, this),
-      /* @__PURE__ */ jsxDEV2(Scripts, {}, void 0, !1, {
-        fileName: "app/root.tsx",
-        lineNumber: 35,
-        columnNumber: 9
-      }, this)
-    ] }, void 0, !0, {
-      fileName: "app/root.tsx",
-      lineNumber: 32,
-      columnNumber: 7
-    }, this)
-  ] }, void 0, !0, {
-    fileName: "app/root.tsx",
-    lineNumber: 27,
-    columnNumber: 5
-  }, this);
+  return /* @__PURE__ */ jsxs("html", { lang: "en", children: [
+    /* @__PURE__ */ jsxs("head", { children: [
+      /* @__PURE__ */ jsx2(Meta, {}),
+      /* @__PURE__ */ jsx2(Links, {})
+    ] }),
+    /* @__PURE__ */ jsxs("body", { className: "font-inter bg-background text-gray-800", children: [
+      /* @__PURE__ */ jsx2(Outlet, {}),
+      /* @__PURE__ */ jsx2(ScrollRestoration, {}),
+      /* @__PURE__ */ jsx2(Scripts, {})
+    ] })
+  ] });
 }
 
 // app/routes/community-guidelines.tsx
@@ -191,111 +143,35 @@ var community_guidelines_exports = {};
 __export(community_guidelines_exports, {
   default: () => CommunityGuidelines
 });
-import { jsxDEV as jsxDEV3 } from "react/jsx-dev-runtime";
+import { jsx as jsx3, jsxs as jsxs2 } from "react/jsx-runtime";
 function CommunityGuidelines() {
-  return /* @__PURE__ */ jsxDEV3("div", { className: "min-h-screen p-4 bg-gradient-to-br from-sky-300 to-sky-500 text-gray-900", children: /* @__PURE__ */ jsxDEV3("div", { className: "max-w-3xl mx-auto bg-white p-8 rounded-3xl shadow-xl border-4 border-yellow-500", children: [
-    /* @__PURE__ */ jsxDEV3("header", { className: "text-center mb-6", children: /* @__PURE__ */ jsxDEV3("h1", { className: "text-4xl font-extrabold drop-shadow-lg", children: "Community Guidelines" }, void 0, !1, {
-      fileName: "app/routes/community-guidelines.tsx",
-      lineNumber: 11,
-      columnNumber: 11
-    }, this) }, void 0, !1, {
-      fileName: "app/routes/community-guidelines.tsx",
-      lineNumber: 10,
-      columnNumber: 9
-    }, this),
-    /* @__PURE__ */ jsxDEV3("main", { className: "prose text-justify", children: [
-      /* @__PURE__ */ jsxDEV3("p", { children: "Welcome to the Time Capsule Universe," }, void 0, !1, {
-        fileName: "app/routes/community-guidelines.tsx",
-        lineNumber: 17,
-        columnNumber: 11
-      }, this),
-      /* @__PURE__ */ jsxDEV3("p", { children: "At Time Capsule, we believe that every message and every memory is precious. To ensure a harmonious and respectful environment, we invite you to observe the following principles:" }, void 0, !1, {
-        fileName: "app/routes/community-guidelines.tsx",
-        lineNumber: 18,
-        columnNumber: 11
-      }, this),
-      /* @__PURE__ */ jsxDEV3("ul", { children: [
-        /* @__PURE__ */ jsxDEV3("li", { children: [
-          /* @__PURE__ */ jsxDEV3("strong", { children: "- Respect and Kindness:" }, void 0, !1, {
-            fileName: "app/routes/community-guidelines.tsx",
-            lineNumber: 23,
-            columnNumber: 15
-          }, this),
+  return /* @__PURE__ */ jsx3("div", { className: "min-h-screen p-4 bg-gradient-to-br from-sky-300 to-sky-500 text-gray-900", children: /* @__PURE__ */ jsxs2("div", { className: "max-w-3xl mx-auto bg-white p-8 rounded-3xl shadow-xl border-4 border-yellow-500", children: [
+    /* @__PURE__ */ jsx3("header", { className: "text-center mb-6", children: /* @__PURE__ */ jsx3("h1", { className: "text-4xl font-extrabold drop-shadow-lg", children: "Community Guidelines" }) }),
+    /* @__PURE__ */ jsxs2("main", { className: "prose text-justify", children: [
+      /* @__PURE__ */ jsx3("p", { children: "Welcome to the Time Capsule Universe," }),
+      /* @__PURE__ */ jsx3("p", { children: "At Time Capsule, we believe that every message and every memory is precious. To ensure a harmonious and respectful environment, we invite you to observe the following principles:" }),
+      /* @__PURE__ */ jsxs2("ul", { children: [
+        /* @__PURE__ */ jsxs2("li", { children: [
+          /* @__PURE__ */ jsx3("strong", { children: "- Respect and Kindness:" }),
           " Treat everyone with courtesy and consideration. Any form of harassment, discrimination, or hate speech is strictly prohibited."
-        ] }, void 0, !0, {
-          fileName: "app/routes/community-guidelines.tsx",
-          lineNumber: 22,
-          columnNumber: 13
-        }, this),
-        /* @__PURE__ */ jsxDEV3("li", { children: [
-          /* @__PURE__ */ jsxDEV3("strong", { children: "- Confidentiality and Discretion:" }, void 0, !1, {
-            fileName: "app/routes/community-guidelines.tsx",
-            lineNumber: 26,
-            columnNumber: 15
-          }, this),
+        ] }),
+        /* @__PURE__ */ jsxs2("li", { children: [
+          /* @__PURE__ */ jsx3("strong", { children: "- Confidentiality and Discretion:" }),
           " Avoid sharing sensitive personal information about yourself or others."
-        ] }, void 0, !0, {
-          fileName: "app/routes/community-guidelines.tsx",
-          lineNumber: 25,
-          columnNumber: 13
-        }, this),
-        /* @__PURE__ */ jsxDEV3("li", { children: [
-          /* @__PURE__ */ jsxDEV3("strong", { children: "- Constructive Sharing:" }, void 0, !1, {
-            fileName: "app/routes/community-guidelines.tsx",
-            lineNumber: 29,
-            columnNumber: 15
-          }, this),
+        ] }),
+        /* @__PURE__ */ jsxs2("li", { children: [
+          /* @__PURE__ */ jsx3("strong", { children: "- Constructive Sharing:" }),
           " Your messages and memories are intended to inspire and encourage. Be aware of the impact of your publications and foster enriching exchanges\u2014even if your goals are not immediately achieved, your capsule is meant for introspection and evolution."
-        ] }, void 0, !0, {
-          fileName: "app/routes/community-guidelines.tsx",
-          lineNumber: 28,
-          columnNumber: 13
-        }, this),
-        /* @__PURE__ */ jsxDEV3("li", { children: [
-          /* @__PURE__ */ jsxDEV3("strong", { children: "- Authenticity and Responsibility:" }, void 0, !1, {
-            fileName: "app/routes/community-guidelines.tsx",
-            lineNumber: 32,
-            columnNumber: 15
-          }, this),
+        ] }),
+        /* @__PURE__ */ jsxs2("li", { children: [
+          /* @__PURE__ */ jsx3("strong", { children: "- Authenticity and Responsibility:" }),
           " Ensure that your content reflects your true emotions and experiences while respecting the dignity of others."
-        ] }, void 0, !0, {
-          fileName: "app/routes/community-guidelines.tsx",
-          lineNumber: 31,
-          columnNumber: 13
-        }, this)
-      ] }, void 0, !0, {
-        fileName: "app/routes/community-guidelines.tsx",
-        lineNumber: 21,
-        columnNumber: 11
-      }, this),
-      /* @__PURE__ */ jsxDEV3("p", { children: "By using Time Capsule, you agree to abide by these essential rules. Together, let's create a space for sharing and inspiration, where each capsule contributes to weaving a collective story of respect and hope." }, void 0, !1, {
-        fileName: "app/routes/community-guidelines.tsx",
-        lineNumber: 35,
-        columnNumber: 11
-      }, this)
-    ] }, void 0, !0, {
-      fileName: "app/routes/community-guidelines.tsx",
-      lineNumber: 16,
-      columnNumber: 9
-    }, this),
-    /* @__PURE__ */ jsxDEV3("footer", { className: "mt-8 text-center text-sm text-gray-600", children: /* @__PURE__ */ jsxDEV3("p", { children: "\xA9 2025 Time Capsule. All rights reserved." }, void 0, !1, {
-      fileName: "app/routes/community-guidelines.tsx",
-      lineNumber: 41,
-      columnNumber: 11
-    }, this) }, void 0, !1, {
-      fileName: "app/routes/community-guidelines.tsx",
-      lineNumber: 40,
-      columnNumber: 9
-    }, this)
-  ] }, void 0, !0, {
-    fileName: "app/routes/community-guidelines.tsx",
-    lineNumber: 8,
-    columnNumber: 7
-  }, this) }, void 0, !1, {
-    fileName: "app/routes/community-guidelines.tsx",
-    lineNumber: 7,
-    columnNumber: 5
-  }, this);
+        ] })
+      ] }),
+      /* @__PURE__ */ jsx3("p", { children: "By using Time Capsule, you agree to abide by these essential rules. Together, let's create a space for sharing and inspiration, where each capsule contributes to weaving a collective story of respect and hope." })
+    ] }),
+    /* @__PURE__ */ jsx3("footer", { className: "mt-8 text-center text-sm text-gray-600", children: /* @__PURE__ */ jsx3("p", { children: "\xA9 2025 Time Capsule. All rights reserved." }) })
+  ] }) });
 }
 
 // app/routes/upcoming-updates.tsx
@@ -303,130 +179,42 @@ var upcoming_updates_exports = {};
 __export(upcoming_updates_exports, {
   default: () => UpcomingUpdates
 });
-import { jsxDEV as jsxDEV4 } from "react/jsx-dev-runtime";
+import { jsx as jsx4, jsxs as jsxs3 } from "react/jsx-runtime";
 function UpcomingUpdates() {
-  return /* @__PURE__ */ jsxDEV4("div", { className: "min-h-screen p-4 bg-gradient-to-br from-sky-300 to-sky-500 text-gray-900", children: /* @__PURE__ */ jsxDEV4("div", { className: "max-w-3xl mx-auto bg-white p-8 rounded-3xl shadow-xl border-4 border-yellow-500", children: [
-    /* @__PURE__ */ jsxDEV4("header", { className: "text-center mb-6", children: /* @__PURE__ */ jsxDEV4("h1", { className: "text-4xl font-extrabold drop-shadow-lg", children: "Upcoming Updates" }, void 0, !1, {
-      fileName: "app/routes/upcoming-updates.tsx",
-      lineNumber: 11,
-      columnNumber: 11
-    }, this) }, void 0, !1, {
-      fileName: "app/routes/upcoming-updates.tsx",
-      lineNumber: 10,
-      columnNumber: 9
-    }, this),
-    /* @__PURE__ */ jsxDEV4("main", { className: "prose text-justify", children: [
-      /* @__PURE__ */ jsxDEV4("p", { children: "At Time Capsule, we're continuously working to enhance your experience. In our upcoming updates, you can expect:" }, void 0, !1, {
-        fileName: "app/routes/upcoming-updates.tsx",
-        lineNumber: 17,
-        columnNumber: 11
-      }, this),
-      /* @__PURE__ */ jsxDEV4("ul", { children: [
-        /* @__PURE__ */ jsxDEV4("li", { children: [
-          /* @__PURE__ */ jsxDEV4("strong", { children: "- Friend Connections:" }, void 0, !1, {
-            fileName: "app/routes/upcoming-updates.tsx",
-            lineNumber: 21,
-            columnNumber: 15
-          }, this),
+  return /* @__PURE__ */ jsx4("div", { className: "min-h-screen p-4 bg-gradient-to-br from-sky-300 to-sky-500 text-gray-900", children: /* @__PURE__ */ jsxs3("div", { className: "max-w-3xl mx-auto bg-white p-8 rounded-3xl shadow-xl border-4 border-yellow-500", children: [
+    /* @__PURE__ */ jsx4("header", { className: "text-center mb-6", children: /* @__PURE__ */ jsx4("h1", { className: "text-4xl font-extrabold drop-shadow-lg", children: "Upcoming Updates" }) }),
+    /* @__PURE__ */ jsxs3("main", { className: "prose text-justify", children: [
+      /* @__PURE__ */ jsx4("p", { children: "At Time Capsule, we're continuously working to enhance your experience. In our upcoming updates, you can expect:" }),
+      /* @__PURE__ */ jsxs3("ul", { children: [
+        /* @__PURE__ */ jsxs3("li", { children: [
+          /* @__PURE__ */ jsx4("strong", { children: "- Friend Connections:" }),
           " Connect with other users so that your public capsules can be shared and enjoyed among friends."
-        ] }, void 0, !0, {
-          fileName: "app/routes/upcoming-updates.tsx",
-          lineNumber: 20,
-          columnNumber: 13
-        }, this),
-        /* @__PURE__ */ jsxDEV4("li", { children: [
-          /* @__PURE__ */ jsxDEV4("strong", { children: "- Draft Mode:" }, void 0, !1, {
-            fileName: "app/routes/upcoming-updates.tsx",
-            lineNumber: 24,
-            columnNumber: 15
-          }, this),
+        ] }),
+        /* @__PURE__ */ jsxs3("li", { children: [
+          /* @__PURE__ */ jsx4("strong", { children: "- Draft Mode:" }),
           " Create and save draft capsules that you can edit and refine before sending\u2014giving you the time to think about your message."
-        ] }, void 0, !0, {
-          fileName: "app/routes/upcoming-updates.tsx",
-          lineNumber: 23,
-          columnNumber: 13
-        }, this),
-        /* @__PURE__ */ jsxDEV4("li", { children: [
-          /* @__PURE__ */ jsxDEV4("strong", { children: "- Archive option:" }, void 0, !1, {
-            fileName: "app/routes/upcoming-updates.tsx",
-            lineNumber: 27,
-            columnNumber: 15
-          }, this),
+        ] }),
+        /* @__PURE__ */ jsxs3("li", { children: [
+          /* @__PURE__ */ jsx4("strong", { children: "- Archive option:" }),
           " Archive the capsules you want to make it easier to organise the dashboard."
-        ] }, void 0, !0, {
-          fileName: "app/routes/upcoming-updates.tsx",
-          lineNumber: 26,
-          columnNumber: 13
-        }, this),
-        /* @__PURE__ */ jsxDEV4("li", { children: [
-          /* @__PURE__ */ jsxDEV4("strong", { children: "- Interactive Replies:" }, void 0, !1, {
-            fileName: "app/routes/upcoming-updates.tsx",
-            lineNumber: 30,
-            columnNumber: 15
-          }, this),
+        ] }),
+        /* @__PURE__ */ jsxs3("li", { children: [
+          /* @__PURE__ */ jsx4("strong", { children: "- Interactive Replies:" }),
           " Respond to received capsules\u2014whether it's engaging with your past self or replying to a friend's message."
-        ] }, void 0, !0, {
-          fileName: "app/routes/upcoming-updates.tsx",
-          lineNumber: 29,
-          columnNumber: 13
-        }, this),
-        /* @__PURE__ */ jsxDEV4("li", { children: [
-          /* @__PURE__ */ jsxDEV4("strong", { children: "- Social Sign-In:" }, void 0, !1, {
-            fileName: "app/routes/upcoming-updates.tsx",
-            lineNumber: 33,
-            columnNumber: 15
-          }, this),
+        ] }),
+        /* @__PURE__ */ jsxs3("li", { children: [
+          /* @__PURE__ */ jsx4("strong", { children: "- Social Sign-In:" }),
           " Enjoy a smoother experience with the option to sign up and log in using Google and Facebook."
-        ] }, void 0, !0, {
-          fileName: "app/routes/upcoming-updates.tsx",
-          lineNumber: 32,
-          columnNumber: 13
-        }, this),
-        /* @__PURE__ */ jsxDEV4("li", { children: [
-          /* @__PURE__ */ jsxDEV4("strong", { children: "- Animation effect for opening day's capsule:" }, void 0, !1, {
-            fileName: "app/routes/upcoming-updates.tsx",
-            lineNumber: 36,
-            columnNumber: 15
-          }, this),
+        ] }),
+        /* @__PURE__ */ jsxs3("li", { children: [
+          /* @__PURE__ */ jsx4("strong", { children: "- Animation effect for opening day's capsule:" }),
           " Enjoy a smoother experience."
-        ] }, void 0, !0, {
-          fileName: "app/routes/upcoming-updates.tsx",
-          lineNumber: 35,
-          columnNumber: 13
-        }, this)
-      ] }, void 0, !0, {
-        fileName: "app/routes/upcoming-updates.tsx",
-        lineNumber: 19,
-        columnNumber: 11
-      }, this),
-      /* @__PURE__ */ jsxDEV4("p", { children: "Stay tuned for these exciting new features as we continue to evolve your Time Capsule experience!" }, void 0, !1, {
-        fileName: "app/routes/upcoming-updates.tsx",
-        lineNumber: 39,
-        columnNumber: 11
-      }, this)
-    ] }, void 0, !0, {
-      fileName: "app/routes/upcoming-updates.tsx",
-      lineNumber: 16,
-      columnNumber: 9
-    }, this),
-    /* @__PURE__ */ jsxDEV4("footer", { className: "mt-8 text-center text-sm text-gray-600", children: /* @__PURE__ */ jsxDEV4("p", { children: "\xA9 2025 Time Capsule. All rights reserved." }, void 0, !1, {
-      fileName: "app/routes/upcoming-updates.tsx",
-      lineNumber: 45,
-      columnNumber: 11
-    }, this) }, void 0, !1, {
-      fileName: "app/routes/upcoming-updates.tsx",
-      lineNumber: 44,
-      columnNumber: 9
-    }, this)
-  ] }, void 0, !0, {
-    fileName: "app/routes/upcoming-updates.tsx",
-    lineNumber: 8,
-    columnNumber: 7
-  }, this) }, void 0, !1, {
-    fileName: "app/routes/upcoming-updates.tsx",
-    lineNumber: 7,
-    columnNumber: 5
-  }, this);
+        ] })
+      ] }),
+      /* @__PURE__ */ jsx4("p", { children: "Stay tuned for these exciting new features as we continue to evolve your Time Capsule experience!" })
+    ] }),
+    /* @__PURE__ */ jsx4("footer", { className: "mt-8 text-center text-sm text-gray-600", children: /* @__PURE__ */ jsx4("p", { children: "\xA9 2025 Time Capsule. All rights reserved." }) })
+  ] }) });
 }
 
 // app/routes/delete-capsules.tsx
@@ -442,7 +230,7 @@ import { Form, useLoaderData, Link } from "@remix-run/react";
 // app/utils/db.server.ts
 import { PrismaClient } from "@prisma/client";
 var db;
-global.__db || (global.__db = new PrismaClient(), global.__db.$connect()), db = global.__db;
+db = new PrismaClient(), db.$connect();
 
 // app/utils/session.server.ts
 import { createCookieSessionStorage } from "@remix-run/node";
@@ -452,7 +240,7 @@ var sessionStorage = createCookieSessionStorage({
   cookie: {
     name: "__session",
     // En production, le cookie ne sera transmis que sur HTTPS.
-    secure: !1,
+    secure: !0,
     // Utilise le secret défini dans le .env pour signer le cookie
     secrets: [process.env.SESSION_SECRET],
     // SameSite "lax" est un bon compromis pour prévenir les attaques CSRF tout en conservant une bonne expérience utilisateur
@@ -486,7 +274,7 @@ async function createUserSession(userId, redirectTo) {
 }
 
 // app/routes/delete-capsules.tsx
-import { jsxDEV as jsxDEV5 } from "react/jsx-dev-runtime";
+import { jsx as jsx5, jsxs as jsxs4 } from "react/jsx-runtime";
 var loader = async ({ request }) => {
   let user = await requireUser(request), capsules = await db.capsule.findMany({
     where: { ownerId: user.id },
@@ -509,27 +297,15 @@ var loader = async ({ request }) => {
 };
 function DeleteCapsules() {
   let { capsules } = useLoaderData();
-  return /* @__PURE__ */ jsxDEV5("div", { className: "min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-sky-400 to-sky-600 p-4", children: /* @__PURE__ */ jsxDEV5("div", { className: "w-full max-w-md bg-yellow-200 p-8 rounded-3xl shadow-xl border-4 border-yellow-500", children: [
-    /* @__PURE__ */ jsxDEV5("h1", { className: "text-4xl font-extrabold text-white mb-6 drop-shadow-lg text-center", children: "Manage Your Capsules" }, void 0, !1, {
-      fileName: "app/routes/delete-capsules.tsx",
-      lineNumber: 66,
-      columnNumber: 9
-    }, this),
-    capsules.length === 0 ? /* @__PURE__ */ jsxDEV5("p", { className: "text-center text-lg", children: "No capsules found." }, void 0, !1, {
-      fileName: "app/routes/delete-capsules.tsx",
-      lineNumber: 70,
-      columnNumber: 11
-    }, this) : /* @__PURE__ */ jsxDEV5("ul", { className: "space-y-4", children: capsules.map((capsule) => /* @__PURE__ */ jsxDEV5(
+  return /* @__PURE__ */ jsx5("div", { className: "min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-sky-400 to-sky-600 p-4", children: /* @__PURE__ */ jsxs4("div", { className: "w-full max-w-md bg-yellow-200 p-8 rounded-3xl shadow-xl border-4 border-yellow-500", children: [
+    /* @__PURE__ */ jsx5("h1", { className: "text-4xl font-extrabold text-white mb-6 drop-shadow-lg text-center", children: "Manage Your Capsules" }),
+    capsules.length === 0 ? /* @__PURE__ */ jsx5("p", { className: "text-center text-lg", children: "No capsules found." }) : /* @__PURE__ */ jsx5("ul", { className: "space-y-4", children: capsules.map((capsule) => /* @__PURE__ */ jsxs4(
       "li",
       {
         className: "flex justify-between items-center p-4 bg-white rounded shadow hover:bg-gray-100 transition",
         children: [
-          /* @__PURE__ */ jsxDEV5("span", { className: "text-xl font-medium", children: capsule.title }, void 0, !1, {
-            fileName: "app/routes/delete-capsules.tsx",
-            lineNumber: 78,
-            columnNumber: 17
-          }, this),
-          /* @__PURE__ */ jsxDEV5(
+          /* @__PURE__ */ jsx5("span", { className: "text-xl font-medium", children: capsule.title }),
+          /* @__PURE__ */ jsxs4(
             Form,
             {
               method: "post",
@@ -537,70 +313,23 @@ function DeleteCapsules() {
                 window.confirm("Are you sure you want to delete this capsule?") || e.preventDefault();
               },
               children: [
-                /* @__PURE__ */ jsxDEV5("input", { type: "hidden", name: "capsuleId", value: capsule.id }, void 0, !1, {
-                  fileName: "app/routes/delete-capsules.tsx",
-                  lineNumber: 89,
-                  columnNumber: 19
-                }, this),
-                /* @__PURE__ */ jsxDEV5(
+                /* @__PURE__ */ jsx5("input", { type: "hidden", name: "capsuleId", value: capsule.id }),
+                /* @__PURE__ */ jsx5(
                   "button",
                   {
                     type: "submit",
                     children: "\u{1F5D1}\uFE0F"
-                  },
-                  void 0,
-                  !1,
-                  {
-                    fileName: "app/routes/delete-capsules.tsx",
-                    lineNumber: 90,
-                    columnNumber: 19
-                  },
-                  this
+                  }
                 )
               ]
-            },
-            void 0,
-            !0,
-            {
-              fileName: "app/routes/delete-capsules.tsx",
-              lineNumber: 79,
-              columnNumber: 17
-            },
-            this
+            }
           )
         ]
       },
-      capsule.id,
-      !0,
-      {
-        fileName: "app/routes/delete-capsules.tsx",
-        lineNumber: 74,
-        columnNumber: 15
-      },
-      this
-    )) }, void 0, !1, {
-      fileName: "app/routes/delete-capsules.tsx",
-      lineNumber: 72,
-      columnNumber: 11
-    }, this),
-    /* @__PURE__ */ jsxDEV5("div", { className: "mt-6 text-center", children: /* @__PURE__ */ jsxDEV5(Link, { to: "/dashboard", className: "w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-4 rounded-full shadow-xl transform hover:scale-105 transition", children: "Back to Dashboard" }, void 0, !1, {
-      fileName: "app/routes/delete-capsules.tsx",
-      lineNumber: 101,
-      columnNumber: 11
-    }, this) }, void 0, !1, {
-      fileName: "app/routes/delete-capsules.tsx",
-      lineNumber: 100,
-      columnNumber: 9
-    }, this)
-  ] }, void 0, !0, {
-    fileName: "app/routes/delete-capsules.tsx",
-    lineNumber: 65,
-    columnNumber: 7
-  }, this) }, void 0, !1, {
-    fileName: "app/routes/delete-capsules.tsx",
-    lineNumber: 64,
-    columnNumber: 5
-  }, this);
+      capsule.id
+    )) }),
+    /* @__PURE__ */ jsx5("div", { className: "mt-6 text-center", children: /* @__PURE__ */ jsx5(Link, { to: "/dashboard", className: "w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-4 rounded-full shadow-xl transform hover:scale-105 transition", children: "Back to Dashboard" }) })
+  ] }) });
 }
 
 // app/routes/privacy-policy.tsx
@@ -608,45 +337,13 @@ var privacy_policy_exports = {};
 __export(privacy_policy_exports, {
   default: () => PrivacyPolicy
 });
-import { jsxDEV as jsxDEV6 } from "react/jsx-dev-runtime";
+import { jsx as jsx6, jsxs as jsxs5 } from "react/jsx-runtime";
 function PrivacyPolicy() {
-  return /* @__PURE__ */ jsxDEV6("div", { className: "min-h-screen bg-gradient-to-b from-sky-500 via-sky-400 to-sky-300 text-white", children: [
-    /* @__PURE__ */ jsxDEV6("header", { className: "w-full p-6 bg-white text-gray-900 text-center", children: /* @__PURE__ */ jsxDEV6("h1", { className: "text-4xl font-bold", children: "Privacy Policy" }, void 0, !1, {
-      fileName: "app/routes/privacy-policy.tsx",
-      lineNumber: 9,
-      columnNumber: 9
-    }, this) }, void 0, !1, {
-      fileName: "app/routes/privacy-policy.tsx",
-      lineNumber: 8,
-      columnNumber: 7
-    }, this),
-    /* @__PURE__ */ jsxDEV6("main", { className: "container mx-auto px-4 py-8 text-gray-900", children: /* @__PURE__ */ jsxDEV6("div", { className: "prose max-w-none", children: /* @__PURE__ */ jsxDEV6("p", { children: "Ajoutez ici le contenu de la Privacy Policy." }, void 0, !1, {
-      fileName: "app/routes/privacy-policy.tsx",
-      lineNumber: 13,
-      columnNumber: 11
-    }, this) }, void 0, !1, {
-      fileName: "app/routes/privacy-policy.tsx",
-      lineNumber: 12,
-      columnNumber: 9
-    }, this) }, void 0, !1, {
-      fileName: "app/routes/privacy-policy.tsx",
-      lineNumber: 11,
-      columnNumber: 7
-    }, this),
-    /* @__PURE__ */ jsxDEV6("footer", { className: "bg-white text-gray-900 py-4 text-center border-t border-gray-300", children: /* @__PURE__ */ jsxDEV6("p", { children: "\xA9 2025 Time Capsule. All rights reserved." }, void 0, !1, {
-      fileName: "app/routes/privacy-policy.tsx",
-      lineNumber: 17,
-      columnNumber: 9
-    }, this) }, void 0, !1, {
-      fileName: "app/routes/privacy-policy.tsx",
-      lineNumber: 16,
-      columnNumber: 7
-    }, this)
-  ] }, void 0, !0, {
-    fileName: "app/routes/privacy-policy.tsx",
-    lineNumber: 7,
-    columnNumber: 5
-  }, this);
+  return /* @__PURE__ */ jsxs5("div", { className: "min-h-screen bg-gradient-to-b from-sky-500 via-sky-400 to-sky-300 text-white", children: [
+    /* @__PURE__ */ jsx6("header", { className: "w-full p-6 bg-white text-gray-900 text-center", children: /* @__PURE__ */ jsx6("h1", { className: "text-4xl font-bold", children: "Privacy Policy" }) }),
+    /* @__PURE__ */ jsx6("main", { className: "container mx-auto px-4 py-8 text-gray-900", children: /* @__PURE__ */ jsx6("div", { className: "prose max-w-none", children: /* @__PURE__ */ jsx6("p", { children: "Ajoutez ici le contenu de la Privacy Policy." }) }) }),
+    /* @__PURE__ */ jsx6("footer", { className: "bg-white text-gray-900 py-4 text-center border-t border-gray-300", children: /* @__PURE__ */ jsx6("p", { children: "\xA9 2025 Time Capsule. All rights reserved." }) })
+  ] });
 }
 
 // app/routes/notification.tsx
@@ -672,45 +369,13 @@ var terms_of_use_exports = {};
 __export(terms_of_use_exports, {
   default: () => TermsOfUse
 });
-import { jsxDEV as jsxDEV7 } from "react/jsx-dev-runtime";
+import { jsx as jsx7, jsxs as jsxs6 } from "react/jsx-runtime";
 function TermsOfUse() {
-  return /* @__PURE__ */ jsxDEV7("div", { className: "min-h-screen bg-gradient-to-b from-sky-500 via-sky-400 to-sky-300 text-white", children: [
-    /* @__PURE__ */ jsxDEV7("header", { className: "w-full p-6 bg-white text-gray-900 text-center", children: /* @__PURE__ */ jsxDEV7("h1", { className: "text-4xl font-bold", children: "Terms of Use" }, void 0, !1, {
-      fileName: "app/routes/terms-of-use.tsx",
-      lineNumber: 9,
-      columnNumber: 9
-    }, this) }, void 0, !1, {
-      fileName: "app/routes/terms-of-use.tsx",
-      lineNumber: 8,
-      columnNumber: 7
-    }, this),
-    /* @__PURE__ */ jsxDEV7("main", { className: "container mx-auto px-4 py-8 text-gray-900", children: /* @__PURE__ */ jsxDEV7("div", { className: "prose max-w-none", children: /* @__PURE__ */ jsxDEV7("p", { children: "Ajoutez ici le contenu des Terms of Use." }, void 0, !1, {
-      fileName: "app/routes/terms-of-use.tsx",
-      lineNumber: 13,
-      columnNumber: 11
-    }, this) }, void 0, !1, {
-      fileName: "app/routes/terms-of-use.tsx",
-      lineNumber: 12,
-      columnNumber: 9
-    }, this) }, void 0, !1, {
-      fileName: "app/routes/terms-of-use.tsx",
-      lineNumber: 11,
-      columnNumber: 7
-    }, this),
-    /* @__PURE__ */ jsxDEV7("footer", { className: "bg-white text-gray-900 py-4 text-center border-t border-gray-300", children: /* @__PURE__ */ jsxDEV7("p", { children: "\xA9 2025 Time Capsule. All rights reserved." }, void 0, !1, {
-      fileName: "app/routes/terms-of-use.tsx",
-      lineNumber: 17,
-      columnNumber: 9
-    }, this) }, void 0, !1, {
-      fileName: "app/routes/terms-of-use.tsx",
-      lineNumber: 16,
-      columnNumber: 7
-    }, this)
-  ] }, void 0, !0, {
-    fileName: "app/routes/terms-of-use.tsx",
-    lineNumber: 7,
-    columnNumber: 5
-  }, this);
+  return /* @__PURE__ */ jsxs6("div", { className: "min-h-screen bg-gradient-to-b from-sky-500 via-sky-400 to-sky-300 text-white", children: [
+    /* @__PURE__ */ jsx7("header", { className: "w-full p-6 bg-white text-gray-900 text-center", children: /* @__PURE__ */ jsx7("h1", { className: "text-4xl font-bold", children: "Terms of Use" }) }),
+    /* @__PURE__ */ jsx7("main", { className: "container mx-auto px-4 py-8 text-gray-900", children: /* @__PURE__ */ jsx7("div", { className: "prose max-w-none", children: /* @__PURE__ */ jsx7("p", { children: "Ajoutez ici le contenu des Terms of Use." }) }) }),
+    /* @__PURE__ */ jsx7("footer", { className: "bg-white text-gray-900 py-4 text-center border-t border-gray-300", children: /* @__PURE__ */ jsx7("p", { children: "\xA9 2025 Time Capsule. All rights reserved." }) })
+  ] });
 }
 
 // app/routes/check-email.tsx
@@ -718,28 +383,12 @@ var check_email_exports = {};
 __export(check_email_exports, {
   default: () => CheckEmail
 });
-import { jsxDEV as jsxDEV8 } from "react/jsx-dev-runtime";
+import { jsx as jsx8, jsxs as jsxs7 } from "react/jsx-runtime";
 function CheckEmail() {
-  return /* @__PURE__ */ jsxDEV8("div", { className: "min-h-screen p-4 bg-gradient-to-br from-sky-300 to-sky-500 text-gray-900 flex items-center justify-center", children: /* @__PURE__ */ jsxDEV8("div", { className: "max-w-md mx-auto bg-white p-8 rounded-3xl shadow-xl border-4 border-yellow-500", children: [
-    /* @__PURE__ */ jsxDEV8("h2", { className: "text-2xl font-bold mb-4", children: "Please, check your e-mail inbox" }, void 0, !1, {
-      fileName: "app/routes/check-email.tsx",
-      lineNumber: 6,
-      columnNumber: 9
-    }, this),
-    /* @__PURE__ */ jsxDEV8("p", { className: "text-lg", children: "We just sent a confirmation email to your inbox. Please click the link in the email to verify your address and get started. If you don't see it right away, be sure to check your spam or junk folder. We're excited to have you with us!\u{1F33B}" }, void 0, !1, {
-      fileName: "app/routes/check-email.tsx",
-      lineNumber: 7,
-      columnNumber: 9
-    }, this)
-  ] }, void 0, !0, {
-    fileName: "app/routes/check-email.tsx",
-    lineNumber: 5,
-    columnNumber: 7
-  }, this) }, void 0, !1, {
-    fileName: "app/routes/check-email.tsx",
-    lineNumber: 4,
-    columnNumber: 5
-  }, this);
+  return /* @__PURE__ */ jsx8("div", { className: "min-h-screen p-4 bg-gradient-to-br from-sky-300 to-sky-500 text-gray-900 flex items-center justify-center", children: /* @__PURE__ */ jsxs7("div", { className: "max-w-md mx-auto bg-white p-8 rounded-3xl shadow-xl border-4 border-yellow-500", children: [
+    /* @__PURE__ */ jsx8("h2", { className: "text-2xl font-bold mb-4", children: "Please, check your e-mail inbox" }),
+    /* @__PURE__ */ jsx8("p", { className: "text-lg", children: "We just sent a confirmation email to your inbox. Please click the link in the email to verify your address and get started. If you don't see it right away, be sure to check your spam or junk folder. We're excited to have you with us!\u{1F33B}" })
+  ] }) });
 }
 
 // app/routes/safety-tips.tsx
@@ -747,122 +396,38 @@ var safety_tips_exports = {};
 __export(safety_tips_exports, {
   default: () => SafetyTips
 });
-import { jsxDEV as jsxDEV9 } from "react/jsx-dev-runtime";
+import { jsx as jsx9, jsxs as jsxs8 } from "react/jsx-runtime";
 function SafetyTips() {
-  return /* @__PURE__ */ jsxDEV9("div", { className: "min-h-screen p-4 bg-gradient-to-br from-sky-300 to-sky-500 text-gray-900", children: /* @__PURE__ */ jsxDEV9("div", { className: "max-w-3xl mx-auto bg-white p-8 rounded-3xl shadow-xl border-4 border-yellow-500", children: [
-    /* @__PURE__ */ jsxDEV9("header", { className: "text-center mb-6 text-justify", children: /* @__PURE__ */ jsxDEV9("h1", { className: "text-4xl font-extrabold drop-shadow-lg", children: "Safety Tips" }, void 0, !1, {
-      fileName: "app/routes/safety-tips.tsx",
-      lineNumber: 11,
-      columnNumber: 11
-    }, this) }, void 0, !1, {
-      fileName: "app/routes/safety-tips.tsx",
-      lineNumber: 10,
-      columnNumber: 9
-    }, this),
-    /* @__PURE__ */ jsxDEV9("main", { className: "prose", children: [
-      /* @__PURE__ */ jsxDEV9("p", { children: /* @__PURE__ */ jsxDEV9("strong", { children: "Security and Protection of Your Data" }, void 0, !1, {
-        fileName: "app/routes/safety-tips.tsx",
-        lineNumber: 18,
-        columnNumber: 13
-      }, this) }, void 0, !1, {
-        fileName: "app/routes/safety-tips.tsx",
-        lineNumber: 17,
-        columnNumber: 11
-      }, this),
-      /* @__PURE__ */ jsxDEV9("p", { children: "Protecting your personal information is our priority. We recommend that you follow these tips to use the platform safely:" }, void 0, !1, {
-        fileName: "app/routes/safety-tips.tsx",
-        lineNumber: 20,
-        columnNumber: 11
-      }, this),
-      /* @__PURE__ */ jsxDEV9("ul", { children: [
-        /* @__PURE__ */ jsxDEV9("li", { children: [
-          /* @__PURE__ */ jsxDEV9("strong", { children: "- Confidentiality of Content:" }, void 0, !1, {
-            fileName: "app/routes/safety-tips.tsx",
-            lineNumber: 25,
-            columnNumber: 15
-          }, this),
+  return /* @__PURE__ */ jsx9("div", { className: "min-h-screen p-4 bg-gradient-to-br from-sky-300 to-sky-500 text-gray-900", children: /* @__PURE__ */ jsxs8("div", { className: "max-w-3xl mx-auto bg-white p-8 rounded-3xl shadow-xl border-4 border-yellow-500", children: [
+    /* @__PURE__ */ jsx9("header", { className: "text-center mb-6 text-justify", children: /* @__PURE__ */ jsx9("h1", { className: "text-4xl font-extrabold drop-shadow-lg", children: "Safety Tips" }) }),
+    /* @__PURE__ */ jsxs8("main", { className: "prose", children: [
+      /* @__PURE__ */ jsx9("p", { children: /* @__PURE__ */ jsx9("strong", { children: "Security and Protection of Your Data" }) }),
+      /* @__PURE__ */ jsx9("p", { children: "Protecting your personal information is our priority. We recommend that you follow these tips to use the platform safely:" }),
+      /* @__PURE__ */ jsxs8("ul", { children: [
+        /* @__PURE__ */ jsxs8("li", { children: [
+          /* @__PURE__ */ jsx9("strong", { children: "- Confidentiality of Content:" }),
           " Never share content (photos, videos, messages) containing sensitive or compromising personal information."
-        ] }, void 0, !0, {
-          fileName: "app/routes/safety-tips.tsx",
-          lineNumber: 24,
-          columnNumber: 13
-        }, this),
-        /* @__PURE__ */ jsxDEV9("li", { children: [
-          /* @__PURE__ */ jsxDEV9("strong", { children: "- Access Settings:" }, void 0, !1, {
-            fileName: "app/routes/safety-tips.tsx",
-            lineNumber: 28,
-            columnNumber: 15
-          }, this),
+        ] }),
+        /* @__PURE__ */ jsxs8("li", { children: [
+          /* @__PURE__ */ jsx9("strong", { children: "- Access Settings:" }),
           " Use the confidentiality options provided to control who can view your capsules."
-        ] }, void 0, !0, {
-          fileName: "app/routes/safety-tips.tsx",
-          lineNumber: 27,
-          columnNumber: 13
-        }, this),
-        /* @__PURE__ */ jsxDEV9("li", { children: [
-          /* @__PURE__ */ jsxDEV9("strong", { children: "- Regular Updates:" }, void 0, !1, {
-            fileName: "app/routes/safety-tips.tsx",
-            lineNumber: 31,
-            columnNumber: 15
-          }, this),
+        ] }),
+        /* @__PURE__ */ jsxs8("li", { children: [
+          /* @__PURE__ */ jsx9("strong", { children: "- Regular Updates:" }),
           " Make sure you keep your application and data up to date to benefit from the latest security protections."
-        ] }, void 0, !0, {
-          fileName: "app/routes/safety-tips.tsx",
-          lineNumber: 30,
-          columnNumber: 13
-        }, this),
-        /* @__PURE__ */ jsxDEV9("li", { children: [
-          /* @__PURE__ */ jsxDEV9("strong", { children: "- Vigilance on Links and Downloads:" }, void 0, !1, {
-            fileName: "app/routes/safety-tips.tsx",
-            lineNumber: 34,
-            columnNumber: 15
-          }, this),
+        ] }),
+        /* @__PURE__ */ jsxs8("li", { children: [
+          /* @__PURE__ */ jsx9("strong", { children: "- Vigilance on Links and Downloads:" }),
           " Do not open links or files from unverified sources."
-        ] }, void 0, !0, {
-          fileName: "app/routes/safety-tips.tsx",
-          lineNumber: 33,
-          columnNumber: 13
-        }, this),
-        /* @__PURE__ */ jsxDEV9("li", { children: [
-          /* @__PURE__ */ jsxDEV9("strong", { children: "- Reporting Anomalies:" }, void 0, !1, {
-            fileName: "app/routes/safety-tips.tsx",
-            lineNumber: 37,
-            columnNumber: 15
-          }, this),
+        ] }),
+        /* @__PURE__ */ jsxs8("li", { children: [
+          /* @__PURE__ */ jsx9("strong", { children: "- Reporting Anomalies:" }),
           " If you notice any suspicious behavior or inappropriate content, please report it immediately using our dedicated tool."
-        ] }, void 0, !0, {
-          fileName: "app/routes/safety-tips.tsx",
-          lineNumber: 36,
-          columnNumber: 13
-        }, this)
-      ] }, void 0, !0, {
-        fileName: "app/routes/safety-tips.tsx",
-        lineNumber: 23,
-        columnNumber: 11
-      }, this)
-    ] }, void 0, !0, {
-      fileName: "app/routes/safety-tips.tsx",
-      lineNumber: 16,
-      columnNumber: 9
-    }, this),
-    /* @__PURE__ */ jsxDEV9("footer", { className: "mt-8 text-center text-sm text-gray-600", children: /* @__PURE__ */ jsxDEV9("p", { children: "\xA9 2025 Time Capsule. All rights reserved." }, void 0, !1, {
-      fileName: "app/routes/safety-tips.tsx",
-      lineNumber: 43,
-      columnNumber: 11
-    }, this) }, void 0, !1, {
-      fileName: "app/routes/safety-tips.tsx",
-      lineNumber: 42,
-      columnNumber: 9
-    }, this)
-  ] }, void 0, !0, {
-    fileName: "app/routes/safety-tips.tsx",
-    lineNumber: 8,
-    columnNumber: 7
-  }, this) }, void 0, !1, {
-    fileName: "app/routes/safety-tips.tsx",
-    lineNumber: 7,
-    columnNumber: 5
-  }, this);
+        ] })
+      ] })
+    ] }),
+    /* @__PURE__ */ jsx9("footer", { className: "mt-8 text-center text-sm text-gray-600", children: /* @__PURE__ */ jsx9("p", { children: "\xA9 2025 Time Capsule. All rights reserved." }) })
+  ] }) });
 }
 
 // app/routes/$capsuleId.tsx
@@ -873,7 +438,7 @@ __export(capsuleId_exports, {
 });
 import { json as json2, redirect as redirect4 } from "@remix-run/node";
 import { useLoaderData as useLoaderData2, Link as Link2 } from "@remix-run/react";
-import { jsxDEV as jsxDEV10 } from "react/jsx-dev-runtime";
+import { jsx as jsx10, jsxs as jsxs9 } from "react/jsx-runtime";
 var loader3 = async ({ request, params }) => {
   let currentUser = await requireUser(request), capsuleId = params.capsuleId;
   if (console.log("Requ\xEAte re\xE7ue pour capsule ID:", capsuleId), !capsuleId)
@@ -902,123 +467,47 @@ var loader3 = async ({ request, params }) => {
 };
 function CapsuleDetail() {
   let { capsule } = useLoaderData2();
-  return /* @__PURE__ */ jsxDEV10("div", { className: "min-h-screen p-4 bg-gradient-to-br from-sky-300 to-sky-500 text-gray-900", children: /* @__PURE__ */ jsxDEV10("div", { className: "max-w-3xl mx-auto bg-white p-8 rounded-3xl shadow-xl border-4 border-yellow-500", children: [
-    /* @__PURE__ */ jsxDEV10("h1", { className: "text-4xl font-extrabold drop-shadow-lg mb-4", children: capsule.title }, void 0, !1, {
-      fileName: "app/routes/$capsuleId.tsx",
-      lineNumber: 82,
-      columnNumber: 9
-    }, this),
-    /* @__PURE__ */ jsxDEV10("p", { className: "mb-4 text-lg", children: capsule.content }, void 0, !1, {
-      fileName: "app/routes/$capsuleId.tsx",
-      lineNumber: 85,
-      columnNumber: 9
-    }, this),
-    /* @__PURE__ */ jsxDEV10("p", { className: "mb-4 text-sm text-gray-600", children: [
+  return /* @__PURE__ */ jsx10("div", { className: "min-h-screen p-4 bg-gradient-to-br from-sky-300 to-sky-500 text-gray-900", children: /* @__PURE__ */ jsxs9("div", { className: "max-w-3xl mx-auto bg-white p-8 rounded-3xl shadow-xl border-4 border-yellow-500", children: [
+    /* @__PURE__ */ jsx10("h1", { className: "text-4xl font-extrabold drop-shadow-lg mb-4", children: capsule.title }),
+    /* @__PURE__ */ jsx10("p", { className: "mb-4 text-lg", children: capsule.content }),
+    /* @__PURE__ */ jsxs9("p", { className: "mb-4 text-sm text-gray-600", children: [
       "Opening day: ",
       new Date(capsule.scheduledDate).toLocaleString()
-    ] }, void 0, !0, {
-      fileName: "app/routes/$capsuleId.tsx",
-      lineNumber: 86,
-      columnNumber: 9
-    }, this),
-    /* @__PURE__ */ jsxDEV10("p", { className: "mb-4 text-sm text-gray-600", children: [
+    ] }),
+    /* @__PURE__ */ jsxs9("p", { className: "mb-4 text-sm text-gray-600", children: [
       "Visibility: ",
       capsule.visibility
-    ] }, void 0, !0, {
-      fileName: "app/routes/$capsuleId.tsx",
-      lineNumber: 89,
-      columnNumber: 9
-    }, this),
-    capsule.ownerId !== capsule.owner.id && /* @__PURE__ */ jsxDEV10("p", { className: "mb-4 text-sm text-gray-600", children: [
+    ] }),
+    capsule.ownerId !== capsule.owner.id && /* @__PURE__ */ jsxs9("p", { className: "mb-4 text-sm text-gray-600", children: [
       "Sent by ",
       capsule.recipientType,
       ":",
       " ",
       capsule.owner.username || capsule.owner.email
-    ] }, void 0, !0, {
-      fileName: "app/routes/$capsuleId.tsx",
-      lineNumber: 93,
-      columnNumber: 11
-    }, this),
-    capsule.visibility === "group" && capsule.groupRecipient && /* @__PURE__ */ jsxDEV10("p", { className: "mb-4 text-sm text-gray-600", children: [
+    ] }),
+    capsule.visibility === "group" && capsule.groupRecipient && /* @__PURE__ */ jsxs9("p", { className: "mb-4 text-sm text-gray-600", children: [
       "Group capsule intended for ",
       capsule.recipientType,
       ": ",
       capsule.groupRecipient,
-      /* @__PURE__ */ jsxDEV10("p", { children: [
+      /* @__PURE__ */ jsxs9("p", { children: [
         "Sent by: ",
         capsule.owner.username || capsule.owner.email
-      ] }, void 0, !0, {
-        fileName: "app/routes/$capsuleId.tsx",
-        lineNumber: 101,
-        columnNumber: 11
-      }, this)
-    ] }, void 0, !0, {
-      fileName: "app/routes/$capsuleId.tsx",
-      lineNumber: 99,
-      columnNumber: 11
-    }, this),
-    capsule.media && capsule.media.length > 0 && /* @__PURE__ */ jsxDEV10("div", { className: "mb-4", children: [
-      /* @__PURE__ */ jsxDEV10("h2", { className: "text-2xl font-semibold mb-2", children: "Special gifts with your capsule" }, void 0, !1, {
-        fileName: "app/routes/$capsuleId.tsx",
-        lineNumber: 106,
-        columnNumber: 13
-      }, this),
-      /* @__PURE__ */ jsxDEV10("div", { className: "grid grid-cols-1 md:grid-cols-2 gap-4", children: capsule.media.map((media) => /* @__PURE__ */ jsxDEV10("div", { className: "p-2 border rounded", children: media.type.startsWith("image") ? /* @__PURE__ */ jsxDEV10("img", { src: media.url, alt: "", className: "w-full" }, void 0, !1, {
-        fileName: "app/routes/$capsuleId.tsx",
-        lineNumber: 113,
-        columnNumber: 21
-      }, this) : media.type.startsWith("video") ? /* @__PURE__ */ jsxDEV10("video", { controls: !0, src: media.url, className: "w-full" }, void 0, !1, {
-        fileName: "app/routes/$capsuleId.tsx",
-        lineNumber: 115,
-        columnNumber: 21
-      }, this) : /* @__PURE__ */ jsxDEV10("audio", { controls: !0, src: media.url }, void 0, !1, {
-        fileName: "app/routes/$capsuleId.tsx",
-        lineNumber: 117,
-        columnNumber: 21
-      }, this) }, media.id, !1, {
-        fileName: "app/routes/$capsuleId.tsx",
-        lineNumber: 111,
-        columnNumber: 17
-      }, this)) }, void 0, !1, {
-        fileName: "app/routes/$capsuleId.tsx",
-        lineNumber: 109,
-        columnNumber: 13
-      }, this)
-    ] }, void 0, !0, {
-      fileName: "app/routes/$capsuleId.tsx",
-      lineNumber: 105,
-      columnNumber: 11
-    }, this),
-    /* @__PURE__ */ jsxDEV10("div", { className: "mt-8", children: /* @__PURE__ */ jsxDEV10(
+      ] })
+    ] }),
+    capsule.media && capsule.media.length > 0 && /* @__PURE__ */ jsxs9("div", { className: "mb-4", children: [
+      /* @__PURE__ */ jsx10("h2", { className: "text-2xl font-semibold mb-2", children: "Special gifts with your capsule" }),
+      /* @__PURE__ */ jsx10("div", { className: "grid grid-cols-1 md:grid-cols-2 gap-4", children: capsule.media.map((media) => /* @__PURE__ */ jsx10("div", { className: "p-2 border rounded", children: media.type.startsWith("image") ? /* @__PURE__ */ jsx10("img", { src: media.url, alt: "", className: "w-full" }) : media.type.startsWith("video") ? /* @__PURE__ */ jsx10("video", { controls: !0, src: media.url, className: "w-full" }) : /* @__PURE__ */ jsx10("audio", { controls: !0, src: media.url }) }, media.id)) })
+    ] }),
+    /* @__PURE__ */ jsx10("div", { className: "mt-8", children: /* @__PURE__ */ jsx10(
       Link2,
       {
         to: "/dashboard",
         className: "bg-gray-700 text-white px-6 py-3 rounded hover:bg-gray-800 transition",
         children: "Back to Dashboard"
-      },
-      void 0,
-      !1,
-      {
-        fileName: "app/routes/$capsuleId.tsx",
-        lineNumber: 125,
-        columnNumber: 11
-      },
-      this
-    ) }, void 0, !1, {
-      fileName: "app/routes/$capsuleId.tsx",
-      lineNumber: 124,
-      columnNumber: 9
-    }, this)
-  ] }, void 0, !0, {
-    fileName: "app/routes/$capsuleId.tsx",
-    lineNumber: 81,
-    columnNumber: 7
-  }, this) }, void 0, !1, {
-    fileName: "app/routes/$capsuleId.tsx",
-    lineNumber: 80,
-    columnNumber: 5
-  }, this);
+      }
+    ) })
+  ] }) });
 }
 
 // app/routes/contact-us.tsx
@@ -1026,61 +515,21 @@ var contact_us_exports = {};
 __export(contact_us_exports, {
   default: () => ContactUs
 });
-import { jsxDEV as jsxDEV11 } from "react/jsx-dev-runtime";
+import { jsx as jsx11, jsxs as jsxs10 } from "react/jsx-runtime";
 function ContactUs() {
-  return /* @__PURE__ */ jsxDEV11("div", { className: "min-h-screen p-4 bg-gradient-to-br from-sky-300 to-sky-500 text-gray-900", children: /* @__PURE__ */ jsxDEV11("div", { className: "max-w-3xl mx-auto bg-white p-8 rounded-3xl shadow-xl border-4 border-yellow-500", children: [
-    /* @__PURE__ */ jsxDEV11("header", { className: "text-center mb-6", children: /* @__PURE__ */ jsxDEV11("h1", { className: "text-4xl font-extrabold drop-shadow-lg", children: "Contact Us" }, void 0, !1, {
-      fileName: "app/routes/contact-us.tsx",
-      lineNumber: 11,
-      columnNumber: 11
-    }, this) }, void 0, !1, {
-      fileName: "app/routes/contact-us.tsx",
-      lineNumber: 10,
-      columnNumber: 9
-    }, this),
-    /* @__PURE__ */ jsxDEV11("main", { className: "prose", children: [
-      /* @__PURE__ */ jsxDEV11("p", { children: [
+  return /* @__PURE__ */ jsx11("div", { className: "min-h-screen p-4 bg-gradient-to-br from-sky-300 to-sky-500 text-gray-900", children: /* @__PURE__ */ jsxs10("div", { className: "max-w-3xl mx-auto bg-white p-8 rounded-3xl shadow-xl border-4 border-yellow-500", children: [
+    /* @__PURE__ */ jsx11("header", { className: "text-center mb-6", children: /* @__PURE__ */ jsx11("h1", { className: "text-4xl font-extrabold drop-shadow-lg", children: "Contact Us" }) }),
+    /* @__PURE__ */ jsxs10("main", { className: "prose", children: [
+      /* @__PURE__ */ jsxs10("p", { children: [
         "If you have any questions, feedback, or need assistance, please feel free to contact us via email at",
         " ",
-        /* @__PURE__ */ jsxDEV11("a", { href: "mailto:ltifene@gmail.com", className: "text-sky-500 hover:underline", children: "ltifene@gmail.com" }, void 0, !1, {
-          fileName: "app/routes/contact-us.tsx",
-          lineNumber: 17,
-          columnNumber: 13
-        }, this),
+        /* @__PURE__ */ jsx11("a", { href: "mailto:ltifene@gmail.com", className: "text-sky-500 hover:underline", children: "ltifene@gmail.com" }),
         "."
-      ] }, void 0, !0, {
-        fileName: "app/routes/contact-us.tsx",
-        lineNumber: 15,
-        columnNumber: 11
-      }, this),
-      /* @__PURE__ */ jsxDEV11("p", { children: "We look forward to hearing from you and will get back to you as soon as possible!" }, void 0, !1, {
-        fileName: "app/routes/contact-us.tsx",
-        lineNumber: 21,
-        columnNumber: 11
-      }, this)
-    ] }, void 0, !0, {
-      fileName: "app/routes/contact-us.tsx",
-      lineNumber: 14,
-      columnNumber: 9
-    }, this),
-    /* @__PURE__ */ jsxDEV11("footer", { className: "mt-8 text-center text-sm text-gray-600", children: /* @__PURE__ */ jsxDEV11("p", { children: "\xA9 2025 Time Capsule. All rights reserved." }, void 0, !1, {
-      fileName: "app/routes/contact-us.tsx",
-      lineNumber: 27,
-      columnNumber: 11
-    }, this) }, void 0, !1, {
-      fileName: "app/routes/contact-us.tsx",
-      lineNumber: 26,
-      columnNumber: 9
-    }, this)
-  ] }, void 0, !0, {
-    fileName: "app/routes/contact-us.tsx",
-    lineNumber: 8,
-    columnNumber: 7
-  }, this) }, void 0, !1, {
-    fileName: "app/routes/contact-us.tsx",
-    lineNumber: 7,
-    columnNumber: 5
-  }, this);
+      ] }),
+      /* @__PURE__ */ jsx11("p", { children: "We look forward to hearing from you and will get back to you as soon as possible!" })
+    ] }),
+    /* @__PURE__ */ jsx11("footer", { className: "mt-8 text-center text-sm text-gray-600", children: /* @__PURE__ */ jsx11("p", { children: "\xA9 2025 Time Capsule. All rights reserved." }) })
+  ] }) });
 }
 
 // app/routes/dashboard.tsx
@@ -1094,43 +543,19 @@ import { Link as Link3, Form as Form2, useLoaderData as useLoaderData3, useSearc
 import { json as json3, redirect as redirect5 } from "@remix-run/node";
 
 // app/components/Timeline.tsx
-import { jsxDEV as jsxDEV12 } from "react/jsx-dev-runtime";
+import { jsx as jsx12, jsxs as jsxs11 } from "react/jsx-runtime";
 var Timeline = ({ capsules }) => {
   let sortedCapsules = [...capsules].sort(
     (a, b) => new Date(b.scheduledDate).getTime() - new Date(a.scheduledDate).getTime()
   );
-  return /* @__PURE__ */ jsxDEV12("div", { children: /* @__PURE__ */ jsxDEV12("ul", { style: { listStyle: "none", paddingLeft: 0 }, children: sortedCapsules.map((capsule) => /* @__PURE__ */ jsxDEV12("li", { style: { marginBottom: "20px", position: "relative" }, children: /* @__PURE__ */ jsxDEV12("div", { style: { borderLeft: "2px solid #333", paddingLeft: "15px" }, children: [
-    /* @__PURE__ */ jsxDEV12("h4", { children: capsule.title }, void 0, !1, {
-      fileName: "app/components/Timeline.tsx",
-      lineNumber: 26,
-      columnNumber: 15
-    }, this),
-    /* @__PURE__ */ jsxDEV12("p", { children: new Date(capsule.scheduledDate).toLocaleString() }, void 0, !1, {
-      fileName: "app/components/Timeline.tsx",
-      lineNumber: 27,
-      columnNumber: 15
-    }, this)
-  ] }, void 0, !0, {
-    fileName: "app/components/Timeline.tsx",
-    lineNumber: 25,
-    columnNumber: 13
-  }, this) }, capsule.id, !1, {
-    fileName: "app/components/Timeline.tsx",
-    lineNumber: 24,
-    columnNumber: 11
-  }, this)) }, void 0, !1, {
-    fileName: "app/components/Timeline.tsx",
-    lineNumber: 22,
-    columnNumber: 7
-  }, this) }, void 0, !1, {
-    fileName: "app/components/Timeline.tsx",
-    lineNumber: 21,
-    columnNumber: 5
-  }, this);
+  return /* @__PURE__ */ jsx12("div", { children: /* @__PURE__ */ jsx12("ul", { style: { listStyle: "none", paddingLeft: 0 }, children: sortedCapsules.map((capsule) => /* @__PURE__ */ jsx12("li", { style: { marginBottom: "20px", position: "relative" }, children: /* @__PURE__ */ jsxs11("div", { style: { borderLeft: "2px solid #333", paddingLeft: "15px" }, children: [
+    /* @__PURE__ */ jsx12("h4", { children: capsule.title }),
+    /* @__PURE__ */ jsx12("p", { children: new Date(capsule.scheduledDate).toLocaleString() })
+  ] }) }, capsule.id)) }) });
 }, Timeline_default = Timeline;
 
 // app/components/CalendarView.tsx
-import { jsxDEV as jsxDEV13 } from "react/jsx-dev-runtime";
+import { jsx as jsx13, jsxs as jsxs12 } from "react/jsx-runtime";
 function CalendarView({ capsules }) {
   let now = /* @__PURE__ */ new Date(), year = now.getUTCFullYear(), month = now.getUTCMonth(), currentDay = now.getUTCDate(), monthName = now.toLocaleString("default", { month: "long" }), daysInMonth = new Date(year, month + 1, 0).getUTCDate(), capsuleDays = capsules.map((capsule) => {
     let date = new Date(capsule.scheduledDate);
@@ -1140,67 +565,32 @@ function CalendarView({ capsules }) {
     calendarCells.push(null);
   for (let day = 1; day <= daysInMonth; day++)
     calendarCells.push(day);
-  return /* @__PURE__ */ jsxDEV13("div", { className: "p-4 bg-white rounded-3xl shadow-xl border-4 border-slate-300", children: [
-    /* @__PURE__ */ jsxDEV13("h3", { className: "text-xl font-semibold mb-2 text-center", children: [
+  return /* @__PURE__ */ jsxs12("div", { className: "p-4 bg-white rounded-3xl shadow-xl border-4 border-slate-300", children: [
+    /* @__PURE__ */ jsxs12("h3", { className: "text-xl font-semibold mb-2 text-center", children: [
       monthName,
       " ",
       year
-    ] }, void 0, !0, {
-      fileName: "app/components/CalendarView.tsx",
-      lineNumber: 50,
-      columnNumber: 7
-    }, this),
-    /* @__PURE__ */ jsxDEV13("div", { className: "grid grid-cols-7 gap-2 text-center", children: [
-      ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map((dayName) => /* @__PURE__ */ jsxDEV13("div", { className: "font-bold", children: dayName }, dayName, !1, {
-        fileName: "app/components/CalendarView.tsx",
-        lineNumber: 56,
-        columnNumber: 11
-      }, this)),
-      calendarCells.map((cell, index) => /* @__PURE__ */ jsxDEV13(
+    ] }),
+    /* @__PURE__ */ jsxs12("div", { className: "grid grid-cols-7 gap-2 text-center", children: [
+      ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map((dayName) => /* @__PURE__ */ jsx13("div", { className: "font-bold", children: dayName }, dayName)),
+      calendarCells.map((cell, index) => /* @__PURE__ */ jsx13(
         "div",
         {
           className: "h-12 flex items-center justify-center border border-gray-200 rounded",
-          children: cell ? /* @__PURE__ */ jsxDEV13("div", { className: `${cell === currentDay ? "bg-green-200 font-bold rounded-full px-1" : ""}`, children: [
-            /* @__PURE__ */ jsxDEV13("span", { children: cell }, void 0, !1, {
-              fileName: "app/components/CalendarView.tsx",
-              lineNumber: 67,
-              columnNumber: 17
-            }, this),
-            capsuleDays.includes(cell) && /* @__PURE__ */ jsxDEV13("span", { className: "ml-1", title: "Capsule scheduled", children: "\u{1F48A}" }, void 0, !1, {
-              fileName: "app/components/CalendarView.tsx",
-              lineNumber: 69,
-              columnNumber: 19
-            }, this)
-          ] }, void 0, !0, {
-            fileName: "app/components/CalendarView.tsx",
-            lineNumber: 66,
-            columnNumber: 15
-          }, this) : null
+          children: cell ? /* @__PURE__ */ jsxs12("div", { className: `${cell === currentDay ? "bg-green-200 font-bold rounded-full px-1" : ""}`, children: [
+            /* @__PURE__ */ jsx13("span", { children: cell }),
+            capsuleDays.includes(cell) && /* @__PURE__ */ jsx13("span", { className: "ml-1", title: "Capsule scheduled", children: "\u{1F48A}" })
+          ] }) : null
         },
-        index,
-        !1,
-        {
-          fileName: "app/components/CalendarView.tsx",
-          lineNumber: 61,
-          columnNumber: 11
-        },
-        this
+        index
       ))
-    ] }, void 0, !0, {
-      fileName: "app/components/CalendarView.tsx",
-      lineNumber: 53,
-      columnNumber: 7
-    }, this)
-  ] }, void 0, !0, {
-    fileName: "app/components/CalendarView.tsx",
-    lineNumber: 49,
-    columnNumber: 5
-  }, this);
+    ] })
+  ] });
 }
 
 // app/routes/dashboard.tsx
 import { useState, useEffect } from "react";
-import { jsxDEV as jsxDEV14 } from "react/jsx-dev-runtime";
+import { jsx as jsx14, jsxs as jsxs13 } from "react/jsx-runtime";
 var loader4 = async ({ request }) => {
   let user = await requireUser(request), capsulesTransformed = (await db.capsule.findMany({
     where: {
@@ -1265,183 +655,79 @@ function Dashboard() {
   let filteredCapsules = capsules;
   filter === "sent" ? filteredCapsules = capsules.filter((c) => c.ownerId === user.id) : filter === "received" && (filteredCapsules = capsules.filter((c) => c.ownerId !== user.id));
   let now = /* @__PURE__ */ new Date(), upcomingCapsules = filteredCapsules.filter((c) => new Date(c.scheduledDate) >= now), pastCapsules = filteredCapsules.filter((c) => new Date(c.scheduledDate) < now);
-  return /* @__PURE__ */ jsxDEV14("div", { className: "min-h-screen p-4 bg-gradient-to-br from-sky-300 to-sky-500 text-gray-900", children: [
-    searchParams.get("locked") && searchParams.get("opening") && /* @__PURE__ */ jsxDEV14("div", { className: "mb-6 p-4 bg-red-100 text-red-800 rounded border border-red-300", children: /* @__PURE__ */ jsxDEV14("p", { children: [
+  return /* @__PURE__ */ jsxs13("div", { className: "min-h-screen p-4 bg-gradient-to-br from-sky-300 to-sky-500 text-gray-900", children: [
+    searchParams.get("locked") && searchParams.get("opening") && /* @__PURE__ */ jsx14("div", { className: "mb-6 p-4 bg-red-100 text-red-800 rounded border border-red-300", children: /* @__PURE__ */ jsxs13("p", { children: [
       "Be patient, this capsule will open on",
       " ",
-      /* @__PURE__ */ jsxDEV14("strong", { children: searchParams.get("opening") }, void 0, !1, {
-        fileName: "app/routes/dashboard.tsx",
-        lineNumber: 169,
-        columnNumber: 13
-      }, this),
+      /* @__PURE__ */ jsx14("strong", { children: searchParams.get("opening") }),
       "."
-    ] }, void 0, !0, {
-      fileName: "app/routes/dashboard.tsx",
-      lineNumber: 167,
-      columnNumber: 11
-    }, this) }, void 0, !1, {
-      fileName: "app/routes/dashboard.tsx",
-      lineNumber: 166,
-      columnNumber: 9
-    }, this),
-    localReminders.length > 0 && /* @__PURE__ */ jsxDEV14("div", { className: "mb-6 p-4 bg-emerald-100 text-emerald-800 rounded", children: localReminders.map((reminder) => /* @__PURE__ */ jsxDEV14("p", { className: "text-sm", children: reminder.message }, reminder.id, !1, {
-      fileName: "app/routes/dashboard.tsx",
-      lineNumber: 178,
-      columnNumber: 13
-    }, this)) }, void 0, !1, {
-      fileName: "app/routes/dashboard.tsx",
-      lineNumber: 176,
-      columnNumber: 9
-    }, this),
-    notifications.length > 0 && /* @__PURE__ */ jsxDEV14("div", { className: "mb-6 p-4 bg-amber-100 text-amber-800 rounded", children: notifications.map((notif) => {
+    ] }) }),
+    localReminders.length > 0 && /* @__PURE__ */ jsx14("div", { className: "mb-6 p-4 bg-emerald-100 text-emerald-800 rounded", children: localReminders.map((reminder) => /* @__PURE__ */ jsx14("p", { className: "text-sm", children: reminder.message }, reminder.id)) }),
+    notifications.length > 0 && /* @__PURE__ */ jsx14("div", { className: "mb-6 p-4 bg-amber-100 text-amber-800 rounded", children: notifications.map((notif) => {
       let match = notif.message.match(/^capsule:(\d+):\s*(.*)/);
       if (match) {
         let capsuleId = match[1], displayMessage = match[2];
-        return /* @__PURE__ */ jsxDEV14("p", { className: "text-sm", children: /* @__PURE__ */ jsxDEV14(
+        return /* @__PURE__ */ jsx14("p", { className: "text-sm", children: /* @__PURE__ */ jsx14(
           "a",
           {
             href: `/notification?capsuleId=${capsuleId}&notifId=${notif.id}`,
             className: "hover:underline",
             children: displayMessage
-          },
-          void 0,
-          !1,
-          {
-            fileName: "app/routes/dashboard.tsx",
-            lineNumber: 193,
-            columnNumber: 19
-          },
-          this
-        ) }, notif.id, !1, {
-          fileName: "app/routes/dashboard.tsx",
-          lineNumber: 192,
-          columnNumber: 17
-        }, this);
+          }
+        ) }, notif.id);
       } else
-        return /* @__PURE__ */ jsxDEV14("p", { className: "text-sm", children: notif.message }, notif.id, !1, {
-          fileName: "app/routes/dashboard.tsx",
-          lineNumber: 202,
-          columnNumber: 22
-        }, this);
-    }) }, void 0, !1, {
-      fileName: "app/routes/dashboard.tsx",
-      lineNumber: 185,
-      columnNumber: 9
-    }, this),
-    /* @__PURE__ */ jsxDEV14("div", { className: "flex justify-between items-center mb-8", children: [
-      /* @__PURE__ */ jsxDEV14("h1", { className: "text-5xl font-extrabold drop-shadow-xl", children: "Dashboard" }, void 0, !1, {
-        fileName: "app/routes/dashboard.tsx",
-        lineNumber: 210,
-        columnNumber: 9
-      }, this),
-      /* @__PURE__ */ jsxDEV14(Form2, { method: "post", action: "/logout", children: /* @__PURE__ */ jsxDEV14(
+        return /* @__PURE__ */ jsx14("p", { className: "text-sm", children: notif.message }, notif.id);
+    }) }),
+    /* @__PURE__ */ jsxs13("div", { className: "flex justify-between items-center mb-8", children: [
+      /* @__PURE__ */ jsx14("h1", { className: "text-5xl font-extrabold drop-shadow-xl", children: "Dashboard" }),
+      /* @__PURE__ */ jsx14(Form2, { method: "post", action: "/logout", children: /* @__PURE__ */ jsx14(
         "button",
         {
           type: "submit",
           className: "bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition",
           children: "Log out"
-        },
-        void 0,
-        !1,
-        {
-          fileName: "app/routes/dashboard.tsx",
-          lineNumber: 212,
-          columnNumber: 11
-        },
-        this
-      ) }, void 0, !1, {
-        fileName: "app/routes/dashboard.tsx",
-        lineNumber: 211,
-        columnNumber: 9
-      }, this)
-    ] }, void 0, !0, {
-      fileName: "app/routes/dashboard.tsx",
-      lineNumber: 209,
-      columnNumber: 7
-    }, this),
-    /* @__PURE__ */ jsxDEV14("section", { className: "flex justify-center mb-8", children: /* @__PURE__ */ jsxDEV14(
+        }
+      ) })
+    ] }),
+    /* @__PURE__ */ jsx14("section", { className: "flex justify-center mb-8", children: /* @__PURE__ */ jsx14(
       Link3,
       {
         to: "/new",
         className: "bg-amber-300 hover:bg-amber-500 text-white px-6 py-3 rounded transition",
         children: "Create a Capsule"
-      },
-      void 0,
-      !1,
-      {
-        fileName: "app/routes/dashboard.tsx",
-        lineNumber: 223,
-        columnNumber: 9
-      },
-      this
-    ) }, void 0, !1, {
-      fileName: "app/routes/dashboard.tsx",
-      lineNumber: 222,
-      columnNumber: 7
-    }, this),
-    /* @__PURE__ */ jsxDEV14("div", { className: "mb-6 flex space-x-4", children: [
-      /* @__PURE__ */ jsxDEV14(
+      }
+    ) }),
+    /* @__PURE__ */ jsxs13("div", { className: "mb-6 flex space-x-4", children: [
+      /* @__PURE__ */ jsx14(
         "button",
         {
           onClick: () => setFilter("all"),
           className: `px-4 py-2 rounded transition ${filter === "all" ? "bg-sky-700 text-white" : "bg-gray-200 text-gray-800"}`,
           children: "All Capsules"
-        },
-        void 0,
-        !1,
-        {
-          fileName: "app/routes/dashboard.tsx",
-          lineNumber: 233,
-          columnNumber: 9
-        },
-        this
+        }
       ),
-      /* @__PURE__ */ jsxDEV14(
+      /* @__PURE__ */ jsx14(
         "button",
         {
           onClick: () => setFilter("sent"),
           className: `px-4 py-2 rounded transition ${filter === "sent" ? "bg-sky-700 text-white" : "bg-gray-200 text-gray-800"}`,
           children: "Sent"
-        },
-        void 0,
-        !1,
-        {
-          fileName: "app/routes/dashboard.tsx",
-          lineNumber: 241,
-          columnNumber: 9
-        },
-        this
+        }
       ),
-      /* @__PURE__ */ jsxDEV14(
+      /* @__PURE__ */ jsx14(
         "button",
         {
           onClick: () => setFilter("received"),
           className: `px-4 py-2 rounded transition ${filter === "received" ? "bg-sky-700 text-white" : "bg-gray-200 text-gray-800"}`,
           children: "Received"
-        },
-        void 0,
-        !1,
-        {
-          fileName: "app/routes/dashboard.tsx",
-          lineNumber: 249,
-          columnNumber: 9
-        },
-        this
+        }
       )
-    ] }, void 0, !0, {
-      fileName: "app/routes/dashboard.tsx",
-      lineNumber: 232,
-      columnNumber: 7
-    }, this),
-    /* @__PURE__ */ jsxDEV14("section", { className: "mb-8", children: [
-      /* @__PURE__ */ jsxDEV14("h2", { className: "text-2xl font-semibold mb-4", children: "Upcoming Capsules" }, void 0, !1, {
-        fileName: "app/routes/dashboard.tsx",
-        lineNumber: 261,
-        columnNumber: 9
-      }, this),
-      upcomingCapsules.length ? /* @__PURE__ */ jsxDEV14("div", { className: "grid gap-4", children: upcomingCapsules.map((capsule) => {
+    ] }),
+    /* @__PURE__ */ jsxs13("section", { className: "mb-8", children: [
+      /* @__PURE__ */ jsx14("h2", { className: "text-2xl font-semibold mb-4", children: "Upcoming Capsules" }),
+      upcomingCapsules.length ? /* @__PURE__ */ jsx14("div", { className: "grid gap-4", children: upcomingCapsules.map((capsule) => {
         let capsuleDate = new Date(capsule.scheduledDate);
-        return capsuleDate > now && (capsule.visibility === "private" || capsule.ownerId !== user.id) ? /* @__PURE__ */ jsxDEV14(
+        return capsuleDate > now && (capsule.visibility === "private" || capsule.ownerId !== user.id) ? /* @__PURE__ */ jsxs13(
           "div",
           {
             className: "flex justify-between items-center p-4 bg-gray-200 rounded shadow border border-gray-400 opacity-50 cursor-not-allowed",
@@ -1452,26 +738,14 @@ function Dashboard() {
               (e.key === "Enter" || e.key === " ") && alert(`Be patient, this capsule will open on ${capsuleDate.toLocaleString()}`);
             },
             children: [
-              /* @__PURE__ */ jsxDEV14("div", { children: [
-                /* @__PURE__ */ jsxDEV14("h3", { className: "text-xl font-semibold text-gray-700", children: capsule.title }, void 0, !1, {
-                  fileName: "app/routes/dashboard.tsx",
-                  lineNumber: 288,
-                  columnNumber: 23
-                }, this),
-                /* @__PURE__ */ jsxDEV14("p", { className: "text-xs text-gray-600", children: [
+              /* @__PURE__ */ jsxs13("div", { children: [
+                /* @__PURE__ */ jsx14("h3", { className: "text-xl font-semibold text-gray-700", children: capsule.title }),
+                /* @__PURE__ */ jsxs13("p", { className: "text-xs text-gray-600", children: [
                   "Opening day: ",
                   capsuleDate.toLocaleString()
-                ] }, void 0, !0, {
-                  fileName: "app/routes/dashboard.tsx",
-                  lineNumber: 289,
-                  columnNumber: 23
-                }, this)
-              ] }, void 0, !0, {
-                fileName: "app/routes/dashboard.tsx",
-                lineNumber: 287,
-                columnNumber: 21
-              }, this),
-              /* @__PURE__ */ jsxDEV14("div", { children: /* @__PURE__ */ jsxDEV14(
+                ] })
+              ] }),
+              /* @__PURE__ */ jsx14("div", { children: /* @__PURE__ */ jsxs13(
                 "svg",
                 {
                   xmlns: "http://www.w3.org/2000/svg",
@@ -1480,274 +754,101 @@ function Dashboard() {
                   viewBox: "0 0 24 24",
                   stroke: "currentColor",
                   children: [
-                    /* @__PURE__ */ jsxDEV14(
+                    /* @__PURE__ */ jsx14(
                       "path",
                       {
                         strokeLinecap: "round",
                         strokeLinejoin: "round",
                         strokeWidth: 2,
                         d: "M12 11c0-1.657-1.343-3-3-3S6 9.343 6 11v2h6v-2z"
-                      },
-                      void 0,
-                      !1,
-                      {
-                        fileName: "app/routes/dashboard.tsx",
-                        lineNumber: 301,
-                        columnNumber: 25
-                      },
-                      this
+                      }
                     ),
-                    /* @__PURE__ */ jsxDEV14(
+                    /* @__PURE__ */ jsx14(
                       "path",
                       {
                         strokeLinecap: "round",
                         strokeLinejoin: "round",
                         strokeWidth: 2,
                         d: "M16 11V9a4 4 0 00-8 0v2"
-                      },
-                      void 0,
-                      !1,
-                      {
-                        fileName: "app/routes/dashboard.tsx",
-                        lineNumber: 307,
-                        columnNumber: 25
-                      },
-                      this
+                      }
                     )
                   ]
-                },
-                void 0,
-                !0,
-                {
-                  fileName: "app/routes/dashboard.tsx",
-                  lineNumber: 294,
-                  columnNumber: 23
-                },
-                this
-              ) }, void 0, !1, {
-                fileName: "app/routes/dashboard.tsx",
-                lineNumber: 293,
-                columnNumber: 21
-              }, this)
+                }
+              ) })
             ]
           },
-          capsule.id,
-          !0,
-          {
-            fileName: "app/routes/dashboard.tsx",
-            lineNumber: 273,
-            columnNumber: 19
-          },
-          this
-        ) : /* @__PURE__ */ jsxDEV14(
+          capsule.id
+        ) : /* @__PURE__ */ jsxs13(
           "div",
           {
             className: "flex justify-between items-center p-4 bg-white rounded shadow hover:bg-gray-100 transition",
             children: [
-              /* @__PURE__ */ jsxDEV14("div", { children: [
-                /* @__PURE__ */ jsxDEV14("h3", { className: "text-xl font-semibold", children: /* @__PURE__ */ jsxDEV14(Link3, { to: `/${capsule.id}`, className: "text-sky-700 hover:underline", children: capsule.title }, void 0, !1, {
-                  fileName: "app/routes/dashboard.tsx",
-                  lineNumber: 325,
-                  columnNumber: 25
-                }, this) }, void 0, !1, {
-                  fileName: "app/routes/dashboard.tsx",
-                  lineNumber: 324,
-                  columnNumber: 23
-                }, this),
-                /* @__PURE__ */ jsxDEV14("p", { className: "text-sm text-gray-600", children: capsule.content }, void 0, !1, {
-                  fileName: "app/routes/dashboard.tsx",
-                  lineNumber: 329,
-                  columnNumber: 23
-                }, this),
-                /* @__PURE__ */ jsxDEV14("p", { className: "text-xs text-gray-500", children: [
+              /* @__PURE__ */ jsxs13("div", { children: [
+                /* @__PURE__ */ jsx14("h3", { className: "text-xl font-semibold", children: /* @__PURE__ */ jsx14(Link3, { to: `/${capsule.id}`, className: "text-sky-700 hover:underline", children: capsule.title }) }),
+                /* @__PURE__ */ jsx14("p", { className: "text-sm text-gray-600", children: capsule.content }),
+                /* @__PURE__ */ jsxs13("p", { className: "text-xs text-gray-500", children: [
                   "Opening day: ",
                   capsuleDate.toLocaleString()
-                ] }, void 0, !0, {
-                  fileName: "app/routes/dashboard.tsx",
-                  lineNumber: 330,
-                  columnNumber: 23
-                }, this)
-              ] }, void 0, !0, {
-                fileName: "app/routes/dashboard.tsx",
-                lineNumber: 323,
-                columnNumber: 21
-              }, this),
-              /* @__PURE__ */ jsxDEV14(
+                ] })
+              ] }),
+              /* @__PURE__ */ jsx14(
                 Link3,
                 {
                   to: "/delete-capsules",
                   className: "ml-4 text-red-600 hover:text-red-800",
                   title: "Manage capsule deletions",
                   children: "\u{1F5D1}\uFE0F"
-                },
-                void 0,
-                !1,
-                {
-                  fileName: "app/routes/dashboard.tsx",
-                  lineNumber: 334,
-                  columnNumber: 21
-                },
-                this
+                }
               )
             ]
           },
-          capsule.id,
-          !0,
-          {
-            fileName: "app/routes/dashboard.tsx",
-            lineNumber: 319,
-            columnNumber: 19
-          },
-          this
+          capsule.id
         );
-      }) }, void 0, !1, {
-        fileName: "app/routes/dashboard.tsx",
-        lineNumber: 263,
-        columnNumber: 11
-      }, this) : /* @__PURE__ */ jsxDEV14("p", { children: "No upcoming capsules." }, void 0, !1, {
-        fileName: "app/routes/dashboard.tsx",
-        lineNumber: 347,
-        columnNumber: 11
-      }, this)
-    ] }, void 0, !0, {
-      fileName: "app/routes/dashboard.tsx",
-      lineNumber: 260,
-      columnNumber: 7
-    }, this),
-    /* @__PURE__ */ jsxDEV14("section", { className: "mb-8", children: [
-      /* @__PURE__ */ jsxDEV14("h2", { className: "text-2xl font-semibold mb-4", children: "Previous Capsules" }, void 0, !1, {
-        fileName: "app/routes/dashboard.tsx",
-        lineNumber: 353,
-        columnNumber: 9
-      }, this),
-      pastCapsules.length ? /* @__PURE__ */ jsxDEV14("div", { className: "grid gap-4", children: pastCapsules.map((capsule) => /* @__PURE__ */ jsxDEV14(
+      }) }) : /* @__PURE__ */ jsx14("p", { children: "No upcoming capsules." })
+    ] }),
+    /* @__PURE__ */ jsxs13("section", { className: "mb-8", children: [
+      /* @__PURE__ */ jsx14("h2", { className: "text-2xl font-semibold mb-4", children: "Previous Capsules" }),
+      pastCapsules.length ? /* @__PURE__ */ jsx14("div", { className: "grid gap-4", children: pastCapsules.map((capsule) => /* @__PURE__ */ jsxs13(
         "div",
         {
           className: "flex justify-between items-center p-4 bg-white rounded shadow hover:bg-gray-100 transition",
           children: [
-            /* @__PURE__ */ jsxDEV14("div", { children: [
-              /* @__PURE__ */ jsxDEV14("h3", { className: "text-xl font-semibold", children: /* @__PURE__ */ jsxDEV14(Link3, { to: `/${capsule.id}`, className: "text-sky-700 hover:underline", children: capsule.title }, void 0, !1, {
-                fileName: "app/routes/dashboard.tsx",
-                lineNumber: 363,
-                columnNumber: 21
-              }, this) }, void 0, !1, {
-                fileName: "app/routes/dashboard.tsx",
-                lineNumber: 362,
-                columnNumber: 19
-              }, this),
-              /* @__PURE__ */ jsxDEV14("p", { className: "text-sm text-gray-600", children: capsule.content }, void 0, !1, {
-                fileName: "app/routes/dashboard.tsx",
-                lineNumber: 367,
-                columnNumber: 19
-              }, this),
-              /* @__PURE__ */ jsxDEV14("p", { className: "text-xs text-gray-500", children: [
+            /* @__PURE__ */ jsxs13("div", { children: [
+              /* @__PURE__ */ jsx14("h3", { className: "text-xl font-semibold", children: /* @__PURE__ */ jsx14(Link3, { to: `/${capsule.id}`, className: "text-sky-700 hover:underline", children: capsule.title }) }),
+              /* @__PURE__ */ jsx14("p", { className: "text-sm text-gray-600", children: capsule.content }),
+              /* @__PURE__ */ jsxs13("p", { className: "text-xs text-gray-500", children: [
                 "Opening day: ",
                 new Date(capsule.scheduledDate).toLocaleString()
-              ] }, void 0, !0, {
-                fileName: "app/routes/dashboard.tsx",
-                lineNumber: 368,
-                columnNumber: 19
-              }, this)
-            ] }, void 0, !0, {
-              fileName: "app/routes/dashboard.tsx",
-              lineNumber: 361,
-              columnNumber: 17
-            }, this),
-            /* @__PURE__ */ jsxDEV14(
+              ] })
+            ] }),
+            /* @__PURE__ */ jsx14(
               Link3,
               {
                 to: "/delete-capsules",
                 className: "ml-4 text-red-600 hover:text-red-800",
                 title: "Manage capsule deletions",
                 children: "\u{1F5D1}\uFE0F"
-              },
-              void 0,
-              !1,
-              {
-                fileName: "app/routes/dashboard.tsx",
-                lineNumber: 372,
-                columnNumber: 17
-              },
-              this
+              }
             )
           ]
         },
-        capsule.id,
-        !0,
-        {
-          fileName: "app/routes/dashboard.tsx",
-          lineNumber: 357,
-          columnNumber: 15
-        },
-        this
-      )) }, void 0, !1, {
-        fileName: "app/routes/dashboard.tsx",
-        lineNumber: 355,
-        columnNumber: 11
-      }, this) : /* @__PURE__ */ jsxDEV14("p", { children: "No previous capsules." }, void 0, !1, {
-        fileName: "app/routes/dashboard.tsx",
-        lineNumber: 383,
-        columnNumber: 11
-      }, this)
-    ] }, void 0, !0, {
-      fileName: "app/routes/dashboard.tsx",
-      lineNumber: 352,
-      columnNumber: 7
-    }, this),
-    /* @__PURE__ */ jsxDEV14("section", { className: "mb-8", children: [
-      /* @__PURE__ */ jsxDEV14("h2", { className: "text-center text-2xl font-semibold mb-4", children: "Visualisations" }, void 0, !1, {
-        fileName: "app/routes/dashboard.tsx",
-        lineNumber: 389,
-        columnNumber: 9
-      }, this),
-      /* @__PURE__ */ jsxDEV14("div", { className: "grid grid-cols-1 md:grid-cols-2 gap-8", children: [
-        /* @__PURE__ */ jsxDEV14("div", { className: "bg-white p-8 rounded-3xl shadow-xl border-4 border-yellow-500", children: [
-          /* @__PURE__ */ jsxDEV14("h3", { className: "text-xl font-semibold mb-2", children: "Timeline" }, void 0, !1, {
-            fileName: "app/routes/dashboard.tsx",
-            lineNumber: 392,
-            columnNumber: 13
-          }, this),
-          /* @__PURE__ */ jsxDEV14(Timeline_default, { capsules }, void 0, !1, {
-            fileName: "app/routes/dashboard.tsx",
-            lineNumber: 393,
-            columnNumber: 13
-          }, this)
-        ] }, void 0, !0, {
-          fileName: "app/routes/dashboard.tsx",
-          lineNumber: 391,
-          columnNumber: 11
-        }, this),
-        /* @__PURE__ */ jsxDEV14("div", { className: "bg-white p-8 rounded-3xl shadow-xl border-4 border-yellow-500", children: [
-          /* @__PURE__ */ jsxDEV14("h3", { className: "text-xl font-semibold mb-2", children: "Calendar" }, void 0, !1, {
-            fileName: "app/routes/dashboard.tsx",
-            lineNumber: 396,
-            columnNumber: 13
-          }, this),
-          /* @__PURE__ */ jsxDEV14(CalendarView, { capsules }, void 0, !1, {
-            fileName: "app/routes/dashboard.tsx",
-            lineNumber: 397,
-            columnNumber: 13
-          }, this)
-        ] }, void 0, !0, {
-          fileName: "app/routes/dashboard.tsx",
-          lineNumber: 395,
-          columnNumber: 11
-        }, this)
-      ] }, void 0, !0, {
-        fileName: "app/routes/dashboard.tsx",
-        lineNumber: 390,
-        columnNumber: 9
-      }, this)
-    ] }, void 0, !0, {
-      fileName: "app/routes/dashboard.tsx",
-      lineNumber: 388,
-      columnNumber: 7
-    }, this)
-  ] }, void 0, !0, {
-    fileName: "app/routes/dashboard.tsx",
-    lineNumber: 163,
-    columnNumber: 5
-  }, this);
+        capsule.id
+      )) }) : /* @__PURE__ */ jsx14("p", { children: "No previous capsules." })
+    ] }),
+    /* @__PURE__ */ jsxs13("section", { className: "mb-8", children: [
+      /* @__PURE__ */ jsx14("h2", { className: "text-center text-2xl font-semibold mb-4", children: "Visualisations" }),
+      /* @__PURE__ */ jsxs13("div", { className: "grid grid-cols-1 md:grid-cols-2 gap-8", children: [
+        /* @__PURE__ */ jsxs13("div", { className: "bg-white p-8 rounded-3xl shadow-xl border-4 border-yellow-500", children: [
+          /* @__PURE__ */ jsx14("h3", { className: "text-xl font-semibold mb-2", children: "Timeline" }),
+          /* @__PURE__ */ jsx14(Timeline_default, { capsules })
+        ] }),
+        /* @__PURE__ */ jsxs13("div", { className: "bg-white p-8 rounded-3xl shadow-xl border-4 border-yellow-500", children: [
+          /* @__PURE__ */ jsx14("h3", { className: "text-xl font-semibold mb-2", children: "Calendar" }),
+          /* @__PURE__ */ jsx14(CalendarView, { capsules })
+        ] })
+      ] })
+    ] })
+  ] });
 }
 
 // app/routes/confirm.tsx
@@ -1757,7 +858,7 @@ __export(confirm_exports, {
   loader: () => loader5
 });
 import { redirect as redirect6 } from "@remix-run/node";
-import { jsxDEV as jsxDEV15 } from "react/jsx-dev-runtime";
+import { jsx as jsx15 } from "react/jsx-runtime";
 var loader5 = async ({ request }) => {
   let token = new URL(request.url).searchParams.get("token");
   if (!token)
@@ -1771,11 +872,7 @@ var loader5 = async ({ request }) => {
   }), redirect6("/login?confirmed=1");
 };
 function Confirm() {
-  return /* @__PURE__ */ jsxDEV15("p", { children: "Confirmation ongoing\u2026" }, void 0, !1, {
-    fileName: "app/routes/confirm.tsx",
-    lineNumber: 30,
-    columnNumber: 10
-  }, this);
+  return /* @__PURE__ */ jsx15("p", { children: "Confirmation ongoing\u2026" });
 }
 
 // app/routes/_index.tsx
@@ -1785,7 +882,7 @@ __export(index_exports, {
 });
 import { Link as Link4 } from "@remix-run/react";
 import { useEffect as useEffect2, useRef, useState as useState2 } from "react";
-import { jsxDEV as jsxDEV16 } from "react/jsx-dev-runtime";
+import { jsx as jsx16, jsxs as jsxs14 } from "react/jsx-runtime";
 var ScrollReveal = ({ children }) => {
   let ref = useRef(null), [isVisible, setVisible] = useState2(!1);
   return useEffect2(() => {
@@ -1796,21 +893,13 @@ var ScrollReveal = ({ children }) => {
       { threshold: 0.3 }
     );
     return ref.current && observer.observe(ref.current), () => observer.disconnect();
-  }, []), /* @__PURE__ */ jsxDEV16(
+  }, []), /* @__PURE__ */ jsx16(
     "div",
     {
       ref,
       className: `transition-all duration-1000 transform ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`,
       children
-    },
-    void 0,
-    !1,
-    {
-      fileName: "app/routes/_index.tsx",
-      lineNumber: 27,
-      columnNumber: 5
-    },
-    this
+    }
   );
 }, stories = [
   {
@@ -1847,175 +936,72 @@ function TimelineStory({ story }) {
     { key: "present", label: "Present" },
     { key: "future", label: "Future" }
   ];
-  return /* @__PURE__ */ jsxDEV16("div", { className: "mb-12", children: [
-    /* @__PURE__ */ jsxDEV16("h3", { className: "text-2xl font-bold mb-4 text-gray-800 text-center", children: story.title }, void 0, !1, {
-      fileName: "app/routes/_index.tsx",
-      lineNumber: 88,
-      columnNumber: 7
-    }, this),
-    /* @__PURE__ */ jsxDEV16("div", { className: "flex justify-center space-x-4 mb-4", children: periodOptions.map(({ key, label }) => /* @__PURE__ */ jsxDEV16(
+  return /* @__PURE__ */ jsxs14("div", { className: "mb-12", children: [
+    /* @__PURE__ */ jsx16("h3", { className: "text-2xl font-bold mb-4 text-gray-800 text-center", children: story.title }),
+    /* @__PURE__ */ jsx16("div", { className: "flex justify-center space-x-4 mb-4", children: periodOptions.map(({ key, label }) => /* @__PURE__ */ jsx16(
       "button",
       {
         onClick: () => setSelectedPeriod(key),
         className: `px-4 py-2 rounded-full border transition-colors ${selectedPeriod === key ? "bg-green-500 text-white" : "bg-white text-blue-600 hover:bg-blue-100"}`,
         children: label
       },
-      key,
-      !1,
-      {
-        fileName: "app/routes/_index.tsx",
-        lineNumber: 91,
-        columnNumber: 11
-      },
-      this
-    )) }, void 0, !1, {
-      fileName: "app/routes/_index.tsx",
-      lineNumber: 89,
-      columnNumber: 7
-    }, this),
-    /* @__PURE__ */ jsxDEV16("div", { className: "p-6 bg-yellow-100 rounded-lg border border-yellow-400 shadow-md", children: /* @__PURE__ */ jsxDEV16("p", { className: "text-lg text-gray-800 text-justify font-pressstart drop-shadow-sm", children: story.parts[selectedPeriod] }, void 0, !1, {
-      fileName: "app/routes/_index.tsx",
-      lineNumber: 106,
-      columnNumber: 9
-    }, this) }, void 0, !1, {
-      fileName: "app/routes/_index.tsx",
-      lineNumber: 105,
-      columnNumber: 7
-    }, this)
-  ] }, void 0, !0, {
-    fileName: "app/routes/_index.tsx",
-    lineNumber: 87,
-    columnNumber: 5
-  }, this);
+      key
+    )) }),
+    /* @__PURE__ */ jsx16("div", { className: "p-6 bg-yellow-100 rounded-lg border border-yellow-400 shadow-md", children: /* @__PURE__ */ jsx16("p", { className: "text-lg text-gray-800 text-justify font-pressstart drop-shadow-sm", children: story.parts[selectedPeriod] }) })
+  ] });
 }
 function TimelineSection() {
-  return /* @__PURE__ */ jsxDEV16(ScrollReveal, { children: /* @__PURE__ */ jsxDEV16("section", { className: "py-12 text-white", children: /* @__PURE__ */ jsxDEV16("div", { className: "container mx-auto px-4", children: [
-    /* @__PURE__ */ jsxDEV16(
+  return /* @__PURE__ */ jsx16(ScrollReveal, { children: /* @__PURE__ */ jsx16("section", { className: "py-12 text-white", children: /* @__PURE__ */ jsxs14("div", { className: "container mx-auto px-4", children: [
+    /* @__PURE__ */ jsx16(
       "h2",
       {
         className: "text-4xl font-extrabold text-white drop-shadow-xl text-center mb-8 tracking-widest",
         style: { textShadow: "3px 3px 6px rgba(0, 0, 0, 1)" },
         children: "Stories of Time"
-      },
-      void 0,
-      !1,
-      {
-        fileName: "app/routes/_index.tsx",
-        lineNumber: 120,
-        columnNumber: 9
-      },
-      this
+      }
     ),
-    stories.map((story) => /* @__PURE__ */ jsxDEV16(TimelineStory, { story }, story.id, !1, {
-      fileName: "app/routes/_index.tsx",
-      lineNumber: 127,
-      columnNumber: 11
-    }, this)),
-    /* @__PURE__ */ jsxDEV16("div", { className: "text-center mt-12", children: /* @__PURE__ */ jsxDEV16(
+    stories.map((story) => /* @__PURE__ */ jsx16(TimelineStory, { story }, story.id)),
+    /* @__PURE__ */ jsx16("div", { className: "text-center mt-12", children: /* @__PURE__ */ jsx16(
       Link4,
       {
         to: "/signup",
         className: "mr-4 inline-block px-6 py-3 bg-green-600 text-white rounded-full hover:bg-green-700 transition-colors",
         children: "Share your story"
-      },
-      void 0,
-      !1,
-      {
-        fileName: "app/routes/_index.tsx",
-        lineNumber: 130,
-        columnNumber: 13
-      },
-      this
-    ) }, void 0, !1, {
-      fileName: "app/routes/_index.tsx",
-      lineNumber: 129,
-      columnNumber: 11
-    }, this)
-  ] }, void 0, !0, {
-    fileName: "app/routes/_index.tsx",
-    lineNumber: 119,
-    columnNumber: 7
-  }, this) }, void 0, !1, {
-    fileName: "app/routes/_index.tsx",
-    lineNumber: 118,
-    columnNumber: 7
-  }, this) }, void 0, !1, {
-    fileName: "app/routes/_index.tsx",
-    lineNumber: 117,
-    columnNumber: 5
-  }, this);
+      }
+    ) })
+  ] }) }) });
 }
 function Index() {
-  return /* @__PURE__ */ jsxDEV16("div", { className: "min-h-screen flex flex-col bg-gradient-to-b from-sky-500 via-sky-400 to-sky-300 text-white", children: [
-    /* @__PURE__ */ jsxDEV16("header", { className: "w-full p-6 text-center", children: /* @__PURE__ */ jsxDEV16(
+  return /* @__PURE__ */ jsxs14("div", { className: "min-h-screen flex flex-col bg-gradient-to-b from-sky-500 via-sky-400 to-sky-300 text-white", children: [
+    /* @__PURE__ */ jsx16("header", { className: "w-full p-6 text-center", children: /* @__PURE__ */ jsx16(
       "h1",
       {
         className: "text-5xl font-extrabold drop-shadow-xl",
         style: { textShadow: "3px 3px 6px rgba(0, 0, 0, 1)" },
         children: "Time Capsule"
-      },
-      void 0,
-      !1,
-      {
-        fileName: "app/routes/_index.tsx",
-        lineNumber: 148,
-        columnNumber: 9
-      },
-      this
-    ) }, void 0, !1, {
-      fileName: "app/routes/_index.tsx",
-      lineNumber: 147,
-      columnNumber: 7
-    }, this),
-    /* @__PURE__ */ jsxDEV16("section", { className: "relative flex flex-col justify-center items-center h-[80vh] px-4 pt-24", children: [
-      /* @__PURE__ */ jsxDEV16("div", { className: "text-center", children: /* @__PURE__ */ jsxDEV16("p", { className: "text-2xl md:text-3xl lg:text-4xl font-light drop-shadow-md", children: "Step into time's magic\u2014Unlock your memories, embrace your future." }, void 0, !1, {
-        fileName: "app/routes/_index.tsx",
-        lineNumber: 159,
-        columnNumber: 11
-      }, this) }, void 0, !1, {
-        fileName: "app/routes/_index.tsx",
-        lineNumber: 158,
-        columnNumber: 9
-      }, this),
-      /* @__PURE__ */ jsxDEV16("div", { className: "mt-12 flex gap-6", children: [
-        /* @__PURE__ */ jsxDEV16(
+      }
+    ) }),
+    /* @__PURE__ */ jsxs14("section", { className: "relative flex flex-col justify-center items-center h-[80vh] px-4 pt-24", children: [
+      /* @__PURE__ */ jsx16("div", { className: "text-center", children: /* @__PURE__ */ jsx16("p", { className: "text-2xl md:text-3xl lg:text-4xl font-light drop-shadow-md", children: "Step into time's magic\u2014Unlock your memories, embrace your future." }) }),
+      /* @__PURE__ */ jsxs14("div", { className: "mt-12 flex gap-6", children: [
+        /* @__PURE__ */ jsx16(
           Link4,
           {
             to: "/login",
             className: "px-6 py-3 rounded-full bg-amber-300 hover:bg-amber-500 text-white font-bold transform hover:scale-105 transition",
             children: "Log In"
-          },
-          void 0,
-          !1,
-          {
-            fileName: "app/routes/_index.tsx",
-            lineNumber: 164,
-            columnNumber: 11
-          },
-          this
+          }
         ),
-        /* @__PURE__ */ jsxDEV16(
+        /* @__PURE__ */ jsx16(
           Link4,
           {
             to: "/signup",
             className: "px-6 py-3 rounded-full bg-amber-300 hover:bg-amber-500 text-white font-bold transform hover:scale-105 transition",
             children: "Sign Up"
-          },
-          void 0,
-          !1,
-          {
-            fileName: "app/routes/_index.tsx",
-            lineNumber: 170,
-            columnNumber: 11
-          },
-          this
+          }
         )
-      ] }, void 0, !0, {
-        fileName: "app/routes/_index.tsx",
-        lineNumber: 163,
-        columnNumber: 9
-      }, this),
-      /* @__PURE__ */ jsxDEV16("div", { className: "absolute bottom-4", children: /* @__PURE__ */ jsxDEV16(
+      ] }),
+      /* @__PURE__ */ jsx16("div", { className: "absolute bottom-4", children: /* @__PURE__ */ jsx16(
         "svg",
         {
           className: "w-12 h-12 animate-bounce text-white drop-shadow-lg",
@@ -2023,232 +1009,84 @@ function Index() {
           stroke: "currentColor",
           viewBox: "0 0 24 24",
           xmlns: "http://www.w3.org/2000/svg",
-          children: /* @__PURE__ */ jsxDEV16("path", { strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: 2, d: "M19 9l-7 7-7-7" }, void 0, !1, {
-            fileName: "app/routes/_index.tsx",
-            lineNumber: 186,
-            columnNumber: 13
-          }, this)
-        },
-        void 0,
-        !1,
-        {
-          fileName: "app/routes/_index.tsx",
-          lineNumber: 179,
-          columnNumber: 11
-        },
-        this
-      ) }, void 0, !1, {
-        fileName: "app/routes/_index.tsx",
-        lineNumber: 178,
-        columnNumber: 9
-      }, this)
-    ] }, void 0, !0, {
-      fileName: "app/routes/_index.tsx",
-      lineNumber: 157,
-      columnNumber: 7
-    }, this),
-    /* @__PURE__ */ jsxDEV16("section", { className: "py-20 -mt-32", children: /* @__PURE__ */ jsxDEV16(ScrollReveal, { children: /* @__PURE__ */ jsxDEV16("div", { className: "max-w-3xl mx-auto px-4 p-8 bg-yellow-200 rounded-3xl shadow-xl border-4 border-yellow-500 text-gray-800", children: [
-      /* @__PURE__ */ jsxDEV16("h2", { className: "text-3xl font-bold mb-4 text-center drop-shadow-lg", children: "About" }, void 0, !1, {
-        fileName: "app/routes/_index.tsx",
-        lineNumber: 195,
-        columnNumber: 13
-      }, this),
-      /* @__PURE__ */ jsxDEV16("p", { className: "text-base leading-relaxed text-justify", children: "Once upon a time, there was a little girl with sparkling eyes, who dreamt of hearing the murmur of the waves as a lullaby every day. She imagined herself, a few years later, living by the sea, gliding over the waves like a dancer in symphony with the ocean." }, void 0, !1, {
-        fileName: "app/routes/_index.tsx",
-        lineNumber: 198,
-        columnNumber: 13
-      }, this),
-      /* @__PURE__ */ jsxDEV16("p", { className: "text-base leading-relaxed mt-4 text-justify", children: "One day, determined to seal her dreams, she created a time capsule, a message of hope and ambition, destined for her future version. Five years later, after a morning surf session, she found herself facing the ocean \u2014 the ocean that had become her daily life over the last year. She felt immense gratitude towards the little girl who had dared to dream. You are where you wanted to be." }, void 0, !1, {
-        fileName: "app/routes/_index.tsx",
-        lineNumber: 201,
-        columnNumber: 13
-      }, this),
-      /* @__PURE__ */ jsxDEV16("p", { className: "text-base leading-relaxed mt-4 text-justify", children: [
-        /* @__PURE__ */ jsxDEV16("strong", { children: "Time Capsule" }, void 0, !1, {
-          fileName: "app/routes/_index.tsx",
-          lineNumber: 205,
-          columnNumber: 15
-        }, this),
+          children: /* @__PURE__ */ jsx16("path", { strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: 2, d: "M19 9l-7 7-7-7" })
+        }
+      ) })
+    ] }),
+    /* @__PURE__ */ jsx16("section", { className: "py-20 -mt-32", children: /* @__PURE__ */ jsx16(ScrollReveal, { children: /* @__PURE__ */ jsxs14("div", { className: "max-w-3xl mx-auto px-4 p-8 bg-yellow-200 rounded-3xl shadow-xl border-4 border-yellow-500 text-gray-800", children: [
+      /* @__PURE__ */ jsx16("h2", { className: "text-3xl font-bold mb-4 text-center drop-shadow-lg", children: "About" }),
+      /* @__PURE__ */ jsx16("p", { className: "text-base leading-relaxed text-justify", children: "Once upon a time, there was a little girl with sparkling eyes, who dreamt of hearing the murmur of the waves as a lullaby every day. She imagined herself, a few years later, living by the sea, gliding over the waves like a dancer in symphony with the ocean." }),
+      /* @__PURE__ */ jsx16("p", { className: "text-base leading-relaxed mt-4 text-justify", children: "One day, determined to seal her dreams, she created a time capsule, a message of hope and ambition, destined for her future version. Five years later, after a morning surf session, she found herself facing the ocean \u2014 the ocean that had become her daily life over the last year. She felt immense gratitude towards the little girl who had dared to dream. You are where you wanted to be." }),
+      /* @__PURE__ */ jsxs14("p", { className: "text-base leading-relaxed mt-4 text-justify", children: [
+        /* @__PURE__ */ jsx16("strong", { children: "Time Capsule" }),
         " is much more than an app. Whether you want to send an inspiring public capsule to your friends, record your dreams for yourself, share a personalised message for a birthday or even to let a grandmother send a heartfelt message to her newborn granddaughter so that as she grows up, she can witness her grandmother\u2019s youthful words \u2014 Time Capsule transforms every moment into a precious bridge between the past and the future. Be creative and let your messages travel through time."
-      ] }, void 0, !0, {
-        fileName: "app/routes/_index.tsx",
-        lineNumber: 204,
-        columnNumber: 13
-      }, this)
-    ] }, void 0, !0, {
-      fileName: "app/routes/_index.tsx",
-      lineNumber: 194,
-      columnNumber: 11
-    }, this) }, void 0, !1, {
-      fileName: "app/routes/_index.tsx",
-      lineNumber: 193,
-      columnNumber: 9
-    }, this) }, void 0, !1, {
-      fileName: "app/routes/_index.tsx",
-      lineNumber: 192,
-      columnNumber: 7
-    }, this),
-    /* @__PURE__ */ jsxDEV16(TimelineSection, {}, void 0, !1, {
-      fileName: "app/routes/_index.tsx",
-      lineNumber: 212,
-      columnNumber: 7
-    }, this),
-    /* @__PURE__ */ jsxDEV16("footer", { className: "bg-white text-gray-900 py-8 border-t-4 border-sky-500 shadow-xl", children: /* @__PURE__ */ jsxDEV16("div", { className: "container mx-auto px-4", children: [
-      /* @__PURE__ */ jsxDEV16("div", { className: "flex flex-col md:flex-row items-center justify-between", children: [
-        /* @__PURE__ */ jsxDEV16("div", { className: "mb-4 md:mb-0 text-center md:text-left", children: [
-          /* @__PURE__ */ jsxDEV16("h3", { className: "text-3xl font-bold text-gray-700 drop-shadow-md", children: "Time Capsule" }, void 0, !1, {
-            fileName: "app/routes/_index.tsx",
-            lineNumber: 220,
-            columnNumber: 15
-          }, this),
-          /* @__PURE__ */ jsxDEV16("p", { className: "text-sm text-gray-600", children: "A journey through time and memories" }, void 0, !1, {
-            fileName: "app/routes/_index.tsx",
-            lineNumber: 223,
-            columnNumber: 15
-          }, this)
-        ] }, void 0, !0, {
-          fileName: "app/routes/_index.tsx",
-          lineNumber: 219,
-          columnNumber: 13
-        }, this),
-        /* @__PURE__ */ jsxDEV16("div", { className: "flex flex-wrap justify-center space-x-4", children: [
-          /* @__PURE__ */ jsxDEV16(
+      ] })
+    ] }) }) }),
+    /* @__PURE__ */ jsx16(TimelineSection, {}),
+    /* @__PURE__ */ jsx16("footer", { className: "bg-white text-gray-900 py-8 border-t-4 border-sky-500 shadow-xl", children: /* @__PURE__ */ jsxs14("div", { className: "container mx-auto px-4", children: [
+      /* @__PURE__ */ jsxs14("div", { className: "flex flex-col md:flex-row items-center justify-between", children: [
+        /* @__PURE__ */ jsxs14("div", { className: "mb-4 md:mb-0 text-center md:text-left", children: [
+          /* @__PURE__ */ jsx16("h3", { className: "text-3xl font-bold text-gray-700 drop-shadow-md", children: "Time Capsule" }),
+          /* @__PURE__ */ jsx16("p", { className: "text-sm text-gray-600", children: "A journey through time and memories" })
+        ] }),
+        /* @__PURE__ */ jsxs14("div", { className: "flex flex-wrap justify-center space-x-4", children: [
+          /* @__PURE__ */ jsx16(
             "a",
             {
               href: "/safety-tips",
               className: "font-semibold text-gray-800 transition-colors duration-300 hover:text-sky-500",
               children: "Safety Tips"
-            },
-            void 0,
-            !1,
-            {
-              fileName: "app/routes/_index.tsx",
-              lineNumber: 228,
-              columnNumber: 15
-            },
-            this
+            }
           ),
-          /* @__PURE__ */ jsxDEV16(
+          /* @__PURE__ */ jsx16(
             "a",
             {
               href: "/community-guidelines",
               className: "font-semibold text-gray-800 transition-colors duration-300 hover:text-sky-500",
               children: "Community Guidelines"
-            },
-            void 0,
-            !1,
-            {
-              fileName: "app/routes/_index.tsx",
-              lineNumber: 234,
-              columnNumber: 15
-            },
-            this
+            }
           ),
-          /* @__PURE__ */ jsxDEV16(
+          /* @__PURE__ */ jsx16(
             "a",
             {
               href: "/upcoming-updates",
               className: "font-semibold text-gray-800 transition-colors duration-300 hover:text-sky-500",
               children: "Upcoming Updates"
-            },
-            void 0,
-            !1,
-            {
-              fileName: "app/routes/_index.tsx",
-              lineNumber: 240,
-              columnNumber: 15
-            },
-            this
+            }
           ),
-          /* @__PURE__ */ jsxDEV16(
+          /* @__PURE__ */ jsx16(
             "a",
             {
               href: "/contact-us",
               className: "font-semibold text-gray-800 transition-colors duration-300 hover:text-sky-500",
               children: "Contact Us"
-            },
-            void 0,
-            !1,
-            {
-              fileName: "app/routes/_index.tsx",
-              lineNumber: 246,
-              columnNumber: 15
-            },
-            this
+            }
           )
-        ] }, void 0, !0, {
-          fileName: "app/routes/_index.tsx",
-          lineNumber: 227,
-          columnNumber: 13
-        }, this)
-      ] }, void 0, !0, {
-        fileName: "app/routes/_index.tsx",
-        lineNumber: 218,
-        columnNumber: 11
-      }, this),
-      /* @__PURE__ */ jsxDEV16("div", { className: "mt-6 flex flex-col md:flex-row items-center justify-between", children: [
-        /* @__PURE__ */ jsxDEV16("div", { className: "flex flex-wrap justify-center space-x-4", children: [
-          /* @__PURE__ */ jsxDEV16(
+        ] })
+      ] }),
+      /* @__PURE__ */ jsxs14("div", { className: "mt-6 flex flex-col md:flex-row items-center justify-between", children: [
+        /* @__PURE__ */ jsxs14("div", { className: "flex flex-wrap justify-center space-x-4", children: [
+          /* @__PURE__ */ jsx16(
             "a",
             {
               href: "/privacy-policy",
               className: "text-xs font-medium text-gray-700 transition-colors duration-300 hover:text-sky-500",
               children: "Privacy Policy"
-            },
-            void 0,
-            !1,
-            {
-              fileName: "app/routes/_index.tsx",
-              lineNumber: 257,
-              columnNumber: 15
-            },
-            this
+            }
           ),
-          /* @__PURE__ */ jsxDEV16(
+          /* @__PURE__ */ jsx16(
             "a",
             {
               href: "/terms-of-use",
               className: "text-xs font-medium text-gray-700 transition-colors duration-300 hover:text-sky-500",
               children: "Terms of Use"
-            },
-            void 0,
-            !1,
-            {
-              fileName: "app/routes/_index.tsx",
-              lineNumber: 263,
-              columnNumber: 15
-            },
-            this
+            }
           )
-        ] }, void 0, !0, {
-          fileName: "app/routes/_index.tsx",
-          lineNumber: 256,
-          columnNumber: 13
-        }, this),
-        /* @__PURE__ */ jsxDEV16("div", { className: "mt-4 md:mt-0 text-xs text-gray-500 text-center", children: "\xA9 2025 Time Capsule. All rights reserved." }, void 0, !1, {
-          fileName: "app/routes/_index.tsx",
-          lineNumber: 270,
-          columnNumber: 13
-        }, this)
-      ] }, void 0, !0, {
-        fileName: "app/routes/_index.tsx",
-        lineNumber: 255,
-        columnNumber: 11
-      }, this)
-    ] }, void 0, !0, {
-      fileName: "app/routes/_index.tsx",
-      lineNumber: 216,
-      columnNumber: 9
-    }, this) }, void 0, !1, {
-      fileName: "app/routes/_index.tsx",
-      lineNumber: 215,
-      columnNumber: 7
-    }, this)
-  ] }, void 0, !0, {
-    fileName: "app/routes/_index.tsx",
-    lineNumber: 145,
-    columnNumber: 5
-  }, this);
+        ] }),
+        /* @__PURE__ */ jsx16("div", { className: "mt-4 md:mt-0 text-xs text-gray-500 text-center", children: "\xA9 2025 Time Capsule. All rights reserved." })
+      ] })
+    ] }) })
+  ] });
 }
 
 // app/routes/logout.tsx
@@ -2320,7 +1158,7 @@ The Time Capsule Team`,
 
 // app/routes/signup.tsx
 import { randomUUID } from "crypto";
-import { jsxDEV as jsxDEV17 } from "react/jsx-dev-runtime";
+import { jsx as jsx17, jsxs as jsxs15 } from "react/jsx-runtime";
 var action4 = async ({ request }) => {
   let formData = await request.formData(), email = formData.get("email"), password = formData.get("password"), username = formData.get("username");
   if (typeof email != "string" || typeof password != "string" || typeof username != "string" || !email || !password || !username)
@@ -2346,41 +1184,25 @@ var action4 = async ({ request }) => {
 };
 function SignupPage() {
   let actionData = useActionData();
-  return /* @__PURE__ */ jsxDEV17("div", { className: "min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-sky-400 to-sky-600 p-4", children: [
-    /* @__PURE__ */ jsxDEV17("h1", { className: "text-4xl font-extrabold text-white mb-6 drop-shadow-lg", children: "Join the Adventure!" }, void 0, !1, {
-      fileName: "app/routes/signup.tsx",
-      lineNumber: 70,
-      columnNumber: 7
-    }, this),
-    /* @__PURE__ */ jsxDEV17(
+  return /* @__PURE__ */ jsxs15("div", { className: "min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-sky-400 to-sky-600 p-4", children: [
+    /* @__PURE__ */ jsx17("h1", { className: "text-4xl font-extrabold text-white mb-6 drop-shadow-lg", children: "Join the Adventure!" }),
+    /* @__PURE__ */ jsxs15(
       Form3,
       {
         method: "post",
         className: "w-full max-w-md bg-yellow-200 p-8 rounded-3xl shadow-xl border-4 border-yellow-500",
         children: [
-          actionData?.error ? /* @__PURE__ */ jsxDEV17("div", { className: "mb-4 text-red-600 font-bold", children: actionData.error }, void 0, !1, {
-            fileName: "app/routes/signup.tsx",
-            lineNumber: 78,
-            columnNumber: 11
-          }, this) : null,
-          /* @__PURE__ */ jsxDEV17("div", { className: "mb-4", children: [
-            /* @__PURE__ */ jsxDEV17(
+          actionData?.error ? /* @__PURE__ */ jsx17("div", { className: "mb-4 text-red-600 font-bold", children: actionData.error }) : null,
+          /* @__PURE__ */ jsxs15("div", { className: "mb-4", children: [
+            /* @__PURE__ */ jsx17(
               "label",
               {
                 htmlFor: "username",
                 className: "block text-lg font-semibold text-gray-700 mb-1",
                 children: "Username"
-              },
-              void 0,
-              !1,
-              {
-                fileName: "app/routes/signup.tsx",
-                lineNumber: 81,
-                columnNumber: 11
-              },
-              this
+              }
             ),
-            /* @__PURE__ */ jsxDEV17(
+            /* @__PURE__ */ jsx17(
               "input",
               {
                 type: "text",
@@ -2388,39 +1210,19 @@ function SignupPage() {
                 id: "username",
                 required: !0,
                 className: "w-full p-3 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-red-500"
-              },
-              void 0,
-              !1,
-              {
-                fileName: "app/routes/signup.tsx",
-                lineNumber: 87,
-                columnNumber: 11
-              },
-              this
+              }
             )
-          ] }, void 0, !0, {
-            fileName: "app/routes/signup.tsx",
-            lineNumber: 80,
-            columnNumber: 9
-          }, this),
-          /* @__PURE__ */ jsxDEV17("div", { className: "mb-4", children: [
-            /* @__PURE__ */ jsxDEV17(
+          ] }),
+          /* @__PURE__ */ jsxs15("div", { className: "mb-4", children: [
+            /* @__PURE__ */ jsx17(
               "label",
               {
                 htmlFor: "email",
                 className: "block text-lg font-semibold text-gray-700 mb-1",
                 children: "Email"
-              },
-              void 0,
-              !1,
-              {
-                fileName: "app/routes/signup.tsx",
-                lineNumber: 96,
-                columnNumber: 11
-              },
-              this
+              }
             ),
-            /* @__PURE__ */ jsxDEV17(
+            /* @__PURE__ */ jsx17(
               "input",
               {
                 type: "email",
@@ -2428,39 +1230,19 @@ function SignupPage() {
                 id: "email",
                 required: !0,
                 className: "w-full p-3 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-red-500"
-              },
-              void 0,
-              !1,
-              {
-                fileName: "app/routes/signup.tsx",
-                lineNumber: 102,
-                columnNumber: 11
-              },
-              this
+              }
             )
-          ] }, void 0, !0, {
-            fileName: "app/routes/signup.tsx",
-            lineNumber: 95,
-            columnNumber: 9
-          }, this),
-          /* @__PURE__ */ jsxDEV17("div", { className: "mb-6", children: [
-            /* @__PURE__ */ jsxDEV17(
+          ] }),
+          /* @__PURE__ */ jsxs15("div", { className: "mb-6", children: [
+            /* @__PURE__ */ jsx17(
               "label",
               {
                 htmlFor: "password",
                 className: "block text-lg font-semibold text-gray-700 mb-1",
                 children: "Password"
-              },
-              void 0,
-              !1,
-              {
-                fileName: "app/routes/signup.tsx",
-                lineNumber: 111,
-                columnNumber: 11
-              },
-              this
+              }
             ),
-            /* @__PURE__ */ jsxDEV17(
+            /* @__PURE__ */ jsx17(
               "input",
               {
                 type: "password",
@@ -2468,77 +1250,33 @@ function SignupPage() {
                 id: "password",
                 required: !0,
                 className: "w-full p-3 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-red-500"
-              },
-              void 0,
-              !1,
-              {
-                fileName: "app/routes/signup.tsx",
-                lineNumber: 117,
-                columnNumber: 11
-              },
-              this
+              }
             )
-          ] }, void 0, !0, {
-            fileName: "app/routes/signup.tsx",
-            lineNumber: 110,
-            columnNumber: 9
-          }, this),
-          /* @__PURE__ */ jsxDEV17(
+          ] }),
+          /* @__PURE__ */ jsx17(
             "button",
             {
               type: "submit",
               className: "w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-4 rounded-full shadow-xl transform hover:scale-105 transition",
               children: "Start"
-            },
-            void 0,
-            !1,
-            {
-              fileName: "app/routes/signup.tsx",
-              lineNumber: 125,
-              columnNumber: 9
-            },
-            this
+            }
           )
         ]
-      },
-      void 0,
-      !0,
-      {
-        fileName: "app/routes/signup.tsx",
-        lineNumber: 73,
-        columnNumber: 7
-      },
-      this
+      }
     ),
-    /* @__PURE__ */ jsxDEV17("p", { className: "mt-4 text-white", children: [
+    /* @__PURE__ */ jsxs15("p", { className: "mt-4 text-white", children: [
       "Already on board?",
       " ",
-      /* @__PURE__ */ jsxDEV17(
+      /* @__PURE__ */ jsx17(
         Link5,
         {
           to: "/login",
           className: "text-blue-200 underline font-semibold",
           children: "Log in"
-        },
-        void 0,
-        !1,
-        {
-          fileName: "app/routes/signup.tsx",
-          lineNumber: 134,
-          columnNumber: 9
-        },
-        this
+        }
       )
-    ] }, void 0, !0, {
-      fileName: "app/routes/signup.tsx",
-      lineNumber: 132,
-      columnNumber: 7
-    }, this)
-  ] }, void 0, !0, {
-    fileName: "app/routes/signup.tsx",
-    lineNumber: 69,
-    columnNumber: 5
-  }, this);
+    ] })
+  ] });
 }
 
 // app/routes/index.tsx
@@ -2548,7 +1286,7 @@ __export(routes_exports, {
 });
 import { Link as Link6 } from "@remix-run/react";
 import { useEffect as useEffect3, useRef as useRef2, useState as useState3 } from "react";
-import { jsxDEV as jsxDEV18 } from "react/jsx-dev-runtime";
+import { jsx as jsx18, jsxs as jsxs16 } from "react/jsx-runtime";
 var ScrollReveal2 = ({ children }) => {
   let ref = useRef2(null), [isVisible, setVisible] = useState3(!1);
   return useEffect3(() => {
@@ -2559,21 +1297,13 @@ var ScrollReveal2 = ({ children }) => {
       { threshold: 0.3 }
     );
     return ref.current && observer.observe(ref.current), () => observer.disconnect();
-  }, []), /* @__PURE__ */ jsxDEV18(
+  }, []), /* @__PURE__ */ jsx18(
     "div",
     {
       ref,
       className: `transition-all duration-1000 transform ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`,
       children
-    },
-    void 0,
-    !1,
-    {
-      fileName: "app/routes/index.tsx",
-      lineNumber: 27,
-      columnNumber: 5
-    },
-    this
+    }
   );
 }, stories2 = [
   {
@@ -2610,175 +1340,72 @@ function TimelineStory2({ story }) {
     { key: "present", label: "Present" },
     { key: "future", label: "Future" }
   ];
-  return /* @__PURE__ */ jsxDEV18("div", { className: "mb-12", children: [
-    /* @__PURE__ */ jsxDEV18("h3", { className: "text-2xl font-bold mb-4 text-gray-800 text-center", children: story.title }, void 0, !1, {
-      fileName: "app/routes/index.tsx",
-      lineNumber: 88,
-      columnNumber: 7
-    }, this),
-    /* @__PURE__ */ jsxDEV18("div", { className: "flex justify-center space-x-4 mb-4", children: periodOptions.map(({ key, label }) => /* @__PURE__ */ jsxDEV18(
+  return /* @__PURE__ */ jsxs16("div", { className: "mb-12", children: [
+    /* @__PURE__ */ jsx18("h3", { className: "text-2xl font-bold mb-4 text-gray-800 text-center", children: story.title }),
+    /* @__PURE__ */ jsx18("div", { className: "flex justify-center space-x-4 mb-4", children: periodOptions.map(({ key, label }) => /* @__PURE__ */ jsx18(
       "button",
       {
         onClick: () => setSelectedPeriod(key),
         className: `px-4 py-2 rounded-full border transition-colors ${selectedPeriod === key ? "bg-green-500 text-white" : "bg-white text-blue-600 hover:bg-blue-100"}`,
         children: label
       },
-      key,
-      !1,
-      {
-        fileName: "app/routes/index.tsx",
-        lineNumber: 91,
-        columnNumber: 11
-      },
-      this
-    )) }, void 0, !1, {
-      fileName: "app/routes/index.tsx",
-      lineNumber: 89,
-      columnNumber: 7
-    }, this),
-    /* @__PURE__ */ jsxDEV18("div", { className: "p-6 bg-yellow-100 rounded-lg border border-yellow-400 shadow-md", children: /* @__PURE__ */ jsxDEV18("p", { className: "text-lg text-gray-800 text-justify font-pressstart drop-shadow-sm", children: story.parts[selectedPeriod] }, void 0, !1, {
-      fileName: "app/routes/index.tsx",
-      lineNumber: 106,
-      columnNumber: 9
-    }, this) }, void 0, !1, {
-      fileName: "app/routes/index.tsx",
-      lineNumber: 105,
-      columnNumber: 7
-    }, this)
-  ] }, void 0, !0, {
-    fileName: "app/routes/index.tsx",
-    lineNumber: 87,
-    columnNumber: 5
-  }, this);
+      key
+    )) }),
+    /* @__PURE__ */ jsx18("div", { className: "p-6 bg-yellow-100 rounded-lg border border-yellow-400 shadow-md", children: /* @__PURE__ */ jsx18("p", { className: "text-lg text-gray-800 text-justify font-pressstart drop-shadow-sm", children: story.parts[selectedPeriod] }) })
+  ] });
 }
 function TimelineSection2() {
-  return /* @__PURE__ */ jsxDEV18(ScrollReveal2, { children: /* @__PURE__ */ jsxDEV18("section", { className: "py-12 text-white", children: /* @__PURE__ */ jsxDEV18("div", { className: "container mx-auto px-4", children: [
-    /* @__PURE__ */ jsxDEV18(
+  return /* @__PURE__ */ jsx18(ScrollReveal2, { children: /* @__PURE__ */ jsx18("section", { className: "py-12 text-white", children: /* @__PURE__ */ jsxs16("div", { className: "container mx-auto px-4", children: [
+    /* @__PURE__ */ jsx18(
       "h2",
       {
         className: "text-4xl font-extrabold text-white drop-shadow-xl text-center mb-8 tracking-widest",
         style: { textShadow: "3px 3px 6px rgba(0, 0, 0, 1)" },
         children: "Stories of Time"
-      },
-      void 0,
-      !1,
-      {
-        fileName: "app/routes/index.tsx",
-        lineNumber: 120,
-        columnNumber: 9
-      },
-      this
+      }
     ),
-    stories2.map((story) => /* @__PURE__ */ jsxDEV18(TimelineStory2, { story }, story.id, !1, {
-      fileName: "app/routes/index.tsx",
-      lineNumber: 127,
-      columnNumber: 11
-    }, this)),
-    /* @__PURE__ */ jsxDEV18("div", { className: "text-center mt-12", children: /* @__PURE__ */ jsxDEV18(
+    stories2.map((story) => /* @__PURE__ */ jsx18(TimelineStory2, { story }, story.id)),
+    /* @__PURE__ */ jsx18("div", { className: "text-center mt-12", children: /* @__PURE__ */ jsx18(
       Link6,
       {
         to: "/signup",
         className: "mr-4 inline-block px-6 py-3 bg-green-600 text-white rounded-full hover:bg-green-700 transition-colors",
         children: "Share your story"
-      },
-      void 0,
-      !1,
-      {
-        fileName: "app/routes/index.tsx",
-        lineNumber: 130,
-        columnNumber: 13
-      },
-      this
-    ) }, void 0, !1, {
-      fileName: "app/routes/index.tsx",
-      lineNumber: 129,
-      columnNumber: 11
-    }, this)
-  ] }, void 0, !0, {
-    fileName: "app/routes/index.tsx",
-    lineNumber: 119,
-    columnNumber: 7
-  }, this) }, void 0, !1, {
-    fileName: "app/routes/index.tsx",
-    lineNumber: 118,
-    columnNumber: 7
-  }, this) }, void 0, !1, {
-    fileName: "app/routes/index.tsx",
-    lineNumber: 117,
-    columnNumber: 5
-  }, this);
+      }
+    ) })
+  ] }) }) });
 }
 function Index2() {
-  return /* @__PURE__ */ jsxDEV18("div", { className: "min-h-screen flex flex-col bg-gradient-to-b from-sky-500 via-sky-400 to-sky-300 text-white", children: [
-    /* @__PURE__ */ jsxDEV18("header", { className: "w-full p-6 text-center", children: /* @__PURE__ */ jsxDEV18(
+  return /* @__PURE__ */ jsxs16("div", { className: "min-h-screen flex flex-col bg-gradient-to-b from-sky-500 via-sky-400 to-sky-300 text-white", children: [
+    /* @__PURE__ */ jsx18("header", { className: "w-full p-6 text-center", children: /* @__PURE__ */ jsx18(
       "h1",
       {
         className: "text-5xl font-extrabold drop-shadow-xl",
         style: { textShadow: "3px 3px 6px rgba(0, 0, 0, 1)" },
         children: "Time Capsule"
-      },
-      void 0,
-      !1,
-      {
-        fileName: "app/routes/index.tsx",
-        lineNumber: 148,
-        columnNumber: 9
-      },
-      this
-    ) }, void 0, !1, {
-      fileName: "app/routes/index.tsx",
-      lineNumber: 147,
-      columnNumber: 7
-    }, this),
-    /* @__PURE__ */ jsxDEV18("section", { className: "relative flex flex-col justify-center items-center h-[80vh] px-4 pt-24", children: [
-      /* @__PURE__ */ jsxDEV18("div", { className: "text-center", children: /* @__PURE__ */ jsxDEV18("p", { className: "text-2xl md:text-3xl lg:text-4xl font-light drop-shadow-md", children: "Step into time's magic\u2014Unlock your memories, embrace your future." }, void 0, !1, {
-        fileName: "app/routes/index.tsx",
-        lineNumber: 159,
-        columnNumber: 11
-      }, this) }, void 0, !1, {
-        fileName: "app/routes/index.tsx",
-        lineNumber: 158,
-        columnNumber: 9
-      }, this),
-      /* @__PURE__ */ jsxDEV18("div", { className: "mt-12 flex gap-6", children: [
-        /* @__PURE__ */ jsxDEV18(
+      }
+    ) }),
+    /* @__PURE__ */ jsxs16("section", { className: "relative flex flex-col justify-center items-center h-[80vh] px-4 pt-24", children: [
+      /* @__PURE__ */ jsx18("div", { className: "text-center", children: /* @__PURE__ */ jsx18("p", { className: "text-2xl md:text-3xl lg:text-4xl font-light drop-shadow-md", children: "Step into time's magic\u2014Unlock your memories, embrace your future." }) }),
+      /* @__PURE__ */ jsxs16("div", { className: "mt-12 flex gap-6", children: [
+        /* @__PURE__ */ jsx18(
           Link6,
           {
             to: "/login",
             className: "px-6 py-3 rounded-full bg-amber-300 hover:bg-amber-500 text-white font-bold transform hover:scale-105 transition",
             children: "Log In"
-          },
-          void 0,
-          !1,
-          {
-            fileName: "app/routes/index.tsx",
-            lineNumber: 164,
-            columnNumber: 11
-          },
-          this
+          }
         ),
-        /* @__PURE__ */ jsxDEV18(
+        /* @__PURE__ */ jsx18(
           Link6,
           {
             to: "/signup",
             className: "px-6 py-3 rounded-full bg-amber-300 hover:bg-amber-500 text-white font-bold transform hover:scale-105 transition",
             children: "Sign Up"
-          },
-          void 0,
-          !1,
-          {
-            fileName: "app/routes/index.tsx",
-            lineNumber: 170,
-            columnNumber: 11
-          },
-          this
+          }
         )
-      ] }, void 0, !0, {
-        fileName: "app/routes/index.tsx",
-        lineNumber: 163,
-        columnNumber: 9
-      }, this),
-      /* @__PURE__ */ jsxDEV18("div", { className: "absolute bottom-4", children: /* @__PURE__ */ jsxDEV18(
+      ] }),
+      /* @__PURE__ */ jsx18("div", { className: "absolute bottom-4", children: /* @__PURE__ */ jsx18(
         "svg",
         {
           className: "w-8 h-8 animate-bounce text-white",
@@ -2786,225 +1413,81 @@ function Index2() {
           stroke: "currentColor",
           viewBox: "0 0 24 24",
           xmlns: "http://www.w3.org/2000/svg",
-          children: /* @__PURE__ */ jsxDEV18("path", { strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: 2, d: "M19 9l-7 7-7-7" }, void 0, !1, {
-            fileName: "app/routes/index.tsx",
-            lineNumber: 186,
-            columnNumber: 13
-          }, this)
-        },
-        void 0,
-        !1,
-        {
-          fileName: "app/routes/index.tsx",
-          lineNumber: 179,
-          columnNumber: 11
-        },
-        this
-      ) }, void 0, !1, {
-        fileName: "app/routes/index.tsx",
-        lineNumber: 178,
-        columnNumber: 9
-      }, this)
-    ] }, void 0, !0, {
-      fileName: "app/routes/index.tsx",
-      lineNumber: 157,
-      columnNumber: 7
-    }, this),
-    /* @__PURE__ */ jsxDEV18("section", { className: "py-20 -mt-32", children: /* @__PURE__ */ jsxDEV18(ScrollReveal2, { children: /* @__PURE__ */ jsxDEV18("div", { className: "max-w-3xl mx-auto px-4 p-8 bg-yellow-200 rounded-3xl shadow-xl border-4 border-yellow-500 text-gray-800", children: [
-      /* @__PURE__ */ jsxDEV18("h2", { className: "text-3xl font-bold mb-4 text-center drop-shadow-lg", children: "About" }, void 0, !1, {
-        fileName: "app/routes/index.tsx",
-        lineNumber: 195,
-        columnNumber: 13
-      }, this),
-      /* @__PURE__ */ jsxDEV18("p", { className: "text-base leading-relaxed text-justify", children: "Once upon a time, there was a little girl with eyes sparkling with innocence, who dreamt of feeling the salt of the ocean caress her cheeks and hearing the murmur of the waves as a lullaby every day. She imagined herself, a few years later, living by the sea, her feet in the foam, gliding over the waves like a dancer in symphony with the ocean." }, void 0, !1, {
-        fileName: "app/routes/index.tsx",
-        lineNumber: 198,
-        columnNumber: 13
-      }, this),
-      /* @__PURE__ */ jsxDEV18("p", { className: "text-base leading-relaxed mt-4 text-justify", children: "One day, determined to seal her dreams, she created a time capsule, a message of hope and ambition, destined for her future version. Five years later, after a morning surf session, she found herself facing the ocean \u2014 the ocean that had become her daily life over the last year. She felt immense gratitude towards the little girl who had dared to dream. You are where you wanted to be." }, void 0, !1, {
-        fileName: "app/routes/index.tsx",
-        lineNumber: 201,
-        columnNumber: 13
-      }, this),
-      /* @__PURE__ */ jsxDEV18("p", { className: "text-base leading-relaxed mt-4 text-justify", children: "Time Capsule is much more than an app. Whether you want to send an inspiring, public and accessible capsule to your friends, record your dreams and achievements for yourself, or share a personalised message for a birthday, an amusing anecdote or to comfort a loved one, Time Capsule transforms every moment into a precious bridge between the past and the future. Be creative and let your messages travel through time." }, void 0, !1, {
-        fileName: "app/routes/index.tsx",
-        lineNumber: 204,
-        columnNumber: 13
-      }, this)
-    ] }, void 0, !0, {
-      fileName: "app/routes/index.tsx",
-      lineNumber: 194,
-      columnNumber: 11
-    }, this) }, void 0, !1, {
-      fileName: "app/routes/index.tsx",
-      lineNumber: 193,
-      columnNumber: 9
-    }, this) }, void 0, !1, {
-      fileName: "app/routes/index.tsx",
-      lineNumber: 192,
-      columnNumber: 7
-    }, this),
-    /* @__PURE__ */ jsxDEV18(TimelineSection2, {}, void 0, !1, {
-      fileName: "app/routes/index.tsx",
-      lineNumber: 212,
-      columnNumber: 7
-    }, this),
-    /* @__PURE__ */ jsxDEV18("footer", { className: "bg-white text-gray-900 py-8 border-t-4 border-sky-500 shadow-xl", children: /* @__PURE__ */ jsxDEV18("div", { className: "container mx-auto px-4", children: [
-      /* @__PURE__ */ jsxDEV18("div", { className: "flex flex-col md:flex-row items-center justify-between", children: [
-        /* @__PURE__ */ jsxDEV18("div", { className: "mb-4 md:mb-0 text-center md:text-left", children: [
-          /* @__PURE__ */ jsxDEV18("h3", { className: "text-3xl font-bold text-gray-700 drop-shadow-md", children: "Time Capsule" }, void 0, !1, {
-            fileName: "app/routes/index.tsx",
-            lineNumber: 220,
-            columnNumber: 15
-          }, this),
-          /* @__PURE__ */ jsxDEV18("p", { className: "text-sm text-gray-600", children: "A journey through time and memories" }, void 0, !1, {
-            fileName: "app/routes/index.tsx",
-            lineNumber: 223,
-            columnNumber: 15
-          }, this)
-        ] }, void 0, !0, {
-          fileName: "app/routes/index.tsx",
-          lineNumber: 219,
-          columnNumber: 13
-        }, this),
-        /* @__PURE__ */ jsxDEV18("div", { className: "flex flex-wrap justify-center space-x-4", children: [
-          /* @__PURE__ */ jsxDEV18(
+          children: /* @__PURE__ */ jsx18("path", { strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: 2, d: "M19 9l-7 7-7-7" })
+        }
+      ) })
+    ] }),
+    /* @__PURE__ */ jsx18("section", { className: "py-20 -mt-32", children: /* @__PURE__ */ jsx18(ScrollReveal2, { children: /* @__PURE__ */ jsxs16("div", { className: "max-w-3xl mx-auto px-4 p-8 bg-yellow-200 rounded-3xl shadow-xl border-4 border-yellow-500 text-gray-800", children: [
+      /* @__PURE__ */ jsx18("h2", { className: "text-3xl font-bold mb-4 text-center drop-shadow-lg", children: "About" }),
+      /* @__PURE__ */ jsx18("p", { className: "text-base leading-relaxed text-justify", children: "Once upon a time, there was a little girl with eyes sparkling with innocence, who dreamt of feeling the salt of the ocean caress her cheeks and hearing the murmur of the waves as a lullaby every day. She imagined herself, a few years later, living by the sea, her feet in the foam, gliding over the waves like a dancer in symphony with the ocean." }),
+      /* @__PURE__ */ jsx18("p", { className: "text-base leading-relaxed mt-4 text-justify", children: "One day, determined to seal her dreams, she created a time capsule, a message of hope and ambition, destined for her future version. Five years later, after a morning surf session, she found herself facing the ocean \u2014 the ocean that had become her daily life over the last year. She felt immense gratitude towards the little girl who had dared to dream. You are where you wanted to be." }),
+      /* @__PURE__ */ jsx18("p", { className: "text-base leading-relaxed mt-4 text-justify", children: "Time Capsule is much more than an app. Whether you want to send an inspiring, public and accessible capsule to your friends, record your dreams and achievements for yourself, or share a personalised message for a birthday, an amusing anecdote or to comfort a loved one, Time Capsule transforms every moment into a precious bridge between the past and the future. Be creative and let your messages travel through time." })
+    ] }) }) }),
+    /* @__PURE__ */ jsx18(TimelineSection2, {}),
+    /* @__PURE__ */ jsx18("footer", { className: "bg-white text-gray-900 py-8 border-t-4 border-sky-500 shadow-xl", children: /* @__PURE__ */ jsxs16("div", { className: "container mx-auto px-4", children: [
+      /* @__PURE__ */ jsxs16("div", { className: "flex flex-col md:flex-row items-center justify-between", children: [
+        /* @__PURE__ */ jsxs16("div", { className: "mb-4 md:mb-0 text-center md:text-left", children: [
+          /* @__PURE__ */ jsx18("h3", { className: "text-3xl font-bold text-gray-700 drop-shadow-md", children: "Time Capsule" }),
+          /* @__PURE__ */ jsx18("p", { className: "text-sm text-gray-600", children: "A journey through time and memories" })
+        ] }),
+        /* @__PURE__ */ jsxs16("div", { className: "flex flex-wrap justify-center space-x-4", children: [
+          /* @__PURE__ */ jsx18(
             "a",
             {
               href: "/safety-tips",
               className: "font-semibold text-gray-800 transition-colors duration-300 hover:text-sky-500",
               children: "Safety Tips"
-            },
-            void 0,
-            !1,
-            {
-              fileName: "app/routes/index.tsx",
-              lineNumber: 228,
-              columnNumber: 15
-            },
-            this
+            }
           ),
-          /* @__PURE__ */ jsxDEV18(
+          /* @__PURE__ */ jsx18(
             "a",
             {
               href: "/community-guidelines",
               className: "font-semibold text-gray-800 transition-colors duration-300 hover:text-sky-500",
               children: "Community Guidelines"
-            },
-            void 0,
-            !1,
-            {
-              fileName: "app/routes/index.tsx",
-              lineNumber: 234,
-              columnNumber: 15
-            },
-            this
+            }
           ),
-          /* @__PURE__ */ jsxDEV18(
+          /* @__PURE__ */ jsx18(
             "a",
             {
               href: "/upcoming-updates",
               className: "font-semibold text-gray-800 transition-colors duration-300 hover:text-sky-500",
               children: "Upcoming Updates"
-            },
-            void 0,
-            !1,
-            {
-              fileName: "app/routes/index.tsx",
-              lineNumber: 240,
-              columnNumber: 15
-            },
-            this
+            }
           ),
-          /* @__PURE__ */ jsxDEV18(
+          /* @__PURE__ */ jsx18(
             "a",
             {
               href: "/contact-us",
               className: "font-semibold text-gray-800 transition-colors duration-300 hover:text-sky-500",
               children: "Contact Us"
-            },
-            void 0,
-            !1,
-            {
-              fileName: "app/routes/index.tsx",
-              lineNumber: 246,
-              columnNumber: 15
-            },
-            this
+            }
           )
-        ] }, void 0, !0, {
-          fileName: "app/routes/index.tsx",
-          lineNumber: 227,
-          columnNumber: 13
-        }, this)
-      ] }, void 0, !0, {
-        fileName: "app/routes/index.tsx",
-        lineNumber: 218,
-        columnNumber: 11
-      }, this),
-      /* @__PURE__ */ jsxDEV18("div", { className: "mt-6 flex flex-col md:flex-row items-center justify-between", children: [
-        /* @__PURE__ */ jsxDEV18("div", { className: "flex flex-wrap justify-center space-x-4", children: [
-          /* @__PURE__ */ jsxDEV18(
+        ] })
+      ] }),
+      /* @__PURE__ */ jsxs16("div", { className: "mt-6 flex flex-col md:flex-row items-center justify-between", children: [
+        /* @__PURE__ */ jsxs16("div", { className: "flex flex-wrap justify-center space-x-4", children: [
+          /* @__PURE__ */ jsx18(
             "a",
             {
               href: "/privacy-policy",
               className: "text-xs font-medium text-gray-700 transition-colors duration-300 hover:text-sky-500",
               children: "Privacy Policy"
-            },
-            void 0,
-            !1,
-            {
-              fileName: "app/routes/index.tsx",
-              lineNumber: 257,
-              columnNumber: 15
-            },
-            this
+            }
           ),
-          /* @__PURE__ */ jsxDEV18(
+          /* @__PURE__ */ jsx18(
             "a",
             {
               href: "/terms-of-use",
               className: "text-xs font-medium text-gray-700 transition-colors duration-300 hover:text-sky-500",
               children: "Terms of Use"
-            },
-            void 0,
-            !1,
-            {
-              fileName: "app/routes/index.tsx",
-              lineNumber: 263,
-              columnNumber: 15
-            },
-            this
+            }
           )
-        ] }, void 0, !0, {
-          fileName: "app/routes/index.tsx",
-          lineNumber: 256,
-          columnNumber: 13
-        }, this),
-        /* @__PURE__ */ jsxDEV18("div", { className: "mt-4 md:mt-0 text-xs text-gray-500 text-center", children: "\xA9 2025 Time Capsule. All rights reserved." }, void 0, !1, {
-          fileName: "app/routes/index.tsx",
-          lineNumber: 270,
-          columnNumber: 13
-        }, this)
-      ] }, void 0, !0, {
-        fileName: "app/routes/index.tsx",
-        lineNumber: 255,
-        columnNumber: 11
-      }, this)
-    ] }, void 0, !0, {
-      fileName: "app/routes/index.tsx",
-      lineNumber: 216,
-      columnNumber: 9
-    }, this) }, void 0, !1, {
-      fileName: "app/routes/index.tsx",
-      lineNumber: 215,
-      columnNumber: 7
-    }, this)
-  ] }, void 0, !0, {
-    fileName: "app/routes/index.tsx",
-    lineNumber: 145,
-    columnNumber: 5
-  }, this);
+        ] }),
+        /* @__PURE__ */ jsx18("div", { className: "mt-4 md:mt-0 text-xs text-gray-500 text-center", children: "\xA9 2025 Time Capsule. All rights reserved." })
+      ] })
+    ] }) })
+  ] });
 }
 
 // app/routes/login.tsx
@@ -3016,7 +1499,7 @@ __export(login_exports, {
 import { json as json5 } from "@remix-run/node";
 import { Form as Form4, useActionData as useActionData2, Link as Link7 } from "@remix-run/react";
 import bcrypt3 from "bcryptjs";
-import { jsxDEV as jsxDEV19 } from "react/jsx-dev-runtime";
+import { jsx as jsx19, jsxs as jsxs17 } from "react/jsx-runtime";
 var action5 = async ({ request }) => {
   let formData = await request.formData(), email = formData.get("email"), password = formData.get("password");
   if (typeof email != "string" || typeof password != "string")
@@ -3026,41 +1509,25 @@ var action5 = async ({ request }) => {
 };
 function LoginPage() {
   let actionData = useActionData2();
-  return /* @__PURE__ */ jsxDEV19("div", { className: "min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-sky-400 to-sky-600 p-4", children: [
-    /* @__PURE__ */ jsxDEV19("h1", { className: "text-4xl font-extrabold text-white mb-6 drop-shadow-lg", children: "Let's create magic!" }, void 0, !1, {
-      fileName: "app/routes/login.tsx",
-      lineNumber: 45,
-      columnNumber: 7
-    }, this),
-    /* @__PURE__ */ jsxDEV19(
+  return /* @__PURE__ */ jsxs17("div", { className: "min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-sky-400 to-sky-600 p-4", children: [
+    /* @__PURE__ */ jsx19("h1", { className: "text-4xl font-extrabold text-white mb-6 drop-shadow-lg", children: "Let's create magic!" }),
+    /* @__PURE__ */ jsxs17(
       Form4,
       {
         method: "post",
         className: "w-full max-w-md bg-yellow-200 p-8 rounded-3xl shadow-xl border-4 border-yellow-500",
         children: [
-          actionData?.error ? /* @__PURE__ */ jsxDEV19("div", { className: "mb-4 text-red-600 font-bold", children: actionData.error }, void 0, !1, {
-            fileName: "app/routes/login.tsx",
-            lineNumber: 53,
-            columnNumber: 11
-          }, this) : null,
-          /* @__PURE__ */ jsxDEV19("div", { className: "mb-4", children: [
-            /* @__PURE__ */ jsxDEV19(
+          actionData?.error ? /* @__PURE__ */ jsx19("div", { className: "mb-4 text-red-600 font-bold", children: actionData.error }) : null,
+          /* @__PURE__ */ jsxs17("div", { className: "mb-4", children: [
+            /* @__PURE__ */ jsx19(
               "label",
               {
                 htmlFor: "email",
                 className: "block text-lg font-semibold text-gray-700 mb-1",
                 children: "Email"
-              },
-              void 0,
-              !1,
-              {
-                fileName: "app/routes/login.tsx",
-                lineNumber: 56,
-                columnNumber: 11
-              },
-              this
+              }
             ),
-            /* @__PURE__ */ jsxDEV19(
+            /* @__PURE__ */ jsx19(
               "input",
               {
                 type: "email",
@@ -3068,39 +1535,19 @@ function LoginPage() {
                 id: "email",
                 required: !0,
                 className: "w-full p-3 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-red-500"
-              },
-              void 0,
-              !1,
-              {
-                fileName: "app/routes/login.tsx",
-                lineNumber: 62,
-                columnNumber: 11
-              },
-              this
+              }
             )
-          ] }, void 0, !0, {
-            fileName: "app/routes/login.tsx",
-            lineNumber: 55,
-            columnNumber: 9
-          }, this),
-          /* @__PURE__ */ jsxDEV19("div", { className: "mb-6", children: [
-            /* @__PURE__ */ jsxDEV19(
+          ] }),
+          /* @__PURE__ */ jsxs17("div", { className: "mb-6", children: [
+            /* @__PURE__ */ jsx19(
               "label",
               {
                 htmlFor: "password",
                 className: "block text-lg font-semibold text-gray-700 mb-1",
                 children: "Password"
-              },
-              void 0,
-              !1,
-              {
-                fileName: "app/routes/login.tsx",
-                lineNumber: 71,
-                columnNumber: 11
-              },
-              this
+              }
             ),
-            /* @__PURE__ */ jsxDEV19(
+            /* @__PURE__ */ jsx19(
               "input",
               {
                 type: "password",
@@ -3108,77 +1555,33 @@ function LoginPage() {
                 id: "password",
                 required: !0,
                 className: "w-full p-3 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-red-500"
-              },
-              void 0,
-              !1,
-              {
-                fileName: "app/routes/login.tsx",
-                lineNumber: 77,
-                columnNumber: 11
-              },
-              this
+              }
             )
-          ] }, void 0, !0, {
-            fileName: "app/routes/login.tsx",
-            lineNumber: 70,
-            columnNumber: 9
-          }, this),
-          /* @__PURE__ */ jsxDEV19(
+          ] }),
+          /* @__PURE__ */ jsx19(
             "button",
             {
               type: "submit",
               className: "w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-4 rounded-full shadow-xl transform hover:scale-105 transition",
               children: "Log in"
-            },
-            void 0,
-            !1,
-            {
-              fileName: "app/routes/login.tsx",
-              lineNumber: 85,
-              columnNumber: 9
-            },
-            this
+            }
           )
         ]
-      },
-      void 0,
-      !0,
-      {
-        fileName: "app/routes/login.tsx",
-        lineNumber: 48,
-        columnNumber: 7
-      },
-      this
+      }
     ),
-    /* @__PURE__ */ jsxDEV19("p", { className: "mt-4 text-white", children: [
+    /* @__PURE__ */ jsxs17("p", { className: "mt-4 text-white", children: [
       "Not a member yet?",
       " ",
-      /* @__PURE__ */ jsxDEV19(
+      /* @__PURE__ */ jsx19(
         Link7,
         {
           to: "/signup",
           className: "text-blue-200 underline font-semibold",
           children: "Joins us!"
-        },
-        void 0,
-        !1,
-        {
-          fileName: "app/routes/login.tsx",
-          lineNumber: 94,
-          columnNumber: 9
-        },
-        this
+        }
       )
-    ] }, void 0, !0, {
-      fileName: "app/routes/login.tsx",
-      lineNumber: 92,
-      columnNumber: 7
-    }, this)
-  ] }, void 0, !0, {
-    fileName: "app/routes/login.tsx",
-    lineNumber: 44,
-    columnNumber: 5
-  }, this);
+    ] })
+  ] });
 }
 
 // app/routes/new.tsx
@@ -3193,7 +1596,7 @@ import { json as json6, redirect as redirect10 } from "@remix-run/node";
 import { useState as useState4 } from "react";
 import { promises as fs } from "fs";
 import path from "path";
-import { jsxDEV as jsxDEV20 } from "react/jsx-dev-runtime";
+import { jsx as jsx20, jsxs as jsxs18 } from "react/jsx-runtime";
 var loader7 = async ({ request }) => (await requireUser(request), json6({})), action6 = async ({ request }) => {
   let user = await requireUser(request), formData = await request.formData(), title = formData.get("title"), content = formData.get("content"), scheduledDate = formData.get("scheduledDate"), visibility = formData.get("visibility");
   if (typeof title != "string" || title.trim() === "")
@@ -3264,13 +1667,9 @@ var loader7 = async ({ request }) => (await requireUser(request), json6({})), ac
 };
 function NewCapsule() {
   let actionData = useActionData3(), transition = useNavigation(), [selectedVisibility, setSelectedVisibility] = useState4("private"), [groupChoice, setGroupChoice] = useState4("");
-  return /* @__PURE__ */ jsxDEV20("div", { className: "min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-sky-400 to-sky-600 p-4", children: [
-    /* @__PURE__ */ jsxDEV20("h1", { className: "text-4xl font-extrabold text-white mb-6 drop-shadow-lg", children: "Create a new Capsule" }, void 0, !1, {
-      fileName: "app/routes/new.tsx",
-      lineNumber: 175,
-      columnNumber: 7
-    }, this),
-    /* @__PURE__ */ jsxDEV20(
+  return /* @__PURE__ */ jsxs18("div", { className: "min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-sky-400 to-sky-600 p-4", children: [
+    /* @__PURE__ */ jsx20("h1", { className: "text-4xl font-extrabold text-white mb-6 drop-shadow-lg", children: "Create a new Capsule" }),
+    /* @__PURE__ */ jsxs18(
       Form5,
       {
         method: "post",
@@ -3282,85 +1681,45 @@ function NewCapsule() {
         },
         className: "w-full max-w-md bg-yellow-200 p-8 rounded-3xl shadow-xl border-4 border-yellow-500",
         children: [
-          actionData?.error && /* @__PURE__ */ jsxDEV20("div", { className: "mb-4 text-red-600 font-bold", children: actionData.error }, void 0, !1, {
-            fileName: "app/routes/new.tsx",
-            lineNumber: 185,
-            columnNumber: 11
-          }, this),
-          /* @__PURE__ */ jsxDEV20("label", { className: "block mb-4", children: [
+          actionData?.error && /* @__PURE__ */ jsx20("div", { className: "mb-4 text-red-600 font-bold", children: actionData.error }),
+          /* @__PURE__ */ jsxs18("label", { className: "block mb-4", children: [
             "Capsule Name:",
-            /* @__PURE__ */ jsxDEV20(
+            /* @__PURE__ */ jsx20(
               "input",
               {
                 type: "text",
                 name: "title",
                 required: !0,
                 className: "mt-1 block w-full p-3 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-red-500"
-              },
-              void 0,
-              !1,
-              {
-                fileName: "app/routes/new.tsx",
-                lineNumber: 189,
-                columnNumber: 11
-              },
-              this
+              }
             )
-          ] }, void 0, !0, {
-            fileName: "app/routes/new.tsx",
-            lineNumber: 187,
-            columnNumber: 9
-          }, this),
-          /* @__PURE__ */ jsxDEV20("label", { className: "block mb-4", children: [
+          ] }),
+          /* @__PURE__ */ jsxs18("label", { className: "block mb-4", children: [
             "Your thoughts:",
-            /* @__PURE__ */ jsxDEV20(
+            /* @__PURE__ */ jsx20(
               "textarea",
               {
                 name: "content",
                 required: !0,
                 className: "mt-1 block w-full p-3 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-red-500"
-              },
-              void 0,
-              !1,
-              {
-                fileName: "app/routes/new.tsx",
-                lineNumber: 198,
-                columnNumber: 11
-              },
-              this
+              }
             )
-          ] }, void 0, !0, {
-            fileName: "app/routes/new.tsx",
-            lineNumber: 196,
-            columnNumber: 9
-          }, this),
-          /* @__PURE__ */ jsxDEV20("label", { className: "block mb-4", children: [
+          ] }),
+          /* @__PURE__ */ jsxs18("label", { className: "block mb-4", children: [
             "Opening Day:",
-            /* @__PURE__ */ jsxDEV20(
+            /* @__PURE__ */ jsx20(
               "input",
               {
                 type: "datetime-local",
                 name: "scheduledDate",
                 required: !0,
                 className: "mt-1 block w-full p-3 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-red-500"
-              },
-              void 0,
-              !1,
-              {
-                fileName: "app/routes/new.tsx",
-                lineNumber: 206,
-                columnNumber: 11
-              },
-              this
+              }
             )
-          ] }, void 0, !0, {
-            fileName: "app/routes/new.tsx",
-            lineNumber: 204,
-            columnNumber: 9
-          }, this),
-          /* @__PURE__ */ jsxDEV20("label", { className: "block mb-4", children: [
+          ] }),
+          /* @__PURE__ */ jsxs18("label", { className: "block mb-4", children: [
             "Visibility:",
-            /* @__PURE__ */ jsxDEV20(
+            /* @__PURE__ */ jsxs18(
               "select",
               {
                 name: "visibility",
@@ -3370,45 +1729,17 @@ function NewCapsule() {
                 },
                 className: "mt-1 block w-full p-3 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-red-500",
                 children: [
-                  /* @__PURE__ */ jsxDEV20("option", { value: "private", children: "Private" }, void 0, !1, {
-                    fileName: "app/routes/new.tsx",
-                    lineNumber: 226,
-                    columnNumber: 13
-                  }, this),
-                  /* @__PURE__ */ jsxDEV20("option", { value: "public", children: "Public" }, void 0, !1, {
-                    fileName: "app/routes/new.tsx",
-                    lineNumber: 227,
-                    columnNumber: 13
-                  }, this),
-                  /* @__PURE__ */ jsxDEV20("option", { value: "group", children: "Group" }, void 0, !1, {
-                    fileName: "app/routes/new.tsx",
-                    lineNumber: 228,
-                    columnNumber: 13
-                  }, this)
+                  /* @__PURE__ */ jsx20("option", { value: "private", children: "Private" }),
+                  /* @__PURE__ */ jsx20("option", { value: "public", children: "Public" }),
+                  /* @__PURE__ */ jsx20("option", { value: "group", children: "Group" })
                 ]
-              },
-              void 0,
-              !0,
-              {
-                fileName: "app/routes/new.tsx",
-                lineNumber: 215,
-                columnNumber: 11
-              },
-              this
+              }
             )
-          ] }, void 0, !0, {
-            fileName: "app/routes/new.tsx",
-            lineNumber: 213,
-            columnNumber: 9
-          }, this),
-          selectedVisibility === "group" && /* @__PURE__ */ jsxDEV20("fieldset", { className: "mb-4 border border-gray-300 p-4 rounded", children: [
-            /* @__PURE__ */ jsxDEV20("legend", { className: "text-lg font-semibold mb-2", children: "How do you want to send the Capsule?" }, void 0, !1, {
-              fileName: "app/routes/new.tsx",
-              lineNumber: 233,
-              columnNumber: 13
-            }, this),
-            /* @__PURE__ */ jsxDEV20("div", { className: "mb-2", children: /* @__PURE__ */ jsxDEV20("label", { className: "inline-flex items-center", children: [
-              /* @__PURE__ */ jsxDEV20(
+          ] }),
+          selectedVisibility === "group" && /* @__PURE__ */ jsxs18("fieldset", { className: "mb-4 border border-gray-300 p-4 rounded", children: [
+            /* @__PURE__ */ jsx20("legend", { className: "text-lg font-semibold mb-2", children: "How do you want to send the Capsule?" }),
+            /* @__PURE__ */ jsx20("div", { className: "mb-2", children: /* @__PURE__ */ jsxs18("label", { className: "inline-flex items-center", children: [
+              /* @__PURE__ */ jsx20(
                 "input",
                 {
                   type: "radio",
@@ -3417,28 +1748,12 @@ function NewCapsule() {
                   onChange: (e) => setGroupChoice(e.target.value),
                   className: "mr-2",
                   required: !0
-                },
-                void 0,
-                !1,
-                {
-                  fileName: "app/routes/new.tsx",
-                  lineNumber: 238,
-                  columnNumber: 17
-                },
-                this
+                }
               ),
               "Via username"
-            ] }, void 0, !0, {
-              fileName: "app/routes/new.tsx",
-              lineNumber: 237,
-              columnNumber: 15
-            }, this) }, void 0, !1, {
-              fileName: "app/routes/new.tsx",
-              lineNumber: 236,
-              columnNumber: 13
-            }, this),
-            /* @__PURE__ */ jsxDEV20("div", { className: "mb-2", children: /* @__PURE__ */ jsxDEV20("label", { className: "inline-flex items-center", children: [
-              /* @__PURE__ */ jsxDEV20(
+            ] }) }),
+            /* @__PURE__ */ jsx20("div", { className: "mb-2", children: /* @__PURE__ */ jsxs18("label", { className: "inline-flex items-center", children: [
+              /* @__PURE__ */ jsx20(
                 "input",
                 {
                   type: "radio",
@@ -3447,29 +1762,13 @@ function NewCapsule() {
                   onChange: (e) => setGroupChoice(e.target.value),
                   className: "mr-2",
                   required: !0
-                },
-                void 0,
-                !1,
-                {
-                  fileName: "app/routes/new.tsx",
-                  lineNumber: 251,
-                  columnNumber: 17
-                },
-                this
+                }
               ),
               "Via email"
-            ] }, void 0, !0, {
-              fileName: "app/routes/new.tsx",
-              lineNumber: 250,
-              columnNumber: 15
-            }, this) }, void 0, !1, {
-              fileName: "app/routes/new.tsx",
-              lineNumber: 249,
-              columnNumber: 13
-            }, this),
-            groupChoice === "username" && /* @__PURE__ */ jsxDEV20("label", { className: "block mt-2", children: [
+            ] }) }),
+            groupChoice === "username" && /* @__PURE__ */ jsxs18("label", { className: "block mt-2", children: [
               "Recipient usernames (comma separated):",
-              /* @__PURE__ */ jsxDEV20(
+              /* @__PURE__ */ jsx20(
                 "input",
                 {
                   type: "text",
@@ -3477,24 +1776,12 @@ function NewCapsule() {
                   required: !0,
                   placeholder: "selim, jane, ma\xEFa",
                   className: "mt-1 block w-full p-3 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-red-500"
-                },
-                void 0,
-                !1,
-                {
-                  fileName: "app/routes/new.tsx",
-                  lineNumber: 265,
-                  columnNumber: 17
-                },
-                this
+                }
               )
-            ] }, void 0, !0, {
-              fileName: "app/routes/new.tsx",
-              lineNumber: 263,
-              columnNumber: 15
-            }, this),
-            groupChoice === "email" && /* @__PURE__ */ jsxDEV20("label", { className: "block mt-2", children: [
+            ] }),
+            groupChoice === "email" && /* @__PURE__ */ jsxs18("label", { className: "block mt-2", children: [
               "Recipient emails (comma separated):",
-              /* @__PURE__ */ jsxDEV20(
+              /* @__PURE__ */ jsx20(
                 "input",
                 {
                   type: "text",
@@ -3502,101 +1789,45 @@ function NewCapsule() {
                   required: !0,
                   placeholder: "selim@example.com, jane@example.com",
                   className: "mt-1 block w-full p-3 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-red-500"
-                },
-                void 0,
-                !1,
-                {
-                  fileName: "app/routes/new.tsx",
-                  lineNumber: 277,
-                  columnNumber: 17
-                },
-                this
+                }
               )
-            ] }, void 0, !0, {
-              fileName: "app/routes/new.tsx",
-              lineNumber: 275,
-              columnNumber: 15
-            }, this)
-          ] }, void 0, !0, {
-            fileName: "app/routes/new.tsx",
-            lineNumber: 232,
-            columnNumber: 11
-          }, this),
-          /* @__PURE__ */ jsxDEV20("fieldset", { className: "mb-4 border border-gray-300 p-4 rounded", children: [
-            /* @__PURE__ */ jsxDEV20("legend", { className: "text-lg font-semibold", children: "Add a gift" }, void 0, !1, {
-              fileName: "app/routes/new.tsx",
-              lineNumber: 289,
-              columnNumber: 11
-            }, this),
-            /* @__PURE__ */ jsxDEV20("label", { className: "block mb-2", children: [
+            ] })
+          ] }),
+          /* @__PURE__ */ jsxs18("fieldset", { className: "mb-4 border border-gray-300 p-4 rounded", children: [
+            /* @__PURE__ */ jsx20("legend", { className: "text-lg font-semibold", children: "Add a gift" }),
+            /* @__PURE__ */ jsxs18("label", { className: "block mb-2", children: [
               "Select a media type:",
-              /* @__PURE__ */ jsxDEV20(
+              /* @__PURE__ */ jsx20(
                 "input",
                 {
                   type: "file",
                   name: "mediaFile",
                   accept: "image/*,video/*,audio/*",
                   className: "mt-1 block w-full p-3 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-red-500"
-                },
-                void 0,
-                !1,
-                {
-                  fileName: "app/routes/new.tsx",
-                  lineNumber: 294,
-                  columnNumber: 13
-                },
-                this
+                }
               )
-            ] }, void 0, !0, {
-              fileName: "app/routes/new.tsx",
-              lineNumber: 292,
-              columnNumber: 11
-            }, this)
-          ] }, void 0, !0, {
-            fileName: "app/routes/new.tsx",
-            lineNumber: 288,
-            columnNumber: 9
-          }, this),
-          /* @__PURE__ */ jsxDEV20(
+            ] })
+          ] }),
+          /* @__PURE__ */ jsx20(
             "button",
             {
               type: "submit",
               disabled: transition.state === "submitting",
               className: "w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-4 rounded-full shadow-xl transform hover:scale-105 transition",
               children: transition.state === "submitting" ? "Creation ongoing..." : "Let's create the magic capsule!"
-            },
-            void 0,
-            !1,
-            {
-              fileName: "app/routes/new.tsx",
-              lineNumber: 302,
-              columnNumber: 9
-            },
-            this
+            }
           )
         ]
-      },
-      void 0,
-      !0,
-      {
-        fileName: "app/routes/new.tsx",
-        lineNumber: 178,
-        columnNumber: 7
-      },
-      this
+      }
     )
-  ] }, void 0, !0, {
-    fileName: "app/routes/new.tsx",
-    lineNumber: 174,
-    columnNumber: 5
-  }, this);
+  ] });
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { entry: { module: "/build/entry.client-TLQCUBIT.js", imports: ["/build/_shared/chunk-O4BRYNJ4.js", "/build/_shared/chunk-HBOENHLD.js", "/build/_shared/chunk-U4FRFQSK.js", "/build/_shared/chunk-XGOTYLZ5.js", "/build/_shared/chunk-7M6SC7J5.js", "/build/_shared/chunk-FOVVXGJ2.js", "/build/_shared/chunk-UWV35TSL.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-DNW3GC7V.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/$capsuleId": { id: "routes/$capsuleId", parentId: "root", path: ":capsuleId", index: void 0, caseSensitive: void 0, module: "/build/routes/$capsuleId-SWJUZI6H.js", imports: ["/build/_shared/chunk-JSCKBFOW.js", "/build/_shared/chunk-KONDUBG3.js", "/build/_shared/chunk-G7CHZRZX.js"], hasAction: !1, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-76MGVL4T.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/check-email": { id: "routes/check-email", parentId: "root", path: "check-email", index: void 0, caseSensitive: void 0, module: "/build/routes/check-email-3ODWRDDT.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/community-guidelines": { id: "routes/community-guidelines", parentId: "root", path: "community-guidelines", index: void 0, caseSensitive: void 0, module: "/build/routes/community-guidelines-6APRDYGD.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/confirm": { id: "routes/confirm", parentId: "root", path: "confirm", index: void 0, caseSensitive: void 0, module: "/build/routes/confirm-TUVAOTYP.js", imports: ["/build/_shared/chunk-KONDUBG3.js", "/build/_shared/chunk-G7CHZRZX.js"], hasAction: !1, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/contact-us": { id: "routes/contact-us", parentId: "root", path: "contact-us", index: void 0, caseSensitive: void 0, module: "/build/routes/contact-us-DNIB6KV6.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/dashboard": { id: "routes/dashboard", parentId: "root", path: "dashboard", index: void 0, caseSensitive: void 0, module: "/build/routes/dashboard-7H3CJNXX.js", imports: ["/build/_shared/chunk-JSCKBFOW.js", "/build/_shared/chunk-KONDUBG3.js", "/build/_shared/chunk-G7CHZRZX.js"], hasAction: !0, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/delete-capsules": { id: "routes/delete-capsules", parentId: "root", path: "delete-capsules", index: void 0, caseSensitive: void 0, module: "/build/routes/delete-capsules-BNOZKYGC.js", imports: ["/build/_shared/chunk-JSCKBFOW.js", "/build/_shared/chunk-KONDUBG3.js", "/build/_shared/chunk-G7CHZRZX.js"], hasAction: !0, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: "index", index: void 0, caseSensitive: void 0, module: "/build/routes/index-S5YRIARH.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/login": { id: "routes/login", parentId: "root", path: "login", index: void 0, caseSensitive: void 0, module: "/build/routes/login-MROXJ7X4.js", imports: ["/build/_shared/chunk-3TAIMXWF.js", "/build/_shared/chunk-JSCKBFOW.js", "/build/_shared/chunk-KONDUBG3.js", "/build/_shared/chunk-G7CHZRZX.js"], hasAction: !0, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/logout": { id: "routes/logout", parentId: "root", path: "logout", index: void 0, caseSensitive: void 0, module: "/build/routes/logout-3MCVWBUP.js", imports: ["/build/_shared/chunk-G7CHZRZX.js"], hasAction: !0, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/new": { id: "routes/new", parentId: "root", path: "new", index: void 0, caseSensitive: void 0, module: "/build/routes/new-44ZGID5R.js", imports: ["/build/_shared/chunk-3NMNVWE6.js", "/build/_shared/chunk-JSCKBFOW.js", "/build/_shared/chunk-KONDUBG3.js", "/build/_shared/chunk-G7CHZRZX.js"], hasAction: !0, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/notification": { id: "routes/notification", parentId: "root", path: "notification", index: void 0, caseSensitive: void 0, module: "/build/routes/notification-7ZHBOCK7.js", imports: ["/build/_shared/chunk-JSCKBFOW.js", "/build/_shared/chunk-KONDUBG3.js", "/build/_shared/chunk-G7CHZRZX.js"], hasAction: !1, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/privacy-policy": { id: "routes/privacy-policy", parentId: "root", path: "privacy-policy", index: void 0, caseSensitive: void 0, module: "/build/routes/privacy-policy-JVTNJNBG.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/safety-tips": { id: "routes/safety-tips", parentId: "root", path: "safety-tips", index: void 0, caseSensitive: void 0, module: "/build/routes/safety-tips-HAWSM2BN.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/signup": { id: "routes/signup", parentId: "root", path: "signup", index: void 0, caseSensitive: void 0, module: "/build/routes/signup-IQ34T3N5.js", imports: ["/build/_shared/chunk-3TAIMXWF.js", "/build/_shared/chunk-3NMNVWE6.js", "/build/_shared/chunk-KONDUBG3.js", "/build/_shared/chunk-G7CHZRZX.js"], hasAction: !0, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/terms-of-use": { id: "routes/terms-of-use", parentId: "root", path: "terms-of-use", index: void 0, caseSensitive: void 0, module: "/build/routes/terms-of-use-4THPFSWE.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/upcoming-updates": { id: "routes/upcoming-updates", parentId: "root", path: "upcoming-updates", index: void 0, caseSensitive: void 0, module: "/build/routes/upcoming-updates-ZYRBLVDB.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 } }, version: "9e104903", hmr: { runtime: "/build/_shared/chunk-FOVVXGJ2.js", timestamp: 1754544597601 }, url: "/build/manifest-9E104903.js" };
+var assets_manifest_default = { entry: { module: "/build/entry.client-VWUYZB6N.js", imports: ["/build/_shared/chunk-NPTIZT3W.js", "/build/_shared/chunk-4HXKWYDW.js", "/build/_shared/chunk-Q3IECNXJ.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-3JWM5HE4.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/$capsuleId": { id: "routes/$capsuleId", parentId: "root", path: ":capsuleId", index: void 0, caseSensitive: void 0, module: "/build/routes/$capsuleId-QJ7IO3HB.js", imports: ["/build/_shared/chunk-LW5HVKRZ.js", "/build/_shared/chunk-VAWQIAN7.js", "/build/_shared/chunk-PGOH7JLP.js"], hasAction: !1, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-FX43ZI4S.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/check-email": { id: "routes/check-email", parentId: "root", path: "check-email", index: void 0, caseSensitive: void 0, module: "/build/routes/check-email-YXDSN5HY.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/community-guidelines": { id: "routes/community-guidelines", parentId: "root", path: "community-guidelines", index: void 0, caseSensitive: void 0, module: "/build/routes/community-guidelines-B2XCIP2B.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/confirm": { id: "routes/confirm", parentId: "root", path: "confirm", index: void 0, caseSensitive: void 0, module: "/build/routes/confirm-2NYOL5OQ.js", imports: ["/build/_shared/chunk-VAWQIAN7.js", "/build/_shared/chunk-PGOH7JLP.js"], hasAction: !1, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/contact-us": { id: "routes/contact-us", parentId: "root", path: "contact-us", index: void 0, caseSensitive: void 0, module: "/build/routes/contact-us-4CZ7KTXY.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/dashboard": { id: "routes/dashboard", parentId: "root", path: "dashboard", index: void 0, caseSensitive: void 0, module: "/build/routes/dashboard-XWYGWFCR.js", imports: ["/build/_shared/chunk-LW5HVKRZ.js", "/build/_shared/chunk-VAWQIAN7.js", "/build/_shared/chunk-PGOH7JLP.js"], hasAction: !0, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/delete-capsules": { id: "routes/delete-capsules", parentId: "root", path: "delete-capsules", index: void 0, caseSensitive: void 0, module: "/build/routes/delete-capsules-XFGY2FFV.js", imports: ["/build/_shared/chunk-LW5HVKRZ.js", "/build/_shared/chunk-VAWQIAN7.js", "/build/_shared/chunk-PGOH7JLP.js"], hasAction: !0, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: "index", index: void 0, caseSensitive: void 0, module: "/build/routes/index-QBK2HUKL.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/login": { id: "routes/login", parentId: "root", path: "login", index: void 0, caseSensitive: void 0, module: "/build/routes/login-P4S5NEJB.js", imports: ["/build/_shared/chunk-CGGNC4NM.js", "/build/_shared/chunk-LW5HVKRZ.js", "/build/_shared/chunk-VAWQIAN7.js", "/build/_shared/chunk-PGOH7JLP.js"], hasAction: !0, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/logout": { id: "routes/logout", parentId: "root", path: "logout", index: void 0, caseSensitive: void 0, module: "/build/routes/logout-7H76O4OB.js", imports: ["/build/_shared/chunk-PGOH7JLP.js"], hasAction: !0, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/new": { id: "routes/new", parentId: "root", path: "new", index: void 0, caseSensitive: void 0, module: "/build/routes/new-PIWOLHQZ.js", imports: ["/build/_shared/chunk-AVK675O2.js", "/build/_shared/chunk-LW5HVKRZ.js", "/build/_shared/chunk-VAWQIAN7.js", "/build/_shared/chunk-PGOH7JLP.js"], hasAction: !0, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/notification": { id: "routes/notification", parentId: "root", path: "notification", index: void 0, caseSensitive: void 0, module: "/build/routes/notification-4LQVXLC3.js", imports: ["/build/_shared/chunk-LW5HVKRZ.js", "/build/_shared/chunk-VAWQIAN7.js", "/build/_shared/chunk-PGOH7JLP.js"], hasAction: !1, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/privacy-policy": { id: "routes/privacy-policy", parentId: "root", path: "privacy-policy", index: void 0, caseSensitive: void 0, module: "/build/routes/privacy-policy-IMWVZMSJ.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/safety-tips": { id: "routes/safety-tips", parentId: "root", path: "safety-tips", index: void 0, caseSensitive: void 0, module: "/build/routes/safety-tips-BLVR2VAN.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/signup": { id: "routes/signup", parentId: "root", path: "signup", index: void 0, caseSensitive: void 0, module: "/build/routes/signup-A6KXTQQV.js", imports: ["/build/_shared/chunk-CGGNC4NM.js", "/build/_shared/chunk-AVK675O2.js", "/build/_shared/chunk-VAWQIAN7.js", "/build/_shared/chunk-PGOH7JLP.js"], hasAction: !0, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/terms-of-use": { id: "routes/terms-of-use", parentId: "root", path: "terms-of-use", index: void 0, caseSensitive: void 0, module: "/build/routes/terms-of-use-ZMP5QZ42.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/upcoming-updates": { id: "routes/upcoming-updates", parentId: "root", path: "upcoming-updates", index: void 0, caseSensitive: void 0, module: "/build/routes/upcoming-updates-MYVOG4YB.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 } }, version: "563a2a09", hmr: void 0, url: "/build/manifest-563A2A09.js" };
 
 // server-entry-module:@remix-run/dev/server-build
-var mode = "development", assetsBuildDirectory = "public/build", future = { v3_fetcherPersist: !1, v3_relativeSplatPath: !1, v3_throwAbortReason: !1, v3_routeConfig: !1, v3_singleFetch: !1, v3_lazyRouteDiscovery: !1, unstable_optimizeDeps: !1 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {
+var mode = "production", assetsBuildDirectory = "public/build", future = { v3_fetcherPersist: !1, v3_relativeSplatPath: !1, v3_throwAbortReason: !1, v3_routeConfig: !1, v3_singleFetch: !1, v3_lazyRouteDiscovery: !1, unstable_optimizeDeps: !1 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {
   root: {
     id: "root",
     parentId: void 0,
@@ -3759,4 +1990,3 @@ export {
   publicPath,
   routes
 };
-//# sourceMappingURL=index.js.map
